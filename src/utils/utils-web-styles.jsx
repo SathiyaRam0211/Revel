@@ -125,7 +125,11 @@ export const CustomBtn = styled.div`
   width: fit-content;
 
   &:hover {
-    background: linear-gradient(96deg, #81eoff -1.9%, #d4f465 93.17%);
+    background: linear-gradient(
+      96deg,
+      ${highlightColor} -1.9%,
+      ${primaryColor} 93.17%
+    );
   }
 
   @media (${tabletLarge}) {

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Haskoy";
+  src: url("./fonts/Haskoy-Regular.woff2") format("woff2"),
+    url("./fonts/Haskoy-Regular.woff") format("woff"),
+    url("./fonts/Haskoy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
