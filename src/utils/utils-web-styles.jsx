@@ -124,6 +124,10 @@ export const CustomBtn = styled.div`
   border-radius: 12px;
   width: fit-content;
 
+  &:hover {
+    background: linear-gradient(96deg, #81eoff -1.9%, #d4f465 93.17%);
+  }
+
   @media (${tabletLarge}) {
     padding: 8px 16px;
     font-size: 20px;
