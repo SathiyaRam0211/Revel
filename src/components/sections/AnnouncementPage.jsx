@@ -11,10 +11,19 @@ const AnnouncementPage = () => {
 
   useEffect(() => {
     const video = videoRef.current;
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        video.play();
+      } else {
+        video.pause();
+      }
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio === 1) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
             video.play();
           } else {
             video.pause();
@@ -25,9 +34,13 @@ const AnnouncementPage = () => {
         threshold: 0.1,
       }
     );
+
     observer.observe(video);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     return () => {
       observer.unobserve(video);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 
@@ -37,11 +50,11 @@ const AnnouncementPage = () => {
         <AnnouncementVideo
           ref={videoRef}
           autoPlay
-          playsInline
           muted
+          playsInline
           preload="auto"
         >
-          <source src={Explainer} />
+          <source src={Explainer} type="video/mp4" />
           Unsupported video
         </AnnouncementVideo>
       </AnnouncementContainer>

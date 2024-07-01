@@ -5,7 +5,9 @@ const Navbar = () => {
   return (
     <CustomNav>
       <BrandImage src={BrandLogo} alt="revel-logo" />
-      <CustomBtn>Register now</CustomBtn>
+      <CustomBtn onClick={() => console.log("Registered")}>
+        Register now
+      </CustomBtn>
     </CustomNav>
   );
 };
