@@ -52,6 +52,7 @@ const AnnouncementPage = () => {
           autoPlay
           muted
           playsInline
+          loop
           preload="auto"
         >
           <source src={Explainer} type="video/mp4" />
