@@ -179,7 +179,7 @@ export const AnnouncementVideo = styled.video`
   }
 
   @media (${mobileLarge}) {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: calc(100vh - 100px);
   }
 `;
