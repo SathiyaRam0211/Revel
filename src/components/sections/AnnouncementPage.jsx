@@ -22,7 +22,7 @@ const AnnouncementPage = () => {
         });
       },
       {
-        threshold: 1.0,
+        threshold: 0.1,
       }
     );
     observer.observe(video);
@@ -34,7 +34,13 @@ const AnnouncementPage = () => {
   return (
     <PageSection $paddingY="0">
       <AnnouncementContainer>
-        <AnnouncementVideo ref={videoRef} autoPlay muted preload="auto">
+        <AnnouncementVideo
+          ref={videoRef}
+          autoPlay
+          playsInline
+          muted
+          preload="auto"
+        >
           <source src={Explainer} />
           Unsupported video
         </AnnouncementVideo>
