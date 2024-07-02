@@ -23,7 +23,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "Hipz n Toez, T Nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
         {
@@ -63,7 +63,7 @@ export const eventDetails = {
         {
           category: "fitness",
           venue: "Online",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "8:30 - 9:30 am",
         },
       ],
@@ -85,7 +85,7 @@ export const eventDetails = {
         {
           category: "fitness",
           venue: "Online",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
       ],
@@ -95,13 +95,13 @@ export const eventDetails = {
       events: [
         {
           category: "danceFitness",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Sakthi",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "locking",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -125,7 +125,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "Hipz n Toez, T Nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
       ],
@@ -135,19 +135,19 @@ export const eventDetails = {
       events: [
         {
           category: "financialManagement",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Sakthi",
           time: "5:00 - 6:00 pm",
         },
         {
           category: "locking",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Sakthi",
           time: "6:00 - 7:00 pm",
         },
         {
           category: "locking",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Sakthi",
           time: "7:00 - 8:00 pm",
         },
@@ -159,18 +159,18 @@ export const eventDetails = {
         {
           category: "fitness",
           venue: "Online",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "contentProduction",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Rohith",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "digitalDesign",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Vijay",
           time: "8:00 - 9:00 pm",
         },
@@ -217,19 +217,19 @@ export const eventDetails = {
         {
           category: "fitness",
           venue: "Online",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "hipHop",
           venue: "Smashers, Thoraipakkam",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "hipHop",
           venue: "Smashers, Thoraipakkam",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "9:00 - 10:00 pm",
         },
       ],
@@ -250,13 +250,13 @@ export const eventDetails = {
       events: [
         {
           category: "contentProduction",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Rohith",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "choreography",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Rohith",
           time: "8:00 - 9:00 pm",
         },
@@ -268,13 +268,13 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "RMC, Ashok Nagar",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "11:00 - 12:00 pm",
         },
         {
           category: "hipHop",
           venue: "RMC, Ashok Nagar",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "12:00 - 1:00 pm",
         },
         {
@@ -309,7 +309,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "RMC, Ashok Nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
       ],
@@ -326,7 +326,7 @@ export const eventDetails = {
         {
           category: "fitness",
           venue: "Online",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
       ],
@@ -337,13 +337,13 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "RMC, Mylapore",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "hipHop",
           venue: "RMC, Mylapore",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "8:00 - 9:00 pm",
         },
         {
@@ -360,7 +360,7 @@ export const eventDetails = {
         {
           category: "fitness",
           venue: "Online",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
       ],
@@ -399,7 +399,7 @@ export const eventDetails = {
         },
         {
           category: "graffiti",
-          venue: "TBA",
+          venue: "To Be Announced",
           faculty: "Vijay",
           time: "8:00 - 9:00 pm",
         },
@@ -417,19 +417,19 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "RMC, Chrompet",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "11:00 - 12:00 pm",
         },
         {
           category: "hipHop",
           venue: "RMC, Chrompet",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "12:00 - 1:00 pm",
         },
         {
           category: "breaking",
           venue: "Hipz n Toez, T Nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
       ],
@@ -475,7 +475,7 @@ export const eventDetails = {
         {
           category: "fitness",
           venue: "Online",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
       ],
@@ -527,7 +527,7 @@ export const eventDetails = {
         {
           category: "fitness",
           venue: "Online",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
       ],
