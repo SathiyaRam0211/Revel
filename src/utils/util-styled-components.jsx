@@ -131,7 +131,7 @@ export const ActionsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 20px;
 `;
 
 export const CustomBtn = styled.div`
