@@ -131,7 +131,11 @@ export const ActionsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 24px;
+
+  @media (${variables.mobileLarge}) {
+    gap: 8px;
+  }
 `;
 
 export const CustomBtn = styled.div`
