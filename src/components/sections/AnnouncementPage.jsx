@@ -2,7 +2,7 @@ import {
   PageSection,
   AnnouncementContainer,
   AnnouncementVideo,
-} from "../../utils/utils-web-styles";
+} from "../../utils/util-styled-components";
 import Explainer from "../../assets/videos/revel-explainer.mp4";
 import { useEffect, useRef } from "react";
 

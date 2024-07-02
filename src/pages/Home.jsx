@@ -1,7 +1,7 @@
 import Navbar from "../components/common/Navbar";
 import AnnouncementPage from "../components/sections/AnnouncementPage";
 import LandingPage from "../components/sections/LandingPage";
-import { HomePage } from "../utils/utils-web-styles";
+import { HomePage } from "../utils/util-styled-components";
 
 const Home = () => {
   return (
