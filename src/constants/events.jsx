@@ -533,4 +533,23 @@ export const eventDetails = {
       ],
     },
   ],
+  August: [
+    {
+      day: 1,
+      events: [
+        {
+          category: "house",
+          venue: "RMC, Ashok Nagar",
+          faculty: "Joshie",
+          time: "8:00 - 9:00 am",
+        },
+        {
+          category: "locking",
+          venue: "Hipz n Toez, T nagar",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+  ],
 };
