@@ -36,7 +36,6 @@ export const PageSection = styled.section`
   box-sizing: border-box;
   height: calc(100vh - 120px);
   padding: ${(props) => (props.$paddingY ? props.$paddingY : "32px")} 64px;
-  border-bottom: 1px solid ${primaryColor};
   position: relative;
 
   @media (${tabletLarge}) {
