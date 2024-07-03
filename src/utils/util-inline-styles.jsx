@@ -128,7 +128,7 @@ export const selectStyle = {
 };
 
 export const categoryStyle = {
-  width: "165px",
+  width: "160px",
   fontWeight: "600",
   ...ellipsis,
 };
@@ -152,6 +152,12 @@ export const venueStyle = {
   alignItems: "center",
   width: "240px",
   ...ellipsis,
+};
+
+export const idStyle = {
+  width: "fit-content",
+  marginRight: "6px",
+  color: `${variables.primaryColor}`,
 };
 
 export const iconButtonStyle = {

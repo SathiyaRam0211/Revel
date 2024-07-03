@@ -281,7 +281,7 @@ export const EventRow = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    padding: 16px;
+    padding: 14px;
     div {
       gap: 0px;
     }

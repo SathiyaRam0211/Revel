@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { artForms, variables } from "../../constants/constants";
 import { eventDetails } from "../../constants/events";
 import {
@@ -11,13 +11,17 @@ import {
   EventContainer,
 } from "../../utils/util-styled-components";
 import CustomSelect from "../common/CustomSelect";
-import { getFormattedDate } from "../../utils/util-helper";
+import {
+  getFormattedDate,
+  preprocessEventDetails,
+} from "../../utils/util-helper";
 import {
   categoryStyle,
   facultyStyle,
   iconButtonStyle,
   timeStyle,
   venueStyle,
+  idStyle,
 } from "../../utils/util-inline-styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -27,18 +31,22 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
+const processedEventDetails = preprocessEventDetails(eventDetails);
+
 const EventsPage = () => {
   const [windowWidth, setWindowWidth] = useState(window.outerWidth);
   const [selectedMonth, setSelectedMonth] = useState("July");
   const [selectedOption, setSelectedOption] = useState(null);
-  const [availableMonths, setAvailableMonths] = useState([]);
+  const [availableMonths, setAvailableMonths] = useState(
+    Object.keys(processedEventDetails)
+  );
 
-  const handleChange = (selected) => {
+  const handleChange = useCallback((selected) => {
     setSelectedOption(selected || null);
-  };
+  }, []);
 
   const filteredEvents = useMemo(() => {
-    const events = eventDetails[selectedMonth];
+    const events = processedEventDetails[selectedMonth];
     if (!selectedOption) {
       return events;
     }
@@ -52,30 +60,31 @@ const EventsPage = () => {
       .filter((day) => day.events.length > 0);
   }, [selectedMonth, selectedOption]);
 
-  const fetchArtForm = (category) => {
+  const fetchArtForm = useCallback((category) => {
     return artForms.find((each) => each?.value === category)?.label || "Other";
-  };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.outerWidth);
     };
     window.addEventListener("resize", handleResize);
-    setAvailableMonths(Object.keys(eventDetails));
-    setSelectedMonth("July");
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  const handleMonthChange = (direction) => {
-    const currentIndex = availableMonths.indexOf(selectedMonth);
-    const newIndex = currentIndex + direction;
-    if (newIndex >= 0 && newIndex < availableMonths.length) {
-      setSelectedMonth(availableMonths[newIndex]);
-    }
-  };
+  const handleMonthChange = useCallback(
+    (direction) => {
+      const currentIndex = availableMonths.indexOf(selectedMonth);
+      const newIndex = currentIndex + direction;
+      if (newIndex >= 0 && newIndex < availableMonths.length) {
+        setSelectedMonth(availableMonths[newIndex]);
+      }
+    },
+    [availableMonths, selectedMonth]
+  );
 
   return (
     <PageSection>
@@ -115,9 +124,10 @@ const EventsPage = () => {
                 <DayHeader>
                   <span>{getFormattedDate(selectedMonth, day)}</span>
                 </DayHeader>
-                {events.map(({ category, faculty, time, venue }, index) => (
+                {events.map(({ category, faculty, time, venue, id }, index) => (
                   <EventRow key={`${category}-${day}-${index}`}>
                     <div>
+                      <span style={idStyle}>#{id}</span>
                       <span style={categoryStyle}>
                         {fetchArtForm(category)}
                       </span>

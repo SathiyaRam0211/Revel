@@ -33,3 +33,18 @@ export const getFormattedDate = (month, day, year = 2024) => {
   const ordinalSuffix = getOrdinalSuffix(day);
   return `${day}${ordinalSuffix} - ${dayOfWeek}`;
 };
+
+export const preprocessEventDetails = (eventDetails) => {
+  let eventCounter = 1;
+  const processedEventDetails = {};
+  for (const month in eventDetails) {
+    processedEventDetails[month] = eventDetails[month].map((day) => ({
+      ...day,
+      events: day.events.map((event) => ({
+        ...event,
+        id: eventCounter++,
+      })),
+    }));
+  }
+  return processedEventDetails;
+};
