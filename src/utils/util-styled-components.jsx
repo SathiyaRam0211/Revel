@@ -19,7 +19,7 @@ export const CustomNav = styled.nav`
 
   @media (${variables.tabletLarge}) {
     height: 100px !important;
-    padding: 16px 32px;
+    padding: 12px 16px;
   }
 `;
 
@@ -32,7 +32,7 @@ export const PageSection = styled.section`
 
   @media (${variables.tabletLarge}) {
     height: calc(100vh - 100px);
-    padding: 16px 32px;
+    padding: 12px 16px;
   }
 `;
 
@@ -229,6 +229,7 @@ export const Toolbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 50px;
 `;
 
 export const EventsWrapper = styled.div`

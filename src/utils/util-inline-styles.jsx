@@ -128,7 +128,7 @@ export const selectStyle = {
 };
 
 export const categoryStyle = {
-  width: "150px",
+  width: "165px",
   fontWeight: "600",
   ...ellipsis,
 };
