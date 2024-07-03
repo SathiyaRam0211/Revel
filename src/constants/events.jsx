@@ -73,7 +73,7 @@ export const eventDetails = {
       events: [
         {
           category: "danceFitness",
-          venue: "RMC, Mylapore",
+          venue: "5th Element, Shenoy Nagar",
           faculty: "Joshie",
           time: "7:00 - 8:00 am",
         },
@@ -95,13 +95,13 @@ export const eventDetails = {
       events: [
         {
           category: "danceFitness",
-          venue: "To Be Announced",
+          venue: "RMC, Chrompet",
           faculty: "Sakthi",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "locking",
-          venue: "To Be Announced",
+          venue: "RMC, Chrompet",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -111,16 +111,22 @@ export const eventDetails = {
       day: 13,
       events: [
         {
-          category: "silambam",
-          venue: "Maduravoyal",
-          faculty: "Soundarrajan",
-          time: "4:00 - 5:00 pm",
+          category: "financialManagement",
+          venue: "5th Element, Shenoy Nagar",
+          faculty: "Sakthi",
+          time: "5:00 - 6:00 pm",
         },
         {
-          category: "silambam",
-          venue: "Maduravoyal",
-          faculty: "Soundarrajan",
-          time: "5:00 - 6:00 pm",
+          category: "locking",
+          venue: "5th Element, Shenoy Nagar",
+          faculty: "Sakthi",
+          time: "6:00 - 7:00 pm",
+        },
+        {
+          category: "locking",
+          venue: "5th Element, Shenoy Nagar",
+          faculty: "Sakthi",
+          time: "7:00 - 8:00 pm",
         },
         {
           category: "breaking",
@@ -134,22 +140,16 @@ export const eventDetails = {
       day: 14,
       events: [
         {
-          category: "financialManagement",
-          venue: "To Be Announced",
-          faculty: "Sakthi",
+          category: "silambam",
+          venue: "Maduravoyal",
+          faculty: "Soundarrajan",
+          time: "4:00 - 5:00 pm",
+        },
+        {
+          category: "silambam",
+          venue: "Maduravoyal",
+          faculty: "Soundarrajan",
           time: "5:00 - 6:00 pm",
-        },
-        {
-          category: "locking",
-          venue: "To Be Announced",
-          faculty: "Sakthi",
-          time: "6:00 - 7:00 pm",
-        },
-        {
-          category: "locking",
-          venue: "To Be Announced",
-          faculty: "Sakthi",
-          time: "7:00 - 8:00 pm",
         },
       ],
     },
@@ -164,13 +164,13 @@ export const eventDetails = {
         },
         {
           category: "contentProduction",
-          venue: "To Be Announced",
+          venue: "RMC, Chrompet",
           faculty: "Rohith",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "digitalDesign",
-          venue: "To Be Announced",
+          venue: "RMC, Chrompet",
           faculty: "Vijay",
           time: "8:00 - 9:00 pm",
         },
@@ -250,13 +250,13 @@ export const eventDetails = {
       events: [
         {
           category: "contentProduction",
-          venue: "To Be Announced",
+          venue: "RMC, Mylapore",
           faculty: "Rohith",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "choreography",
-          venue: "To Be Announced",
+          venue: "RMC, Mylapore",
           faculty: "Rohith",
           time: "8:00 - 9:00 pm",
         },
@@ -267,13 +267,13 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "RMC, Ashok Nagar",
+          venue: "5th Element, Shenoy Nagar",
           faculty: "DeeZee aka Dinesh",
           time: "11:00 - 12:00 pm",
         },
         {
           category: "hipHop",
-          venue: "RMC, Ashok Nagar",
+          venue: "5th Element, Shenoy Nagar",
           faculty: "DeeZee aka Dinesh",
           time: "12:00 - 1:00 pm",
         },
@@ -387,19 +387,19 @@ export const eventDetails = {
       events: [
         {
           category: "house",
-          venue: "RMC, Chrompet",
+          venue: "5th Element, Shenoy Nagar",
           faculty: "Joshie",
           time: "8:00 - 9:00 am",
         },
         {
           category: "house",
-          venue: "RMC, Chrompet",
+          venue: "5th Element, Shenoy Nagar",
           faculty: "Joshie",
           time: "9:00 - 10:00 am",
         },
         {
           category: "graffiti",
-          venue: "To Be Announced",
+          venue: "RMC, Chrompet",
           faculty: "Vijay",
           time: "8:00 - 9:00 pm",
         },
@@ -428,7 +428,7 @@ export const eventDetails = {
         },
         {
           category: "breaking",
-          venue: "Hipz n Toez, T Nagar",
+          venue: "5th Element, Shenoy Nagar",
           faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
@@ -497,7 +497,7 @@ export const eventDetails = {
         },
         {
           category: "choreography",
-          venue: "Hipz n Toez, T Nagar",
+          venue: "5th Element, Shenoy Nagar",
           faculty: "Rohith",
           time: "8:00 - 9:00 pm",
         },
@@ -545,7 +545,7 @@ export const eventDetails = {
         },
         {
           category: "locking",
-          venue: "Hipz n Toez, T nagar",
+          venue: "Hipz n Toez, T Nagar",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
