@@ -19,7 +19,7 @@ export const CustomNav = styled.nav`
 
   @media (${variables.tabletLarge}) {
     height: 100px !important;
-    padding: 12px 16px;
+    padding: 12px 24px;
   }
 `;
 
@@ -32,7 +32,7 @@ export const PageSection = styled.section`
 
   @media (${variables.tabletLarge}) {
     height: calc(100vh - 100px);
-    padding: 12px 16px;
+    padding: 12px 24px;
   }
 `;
 
