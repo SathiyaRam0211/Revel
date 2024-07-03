@@ -134,7 +134,7 @@ export const categoryStyle = {
 };
 
 export const facultyStyle = {
-  width: "120px",
+  width: "130px",
   ...ellipsis,
 };
 
