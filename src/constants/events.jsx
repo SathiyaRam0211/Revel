@@ -39,7 +39,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "RMC, Chrompet",
+          venue: "Hipz n Toez, T Nagar",
           faculty: "Sakthi",
           time: "7:00 - 8:00 am",
         },
