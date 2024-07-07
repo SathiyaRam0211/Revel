@@ -69,17 +69,6 @@ export const eventDetails = {
       ],
     },
     {
-      day: 9,
-      events: [
-        {
-          category: "danceFitness",
-          venue: "5th Element, Shenoy Nagar",
-          faculty: "Joshie",
-          time: "7:00 - 8:00 am",
-        },
-      ],
-    },
-    {
       day: 10,
       events: [
         {
