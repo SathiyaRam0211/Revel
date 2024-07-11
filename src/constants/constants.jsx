@@ -16,6 +16,8 @@ export const artForms = [
   { value: "financialManagement", label: "Manage Finances" },
   { value: "fitness", label: "Fitness and Workouts" },
   { value: "danceFitness", label: "Dance Fitness" },
+  { value: "freestyleBasics", label: "Freestyle Basics" },
+  { value: "folkChoreography", label: "Folk Choreography" }
 ];
 
 export const variables = {

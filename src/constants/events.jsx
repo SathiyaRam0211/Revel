@@ -83,7 +83,7 @@ export const eventDetails = {
       day: 12,
       events: [
         {
-          category: "danceFitness",
+          category: "freestyleBasics",
           venue: "RMC, Chrompet",
           faculty: "Sakthi",
           time: "7:00 - 8:00 pm",
@@ -100,22 +100,16 @@ export const eventDetails = {
       day: 13,
       events: [
         {
-          category: "financialManagement",
-          venue: "5th Element, Shenoy Nagar",
-          faculty: "Sakthi",
+          category: "silambam",
+          venue: "Maduravoyal",
+          faculty: "Soundarrajan",
+          time: "4:00 - 5:00 pm",
+        },
+        {
+          category: "silambam",
+          venue: "Maduravoyal",
+          faculty: "Soundarrajan",
           time: "5:00 - 6:00 pm",
-        },
-        {
-          category: "locking",
-          venue: "5th Element, Shenoy Nagar",
-          faculty: "Sakthi",
-          time: "6:00 - 7:00 pm",
-        },
-        {
-          category: "locking",
-          venue: "5th Element, Shenoy Nagar",
-          faculty: "Sakthi",
-          time: "7:00 - 8:00 pm",
         },
         {
           category: "breaking",
@@ -129,16 +123,28 @@ export const eventDetails = {
       day: 14,
       events: [
         {
-          category: "silambam",
-          venue: "Maduravoyal",
-          faculty: "Soundarrajan",
-          time: "4:00 - 5:00 pm",
+          category: "locking",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "Sakthi",
+          time: "5:00 - 6:00 pm",
         },
         {
-          category: "silambam",
-          venue: "Maduravoyal",
-          faculty: "Soundarrajan",
-          time: "5:00 - 6:00 pm",
+          category: "locking",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "Sakthi",
+          time: "6:00 - 7:00 pm",
+        },
+        {
+          category: "financialManagement",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "Sakthi",
+          time: "7:00 - 8:00 pm",
+        },
+        {
+          category: "folkChoreography",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "Wilson",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
@@ -147,9 +153,9 @@ export const eventDetails = {
       events: [
         {
           category: "fitness",
-          venue: "Online",
+          venue: "RMC, Ashok Nagar",
           faculty: "Feelhips aka Prabhu",
-          time: "7:00 - 8:00 pm",
+          time: "7:00 - 8:00 am",
         },
         {
           category: "contentProduction",
@@ -169,14 +175,14 @@ export const eventDetails = {
       day: 16,
       events: [
         {
-          category: "danceFitness",
+          category: "freestyleBasics",
           venue: "Hipz n Toez, T Nagar",
-          faculty: "Joshie",
+          faculty: "Sakthi",
           time: "7:00 - 8:00 am",
         },
         {
           category: "locking",
-          venue: "Dance Zone, Santhospuram",
+          venue: "Dance Lessons, Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -209,18 +215,6 @@ export const eventDetails = {
           faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
-        {
-          category: "hipHop",
-          venue: "Smashers, Thoraipakkam",
-          faculty: "DeeZee aka Dinesh",
-          time: "8:00 - 9:00 pm",
-        },
-        {
-          category: "hipHop",
-          venue: "Smashers, Thoraipakkam",
-          faculty: "DeeZee aka Dinesh",
-          time: "9:00 - 10:00 pm",
-        },
       ],
     },
     {
@@ -230,7 +224,19 @@ export const eventDetails = {
           category: "graffiti",
           venue: "Online",
           faculty: "Vijay",
+          time: "7:00 - 8:00 am",
+        },
+        {
+          category: "hipHop",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "DeeZee aka Dinesh",
           time: "8:00 - 9:00 pm",
+        },
+        {
+          category: "hipHop",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "DeeZee aka Dinesh",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
@@ -239,13 +245,13 @@ export const eventDetails = {
       events: [
         {
           category: "contentProduction",
-          venue: "RMC, Mylapore",
+          venue: "Dance Lessons, Mogappair",
           faculty: "Rohith",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "choreography",
-          venue: "RMC, Mylapore",
+          venue: "Dance Lessons, Mogappair",
           faculty: "Rohith",
           time: "8:00 - 9:00 pm",
         },
@@ -256,13 +262,13 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "5th Element, Shenoy Nagar",
+          venue: "RMC, Ashok Nagar",
           faculty: "DeeZee aka Dinesh",
           time: "11:00 - 12:00 pm",
         },
         {
           category: "hipHop",
-          venue: "5th Element, Shenoy Nagar",
+          venue: "RMC, Ashok Nagar",
           faculty: "DeeZee aka Dinesh",
           time: "12:00 - 1:00 pm",
         },
