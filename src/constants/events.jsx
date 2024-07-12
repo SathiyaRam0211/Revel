@@ -124,21 +124,21 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Dance Lessons, Mogappair",
+          venue: "RMC, Ashok Nagar",
           faculty: "Sakthi",
-          time: "5:00 - 6:00 pm",
+          time: "2:00 - 3:00 pm",
         },
         {
           category: "locking",
-          venue: "Dance Lessons, Mogappair",
+          venue: "RMC, Ashok Nagar",
           faculty: "Sakthi",
-          time: "6:00 - 7:00 pm",
+          time: "3:00 - 4:00 pm",
         },
         {
           category: "financialManagement",
-          venue: "Dance Lessons, Mogappair",
+          venue: "RMC, Ashok Nagar",
           faculty: "Sakthi",
-          time: "7:00 - 8:00 pm",
+          time: "4:00 - 5:00 pm",
         },
         {
           category: "folkChoreography",
