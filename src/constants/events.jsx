@@ -123,22 +123,22 @@ export const eventDetails = {
       day: 14,
       events: [
         {
+          category: "financialManagement",
+          venue: "Hipz n Toez, T Nagar",
+          faculty: "Sakthi",
+          time: "12:00 - 1:00 pm",
+        },
+        {
           category: "locking",
-          venue: "RMC, Ashok Nagar",
+          venue: "Hipz n Toez, T Nagar",
+          faculty: "Sakthi",
+          time: "1:00 - 2:00 pm",
+        },
+        {
+          category: "locking",
+          venue: "Hipz n Toez, T Nagar",
           faculty: "Sakthi",
           time: "2:00 - 3:00 pm",
-        },
-        {
-          category: "locking",
-          venue: "RMC, Ashok Nagar",
-          faculty: "Sakthi",
-          time: "3:00 - 4:00 pm",
-        },
-        {
-          category: "financialManagement",
-          venue: "RMC, Ashok Nagar",
-          faculty: "Sakthi",
-          time: "4:00 - 5:00 pm",
         },
         {
           category: "folkChoreography",
