@@ -266,6 +266,8 @@ export const EventRow = styled.div`
   padding: 8px 16px;
   border-radius: 12px;
   background: ${variables.secondaryBgColor};
+  opacity: ${(props) => (props.$isComplete ? 0.7 : 1)};
+  pointer-events: ${(props) => (props.$isComplete ? "none" : "auto")};
   color: ${variables.textColor};
   display: flex;
   align-items: center;

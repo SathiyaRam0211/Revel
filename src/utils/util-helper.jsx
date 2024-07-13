@@ -34,6 +34,24 @@ export const getFormattedDate = (month, day, year = 2024) => {
   return `${day}${ordinalSuffix} - ${dayOfWeek}`;
 };
 
+export const getCurrentMonthName = () => {
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  return monthNames[new Date().getMonth()];
+};
+
 export const preprocessEventDetails = (eventDetails) => {
   let eventCounter = 1;
   const processedEventDetails = {};

@@ -1,4 +1,10 @@
-import { useState, useMemo, useEffect, useCallback } from "react";
+import React, {
+  useState,
+  useMemo,
+  useEffect,
+  useCallback,
+  useRef,
+} from "react";
 import { artForms, variables } from "../../constants/constants";
 import { eventDetails } from "../../constants/events";
 import {
@@ -12,6 +18,7 @@ import {
 } from "../../utils/util-styled-components";
 import CustomSelect from "../common/CustomSelect";
 import {
+  getCurrentMonthName,
   getFormattedDate,
   preprocessEventDetails,
 } from "../../utils/util-helper";
@@ -35,11 +42,11 @@ const processedEventDetails = preprocessEventDetails(eventDetails);
 
 const EventsPage = () => {
   const [windowWidth, setWindowWidth] = useState(window.outerWidth);
-  const [selectedMonth, setSelectedMonth] = useState("July");
+  const [selectedMonth, setSelectedMonth] = useState(getCurrentMonthName());
   const [selectedOption, setSelectedOption] = useState(null);
-  const [availableMonths, setAvailableMonths] = useState(
-    Object.keys(processedEventDetails)
-  );
+  const availableMonths = Object.keys(processedEventDetails);
+  const currentDay = new Date().getDate();
+  const eventRefs = useRef({});
 
   const handleChange = useCallback((selected) => {
     setSelectedOption(selected || null);
@@ -54,25 +61,15 @@ const EventsPage = () => {
       .map((day) => ({
         ...day,
         events: day.events.filter(
-          (event) => event.category === selectedOption.value
+          (event) =>
+            event.category === selectedOption.value && day.day >= currentDay
         ),
       }))
       .filter((day) => day.events.length > 0);
-  }, [selectedMonth, selectedOption]);
+  }, [selectedMonth, selectedOption, currentDay]);
 
   const fetchArtForm = useCallback((category) => {
     return artForms.find((each) => each?.value === category)?.label || "Other";
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.outerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   const handleMonthChange = useCallback(
@@ -85,6 +82,28 @@ const EventsPage = () => {
     },
     [availableMonths, selectedMonth]
   );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.outerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const days = Object.keys(eventRefs.current)
+      .map(Number)
+      .sort((a, b) => a - b);
+    const nextEventDay = days.find((day) => day >= currentDay) || days[0];
+
+    if (eventRefs.current[nextEventDay]) {
+      eventRefs.current[nextEventDay].scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentDay, selectedMonth, selectedOption]);
 
   return (
     <PageSection>
@@ -120,12 +139,15 @@ const EventsPage = () => {
           </Toolbar>
           <EventsWrapper>
             {filteredEvents.map(({ day, events }) => (
-              <div key={day}>
+              <div key={day} ref={(ref) => (eventRefs.current[day] = ref)}>
                 <DayHeader>
                   <span>{getFormattedDate(selectedMonth, day)}</span>
                 </DayHeader>
                 {events.map(({ category, faculty, time, venue, id }, index) => (
-                  <EventRow key={`${category}-${day}-${index}`}>
+                  <EventRow
+                    $isComplete={day < currentDay}
+                    key={`${category}-${day}-${index}`}
+                  >
                     <div>
                       <span style={idStyle}>#{id}</span>
                       <span style={categoryStyle}>
