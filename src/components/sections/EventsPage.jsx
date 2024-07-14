@@ -41,12 +41,13 @@ import {
 const processedEventDetails = preprocessEventDetails(eventDetails);
 
 const EventsPage = () => {
-  const [windowWidth, setWindowWidth] = useState(window.outerWidth);
-  const [selectedMonth, setSelectedMonth] = useState(getCurrentMonthName());
-  const [selectedOption, setSelectedOption] = useState(null);
   const availableMonths = Object.keys(processedEventDetails);
   const currentDay = new Date().getDate();
   const eventRefs = useRef({});
+  const currentMonth = getCurrentMonthName();
+  const [windowWidth, setWindowWidth] = useState(window.outerWidth);
+  const [selectedMonth, setSelectedMonth] = useState(currentMonth);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const handleChange = useCallback((selected) => {
     setSelectedOption(selected || null);
@@ -114,14 +115,14 @@ const EventsPage = () => {
               Classes -{" "}
               {windowWidth < 991
                 ? selectedMonth.substring(0, 3)
-                : selectedMonth}{" "}
+                : selectedMonth}
               {availableMonths.indexOf(selectedMonth) !== 0 && (
                 <FontAwesomeIcon
                   onClick={() => handleMonthChange(-1)}
                   style={iconButtonStyle}
                   icon={faCircleChevronUp}
                 />
-              )}{" "}
+              )}
               {availableMonths.indexOf(selectedMonth) !==
                 availableMonths.length - 1 && (
                 <FontAwesomeIcon
@@ -145,7 +146,9 @@ const EventsPage = () => {
                 </DayHeader>
                 {events.map(({ category, faculty, time, venue, id }, index) => (
                   <EventRow
-                    $isComplete={day < currentDay}
+                    $isComplete={
+                      day < currentDay && selectedMonth === currentMonth
+                    }
                     key={`${category}-${day}-${index}`}
                   >
                     <div>

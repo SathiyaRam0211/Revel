@@ -65,13 +65,15 @@ export const HeroContainer = styled.div`
   }
 `;
 
-export const HeroText = styled.h3`
+export const HeroText = styled.div`
   font-family: ${variables.headerFont};
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
   color: ${variables.textColor};
-  margin: 0px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
   @media (${variables.tabletLarge}) {
     font-size: 16px;
@@ -229,7 +231,7 @@ export const Toolbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 40px;
 `;
 
 export const EventsWrapper = styled.div`
@@ -266,7 +268,7 @@ export const EventRow = styled.div`
   padding: 8px 16px;
   border-radius: 12px;
   background: ${variables.secondaryBgColor};
-  opacity: ${(props) => (props.$isComplete ? 0.7 : 1)};
+  opacity: ${(props) => (props.$isComplete ? 0.5 : 1)};
   pointer-events: ${(props) => (props.$isComplete ? "none" : "auto")};
   color: ${variables.textColor};
   display: flex;

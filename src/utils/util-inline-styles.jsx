@@ -72,7 +72,7 @@ export const selectStyle = {
     ...baseStyles,
     backgroundColor: `${variables.backgroundColor}`,
     cursor: "pointer",
-    width: "140px",
+    width: "145px",
     ...ellipsis,
     fontFamily: "Haskoy",
     fontSize: "12px",
