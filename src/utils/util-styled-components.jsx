@@ -25,13 +25,13 @@ export const CustomNav = styled.nav`
 
 export const PageSection = styled.section`
   box-sizing: border-box;
-  height: calc(100vh - 120px);
+  height: calc(var(--vh, 1vh) * 100 - 120px);
   padding: ${(props) => (props.$paddingY ? props.$paddingY : "32px")}
     ${(props) => (props.$paddingX ? props.$paddingX : "64px")};
   position: relative;
 
   @media (${variables.tabletLarge}) {
-    height: calc(100vh - 100px);
+    height: calc(var(--vh, 1vh) * 100 - 100px);
     padding: 12px 24px;
   }
 `;
