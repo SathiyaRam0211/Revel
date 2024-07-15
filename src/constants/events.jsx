@@ -176,27 +176,15 @@ export const eventDetails = {
       events: [
         {
           category: "freestyleBasics",
-          venue: "Hipz n Toez, T Nagar",
+          venue: "Dance Lessons, Mogappair",
           faculty: "Sakthi",
-          time: "7:00 - 8:00 am",
+          time: "7:30 - 8:30 pm",
         },
         {
           category: "locking",
           venue: "Dance Lessons, Mogappair",
           faculty: "Sakthi",
-          time: "8:00 - 9:00 pm",
-        },
-        {
-          category: "choreography",
-          venue: "Smashers, Thoraipakkam",
-          faculty: "Rohith",
-          time: "8:00 - 9:00 pm",
-        },
-        {
-          category: "choreography",
-          venue: "Smashers, Thoraipakkam",
-          faculty: "Rohith",
-          time: "9:00 - 10:00 pm",
+          time: "8:30 - 9:30 pm",
         },
       ],
     },
