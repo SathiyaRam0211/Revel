@@ -175,16 +175,16 @@ export const eventDetails = {
       day: 16,
       events: [
         {
+          category: "locking",
+          venue: "Hipz n Toez, T Nagar",
+          faculty: "Sakthi",
+          time: "7:00 - 8:00 am",
+        },
+        {
           category: "freestyleBasics",
           venue: "Dance Lessons, Mogappair",
           faculty: "Sakthi",
-          time: "7:30 - 8:30 pm",
-        },
-        {
-          category: "locking",
-          venue: "Dance Lessons, Mogappair",
-          faculty: "Sakthi",
-          time: "8:30 - 9:30 pm",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
@@ -238,7 +238,7 @@ export const eventDetails = {
           time: "7:00 - 8:00 pm",
         },
         {
-          category: "choreography",
+          category: "locking",
           venue: "Dance Lessons, Mogappair",
           faculty: "Rohith",
           time: "8:00 - 9:00 pm",
