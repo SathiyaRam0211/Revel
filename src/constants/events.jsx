@@ -240,7 +240,7 @@ export const eventDetails = {
         {
           category: "locking",
           venue: "Dance Lessons, Mogappair",
-          faculty: "Rohith",
+          faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
       ],
