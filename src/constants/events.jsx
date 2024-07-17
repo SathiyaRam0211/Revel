@@ -209,12 +209,6 @@ export const eventDetails = {
       day: 18,
       events: [
         {
-          category: "graffiti",
-          venue: "Online",
-          faculty: "Vijay",
-          time: "7:00 - 8:00 am",
-        },
-        {
           category: "hipHop",
           venue: "Dance Lessons, Mogappair",
           faculty: "DeeZee aka Dinesh",
@@ -232,9 +226,9 @@ export const eventDetails = {
       day: 19,
       events: [
         {
-          category: "contentProduction",
+          category: "graffiti",
           venue: "Dance Lessons, Mogappair",
-          faculty: "Rohith",
+          faculty: "Vijay",
           time: "7:00 - 8:00 pm",
         },
         {
@@ -259,30 +253,6 @@ export const eventDetails = {
           venue: "RMC, Ashok Nagar",
           faculty: "DeeZee aka Dinesh",
           time: "12:00 - 1:00 pm",
-        },
-        {
-          category: "contentProduction",
-          venue: "Online",
-          faculty: "Rohith",
-          time: "3:00 - 4:00 pm",
-        },
-        {
-          category: "digitalDesign",
-          venue: "Online",
-          faculty: "Vijay",
-          time: "4:00 - 5:00 pm",
-        },
-        {
-          category: "parai",
-          venue: "Maduravoyal",
-          faculty: "Manimaran",
-          time: "5:00 - 6:00 pm",
-        },
-        {
-          category: "parai",
-          venue: "Maduravoyal",
-          faculty: "Manimaran",
-          time: "6:00 - 7:00 pm",
         },
       ],
     },
