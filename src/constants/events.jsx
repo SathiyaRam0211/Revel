@@ -227,15 +227,15 @@ export const eventDetails = {
       events: [
         {
           category: "graffiti",
-          venue: "Dance Lessons, Mogappair",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Vijay",
-          time: "7:00 - 8:00 pm",
+          time: "8:00 - 9:00 pm",
         },
         {
           category: "locking",
-          venue: "Dance Lessons, Mogappair",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
-          time: "8:00 - 9:00 pm",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
