@@ -12,7 +12,7 @@ import MultiPass from "../../assets/images/multi-pass-logo.svg";
 import { handleRegister } from "../../utils/util-helper";
 import { useNavigate } from "react-router";
 
-const LandingPage = () => {
+const LandingSection = () => {
   const navigate = useNavigate();
   return (
     <PageSection>
@@ -33,4 +33,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default LandingSection;

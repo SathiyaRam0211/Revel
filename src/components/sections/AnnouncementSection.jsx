@@ -6,7 +6,7 @@ import {
 import Explainer from "../../assets/videos/revel-explainer.mp4";
 import { useEffect, useRef } from "react";
 
-const AnnouncementPage = () => {
+const AnnouncementSection = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -63,4 +63,4 @@ const AnnouncementPage = () => {
   );
 };
 
-export default AnnouncementPage;
+export default AnnouncementSection;

@@ -36,6 +36,35 @@ export const PageSection = styled.section`
   }
 `;
 
+export const WholePageSection = styled.section`
+  box-sizing: border-box;
+  height: calc(var(--vh, 1vh) * 100);
+  padding: 32px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (${variables.tabletLarge}) {
+    padding: 12px 24px;
+  }
+`;
+
+export const LoginContainer = styled.div`
+  border-radius: 12px;
+  border: 1px solid ${variables.secondaryBgColor};
+  width: 100%;
+  padding: 48px 24px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  @media (${variables.tabletLarge}) {
+    padding: 48px 24px;
+  }
+`;
+
 export const BrandImage = styled.img`
   cursor: pointer;
   height: 40px;
@@ -141,6 +170,7 @@ export const ActionsWrapper = styled.div`
 `;
 
 export const CustomBtn = styled.div`
+  box-sizing: border-box;
   cursor: pointer;
   padding: 16px 32px;
   background: ${variables.primaryColor};
@@ -148,7 +178,9 @@ export const CustomBtn = styled.div`
   font-size: 24px;
   font-weight: 600;
   border-radius: 12px;
-  width: fit-content;
+  width: ${(props) => (props.$width ? props.$width : "fit-content")};
+  max-width: 360px;
+  text-align: center;
 
   &:hover {
     background: ${variables.gradient};
@@ -166,8 +198,9 @@ export const CustomBtn = styled.div`
 `;
 
 export const CustomLink = styled.div`
+  box-sizing: border-box;
   cursor: pointer;
-  padding: 16px 32px;
+  padding: 0 8px;
   color: ${variables.primaryColor};
   font-size: 24px;
   font-weight: 700;
@@ -181,7 +214,7 @@ export const CustomLink = styled.div`
   }
 
   @media (${variables.mobileLarge}) {
-    padding: 8px 16px;
+    padding: 0px 8px;
     font-size: 16px;
   }
 `;
@@ -289,6 +322,53 @@ export const EventRow = styled.div`
     div {
       gap: 0px;
     }
+  }
+`;
+
+export const CustomInput = styled.input`
+  box-sizing: border-box;
+  margin: 12px 0;
+  padding: 16px 24px;
+  background: ${variables.secondaryBgColor};
+  border: none;
+  border-radius: 12px;
+  font-size: 24px;
+  color: ${variables.textColor};
+  outline: none;
+  width: 100%;
+  max-width: 360px;
+
+  &:focus {
+    border: 1px solid ${variables.textColor};
+  }
+
+  @media (${variables.tabletLarge}) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @media (${variables.mobileLarge}) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+`;
+
+export const ContainerText = styled.span`
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  color: ${variables.textColor};
+  display: flex;
+  align-items: center;
+
+  @media (${variables.tabletLarge}) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @media (${variables.mobileLarge}) {
+    font-size: 16px;
+    line-height: 24px;
   }
 `;
 

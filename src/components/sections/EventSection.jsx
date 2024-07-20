@@ -40,7 +40,7 @@ import {
 
 const processedEventDetails = preprocessEventDetails(eventDetails);
 
-const EventsPage = () => {
+const EventSection = () => {
   const availableMonths = Object.keys(processedEventDetails);
   const currentDay = new Date().getDate();
   const eventRefs = useRef({});
@@ -185,4 +185,4 @@ const EventsPage = () => {
   );
 };
 
-export default EventsPage;
+export default EventSection;

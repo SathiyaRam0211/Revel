@@ -1,14 +1,14 @@
 import Navbar from "../components/common/Navbar";
-import AnnouncementPage from "../components/sections/AnnouncementPage";
-import LandingPage from "../components/sections/LandingPage";
+import AnnouncementSection from "../components/sections/AnnouncementSection";
+import LandingSection from "../components/sections/LandingSection";
 import { HomePage } from "../utils/util-styled-components";
 
 const Home = () => {
   return (
     <HomePage>
       <Navbar />
-      <LandingPage />
-      <AnnouncementPage />
+      <LandingSection />
+      <AnnouncementSection />
     </HomePage>
   );
 };
