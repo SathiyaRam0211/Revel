@@ -347,7 +347,7 @@ export const eventDetails = {
           category: "digitalDesign",
           venue: "Hipz n Toez, T Nagar",
           faculty: "Vijay",
-          time: "2:00 - 3:00 am",
+          time: "2:00 - 3:00 pm",
         },
       ],
     },
