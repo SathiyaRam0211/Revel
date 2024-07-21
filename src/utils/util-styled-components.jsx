@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { variables } from "../constants/constants";
 
 export const HomePage = styled.div`
@@ -12,7 +12,7 @@ export const CustomNav = styled.nav`
   justify-content: space-between;
   position: sticky;
   top: 0px;
-  z-index: 5;
+  z-index: 1;
   box-sizing: border-box;
   height: 120px;
   padding: 32px 64px;
@@ -36,33 +36,64 @@ export const PageSection = styled.section`
   }
 `;
 
-export const WholePageSection = styled.section`
-  box-sizing: border-box;
-  height: calc(var(--vh, 1vh) * 100);
-  padding: 32px 64px;
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+`;
+
+export const CloseWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: ${variables.backgroundColor};
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  border-radius: 0px 24px 0px 0px;
+`;
+
+export const DialogContainer = styled.div`
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 24px;
+  width: 75%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  animation: ${(props) => (props.$isVisible ? scaleIn : scaleOut)} 0.3s ease-out;
 
   @media (${variables.tabletLarge}) {
-    padding: 12px 24px;
   }
 `;
 
-export const LoginContainer = styled.div`
-  border-radius: 12px;
-  border: 1px solid ${variables.secondaryBgColor};
-  width: 100%;
-  padding: 48px 24px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+export const LeftSection = styled.div`
+  box-sizing: border-box;
+  border-radius: 24px 0px 0px 24px;
+  height: 100%;
+  background: ${variables.backgroundColor};
+  padding: 32px;
+  width: 40%;
+  position: relative;
+`;
 
-  @media (${variables.tabletLarge}) {
-    padding: 48px 24px;
-  }
+export const RightSection = styled.div`
+  box-sizing: border-box;
+  border-radius: 0px 24px 24px 0px;
+  height: 100%;
+  background: ${variables.secondaryBgColor};
+  padding: 32px;
+  width: 60%;
 `;
 
 export const BrandImage = styled.img`
@@ -75,6 +106,19 @@ export const BrandImage = styled.img`
 
   @media (${variables.mobileLarge}) {
     height: 24px;
+  }
+`;
+
+export const ContainerImage = styled.img`
+  cursor: pointer;
+  height: 20px;
+
+  @media (${variables.tabletLarge}) {
+    height: 16px;
+  }
+
+  @media (${variables.mobileLarge}) {
+    height: 16px;
   }
 `;
 
@@ -173,8 +217,11 @@ export const CustomBtn = styled.div`
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 32px;
-  background: ${variables.primaryColor};
-  color: ${variables.secondaryTextColor};
+  background: ${(props) =>
+    props.$disabled ? variables.backgroundColor : variables.primaryColor};
+  color: ${(props) =>
+    props.$disabled ? variables.lightTextColor : variables.secondaryTextColor};
+  pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
   font-size: 24px;
   font-weight: 600;
   border-radius: 12px;
@@ -200,7 +247,7 @@ export const CustomBtn = styled.div`
 export const CustomLink = styled.div`
   box-sizing: border-box;
   cursor: pointer;
-  padding: 0 8px;
+  padding: 16px 32px;
   color: ${variables.primaryColor};
   font-size: 24px;
   font-weight: 700;
@@ -325,21 +372,27 @@ export const EventRow = styled.div`
   }
 `;
 
+export const CustomInputContainer = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
 export const CustomInput = styled.input`
   box-sizing: border-box;
-  margin: 12px 0;
-  padding: 16px 24px;
-  background: ${variables.secondaryBgColor};
-  border: none;
+  margin: 8px 0;
+  padding: 16px 24px 16px 64px;
+  background: ${variables.backgroundColor};
+  border: 1px solid ${variables.darkTextColor}50;
   border-radius: 12px;
   font-size: 24px;
   color: ${variables.textColor};
-  outline: none;
+  outline: 1px solid ${variables.darkTextColor}50;
   width: 100%;
-  max-width: 360px;
+  max-width: 380px;
+  letter-spacing: 2px;
 
   &:focus {
-    border: 1px solid ${variables.textColor};
+    border-color: ${variables.textColor};
   }
 
   @media (${variables.tabletLarge}) {
@@ -353,13 +406,14 @@ export const CustomInput = styled.input`
   }
 `;
 
-export const ContainerText = styled.span`
+export const CustomInputPrefix = styled.span`
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: ${variables.lightTextColor};
+  pointer-events: none;
   font-size: 24px;
-  font-weight: 500;
-  line-height: 32px;
-  color: ${variables.textColor};
-  display: flex;
-  align-items: center;
 
   @media (${variables.tabletLarge}) {
     font-size: 20px;
@@ -370,6 +424,71 @@ export const ContainerText = styled.span`
     font-size: 16px;
     line-height: 24px;
   }
+`;
+
+export const ContainerHeaderText = styled.span`
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 24px;
+  color: ${variables.textColor};
+
+  @media (${variables.tabletLarge}) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (${variables.mobileLarge}) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+`;
+
+export const ContainerText = styled.span`
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: ${variables.lightTextColor};
+
+  @media (${variables.tabletLarge}) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media (${variables.mobileLarge}) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+`;
+
+export const ContainerLink = styled.span`
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  width: fit-content;
+  color: transparent;
+  background: ${(props) =>
+    props.$disabled ? variables.darkTextColor : variables.gradient};
+  pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  @media (${variables.mobileLarge}) {
+    padding: 0px 8px;
+    font-size: 16px;
+  }
+`;
+
+export const ContainerIconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const Ellipsis = styled.div`
@@ -377,4 +496,26 @@ export const Ellipsis = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   margin-left: 4px;
+`;
+
+const scaleIn = keyframes`
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
+const scaleOut = keyframes`
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.9);
+    opacity: 0;
+  }
 `;

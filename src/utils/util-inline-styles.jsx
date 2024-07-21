@@ -165,3 +165,20 @@ export const iconButtonStyle = {
   fontSize: "14px",
   color: `${variables.primaryColor}`,
 };
+
+export const otpStyle = {
+  boxSizing: "border-box",
+  width: "64px",
+  height: "56px",
+  marginRight: "12px",
+  borderRadius: "8px",
+  backgroundColor: `${variables.backgroundColor}`,
+  border: `1px solid ${variables.darkTextColor}`,
+  color: `${variables.textColor}`,
+  fontSize: "18px",
+};
+
+export const errorStyle = {
+  color: `${variables.darkTextColor}`,
+  marginTop: "12px",
+};

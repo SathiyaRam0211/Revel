@@ -2,17 +2,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
-import Login from "./pages/Login";
+import { LoginProvider } from "./contexts/LoginContext";
+import LoginDialog from "./components/dialogs/LoginDialog";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact element={<Home />} path="/" />
-        <Route exact element={<Events />} path="/schedule" />
-        <Route exact element={<Login />} path="/login" />
-      </Routes>
-    </BrowserRouter>
+    <LoginProvider>
+      <LoginDialog />
+      <BrowserRouter>
+        <Routes>
+          <Route exact element={<Home />} path="/" />
+          <Route exact element={<Events />} path="/schedule" />
+        </Routes>
+      </BrowserRouter>
+    </LoginProvider>
   );
 }
 

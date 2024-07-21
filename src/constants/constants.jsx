@@ -17,15 +17,18 @@ export const artForms = [
   { value: "fitness", label: "Fitness and Workouts" },
   { value: "danceFitness", label: "Dance Fitness" },
   { value: "freestyleBasics", label: "Freestyle Basics" },
-  { value: "folkChoreography", label: "Folk Choreography" }
+  { value: "folkChoreography", label: "Folk Choreography" },
 ];
 
 export const variables = {
-  backgroundColor: "#222a2f",
+  backgroundColor: "#212a2f",
   secondaryBgColor: "#263238",
+  darkBgColor: "#212b30",
   primaryColor: "#d4f465",
   textColor: "#ffffff",
   secondaryTextColor: "#02028b",
+  lightTextColor: "#d9d9d9",
+  darkTextColor: "#000000",
   highlightColor: "#81e0ff",
   desktopSmall: "max-width: 1080px",
   tabletLarge: "max-width: 991px",
