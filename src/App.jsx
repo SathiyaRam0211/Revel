@@ -4,11 +4,13 @@ import Home from "./pages/Home";
 import Events from "./pages/Events";
 import { LoginProvider } from "./contexts/LoginContext";
 import LoginDialog from "./components/dialogs/LoginDialog";
+import RegisterDialog from "./components/dialogs/RegisterDialog";
 
 function App() {
   return (
     <LoginProvider>
       <LoginDialog />
+      <RegisterDialog />
       <BrowserRouter>
         <Routes>
           <Route exact element={<Home />} path="/" />

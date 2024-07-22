@@ -9,7 +9,7 @@ import { useNavigate } from "react-router";
 import { useLogin } from "../../contexts/LoginContext";
 
 const Navbar = () => {
-  const { openLogin } = useLogin();
+  const { openLogin, openRegister } = useLogin();
   const navigate = useNavigate();
 
   return (
@@ -20,7 +20,12 @@ const Navbar = () => {
         onClick={() => navigate("/")}
       />
       <CustomBtn onClick={handleRegister}>Register now</CustomBtn>
-      <button style={{ display: "none" }} onClick={openLogin}></button>
+      {false && (
+        <>
+          <button onClick={openLogin}>Login</button>
+          <button onClick={openRegister}>Register</button>
+        </>
+      )}
     </CustomNav>
   );
 };

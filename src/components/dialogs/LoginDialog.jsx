@@ -26,7 +26,7 @@ import CustomOtpInput from "../common/CustomOtpInput";
 import CustomTimer from "../common/CustomTimer";
 
 const LoginDialog = () => {
-  const { isLoginOpen, closeLogin } = useLogin();
+  const { isLoginOpen, closeLogin, openRegister } = useLogin();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [otp, setOtp] = useState("");
   const [isBtnDisabled, setBtnDisabled] = useState(true);
@@ -94,6 +94,7 @@ const LoginDialog = () => {
                   value={phoneNumber}
                   onChange={handleChange}
                   autoFocus
+                  $marginRight="64px"
                 />
               </CustomInputContainer>
               <ContainerText>
@@ -136,7 +137,15 @@ const LoginDialog = () => {
             </>
           )}
           <ContainerText>
-            Don't have an account? <ContainerLink>Sign up</ContainerLink>
+            Don't have an account?{" "}
+            <ContainerLink
+              onClick={() => {
+                closeLogin();
+                openRegister();
+              }}
+            >
+              Sign up
+            </ContainerLink>
           </ContainerText>
         </RightSection>
       </DialogContainer>

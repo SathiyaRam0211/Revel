@@ -380,7 +380,8 @@ export const CustomInputContainer = styled.div`
 export const CustomInput = styled.input`
   box-sizing: border-box;
   margin: 8px 0;
-  padding: 16px 24px 16px 64px;
+  padding: 16px 24px 16px
+    ${(props) => (props.$marginRight ? props.$marginRight : "24px")};
   background: ${variables.backgroundColor};
   border: 1px solid ${variables.darkTextColor}50;
   border-radius: 12px;
@@ -388,7 +389,6 @@ export const CustomInput = styled.input`
   color: ${variables.textColor};
   outline: 1px solid ${variables.darkTextColor}50;
   width: 100%;
-  max-width: 380px;
   letter-spacing: 2px;
 
   &:focus {
@@ -446,7 +446,7 @@ export const ContainerHeaderText = styled.span`
 `;
 
 export const ContainerText = styled.span`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: ${variables.lightTextColor};
@@ -465,7 +465,7 @@ export const ContainerText = styled.span`
 export const ContainerLink = styled.span`
   box-sizing: border-box;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   width: fit-content;
   color: transparent;
