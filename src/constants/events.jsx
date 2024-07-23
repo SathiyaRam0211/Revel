@@ -6,13 +6,13 @@ export const eventDetails = {
         {
           category: "danceFitness",
           venue: "Dance Lessons, Mogappair",
-          faculty: "Joshie",
+          faculty: "Joshi",
           time: "7:00 - 8:00 pm",
         },
         {
           category: "house",
           venue: "Dance Lessons, Mogappair",
-          faculty: "Joshie",
+          faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
       ],
@@ -29,7 +29,7 @@ export const eventDetails = {
         {
           category: "house",
           venue: "Hipz n Toez, T Nagar",
-          faculty: "Joshie",
+          faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
       ],
@@ -46,13 +46,13 @@ export const eventDetails = {
         {
           category: "house",
           venue: "Hipz n Toez, T Nagar",
-          faculty: "Joshie",
+          faculty: "Joshi",
           time: "8:00 - 9:00 am",
         },
         {
           category: "house",
           venue: "Hipz n Toez, T Nagar",
-          faculty: "Joshie",
+          faculty: "Joshi",
           time: "9:00 - 10:00 am",
         },
       ],
@@ -290,7 +290,7 @@ export const eventDetails = {
         {
           category: "house",
           venue: "Dance Zone, Santhospuram",
-          faculty: "Joshie",
+          faculty: "Joshi",
           time: "8:30 - 9:30 pm",
         },
       ],
@@ -379,7 +379,7 @@ export const eventDetails = {
         {
           category: "house",
           venue: "Dance Zone, Santhospuram",
-          faculty: "Joshie",
+          faculty: "Joshi",
           time: "8:00 - 9:00 am",
         },
         {
@@ -421,10 +421,9 @@ export const eventDetails = {
         {
           category: "house",
           venue: "Dance Lessons, Mogappair",
-          faculty: "Joshie",
+          faculty: "Joshi",
           time: "8:30 - 9:30 pm",
         },
-        
       ],
     },
   ],

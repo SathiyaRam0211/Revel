@@ -3,10 +3,10 @@ import {
   PageSection,
   HeaderText,
   HighlightText,
-  ActionsWrapper,
   CustomLink,
   CustomBtn,
   BrandImage,
+  FlexWrapper,
 } from "../../utils/util-styled-components";
 import MultiPass from "../../assets/images/multi-pass-logo.svg";
 import { handleRegister } from "../../utils/util-helper";
@@ -22,12 +22,12 @@ const LandingSection = () => {
           Anything & everything artistic under{" "}
           <HighlightText>one subscription</HighlightText>
         </HeaderText>
-        <ActionsWrapper>
+        <FlexWrapper $gap="24px">
           <CustomLink onClick={() => navigate("/schedule")}>
             View Schedule
           </CustomLink>
           <CustomBtn onClick={handleRegister}>Register now</CustomBtn>
-        </ActionsWrapper>
+        </FlexWrapper>
       </HeroContainer>
     </PageSection>
   );

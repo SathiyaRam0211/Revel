@@ -23,6 +23,39 @@ export const CustomNav = styled.nav`
   }
 `;
 
+export const CustomMenu = styled.div`
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: ${VARIABLES.backgroundColor};
+  padding: 140px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const MenuItem = styled.div`
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 12px;
+  margin: 12px;
+  background: ${(props) => (props.$isBtn ? VARIABLES.primaryColor : "none")};
+  color: ${(props) =>
+    props.$isBtn ? VARIABLES.darkTextColor : VARIABLES.primaryColor};
+  pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
+  opacity: ${(props) => (props.$disabled ? "0.5" : "1")};
+  border-radius: 12px;
+
+  &:hover {
+    background: ${(props) =>
+      props.$isBtn ? VARIABLES.gradient : VARIABLES.secondaryBgColor};
+  }
+`;
+
 export const PageSection = styled.section`
   box-sizing: border-box;
   height: calc(var(--vh, 1vh) * 100 - 120px);
@@ -72,7 +105,7 @@ export const BrandImage = styled.img`
   }
 
   @media (${VARIABLES.mobileLarge}) {
-    height: 24px;
+    height: 28px;
   }
 `;
 
@@ -134,6 +167,7 @@ export const HeaderText = styled.h1`
   @media (${VARIABLES.tabletLarge}) {
     font-size: 32px;
     line-height: 40px;
+    margin: 56px 0;
   }
 
   @media (${VARIABLES.mobileLarge}) {
@@ -165,19 +199,6 @@ export const HighlightText = styled.span`
   }
 `;
 
-export const ActionsWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  max-width: ${(props) => (props.$maxWidth ? props.$maxWidth : "none")};
-
-  @media (${VARIABLES.mobileLarge}) {
-    gap: 8px;
-    max-width: ${(props) => (props.$maxWidth ? "292px" : "none")};
-  }
-`;
-
 export const FlexWrapper = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.$direction ? props.$direction : "row")};
@@ -186,16 +207,22 @@ export const FlexWrapper = styled.div`
   justify-content: ${(props) =>
     props.$justifyContent ? props.$justifyContent : "flex-start"};
   gap: ${(props) => (props.$gap ? props.$gap : "0px")};
+  max-width: ${(props) => (props.$maxWidth ? props.$maxWidth : "none")};
+
+  @media (${VARIABLES.mobileLarge}) {
+    gap: ${(props) => (props.$gap ? "12px" : "0px")};
+    max-width: ${(props) => (props.$maxWidth ? "292px" : "none")};
+  }
 `;
 
 export const CustomBtn = styled.div`
   box-sizing: border-box;
   cursor: pointer;
-  padding: 16px 32px;
+  padding: 16px 24px;
   background: ${VARIABLES.primaryColor};
   color: ${VARIABLES.secondaryTextColor};
   pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
-  opacity: ${(props) => (props.$disabled ? "0.5" : "none")};
+  opacity: ${(props) => (props.$disabled ? "0.5" : "1")};
   font-size: 24px;
   font-weight: 600;
   border-radius: 12px;
@@ -208,12 +235,11 @@ export const CustomBtn = styled.div`
   }
 
   @media (${VARIABLES.tabletLarge}) {
-    padding: 8px 16px;
+    padding: 12px 16px;
     font-size: 20px;
   }
 
   @media (${VARIABLES.mobileLarge}) {
-    padding: 8px 16px;
     font-size: 16px;
   }
 `;
@@ -221,7 +247,7 @@ export const CustomBtn = styled.div`
 export const CustomLink = styled.div`
   box-sizing: border-box;
   cursor: pointer;
-  padding: 16px 32px;
+  padding: 16px 24px;
   color: ${VARIABLES.primaryColor};
   font-size: 24px;
   font-weight: 700;
@@ -234,8 +260,12 @@ export const CustomLink = styled.div`
     background-clip: text;
   }
 
+  @media (${VARIABLES.tabletLarge}) {
+    padding: 12px 16px;
+    font-size: 20px;
+  }
+
   @media (${VARIABLES.mobileLarge}) {
-    padding: 0px 8px;
     font-size: 16px;
   }
 `;
@@ -322,7 +352,7 @@ export const EventRow = styled.div`
   padding: 8px 16px;
   border-radius: 12px;
   background: ${VARIABLES.secondaryBgColor};
-  opacity: ${(props) => (props.$isComplete ? 0.5 : 1)};
+  opacity: ${(props) => (props.$isComplete ? "0.5" : "1")};
   pointer-events: ${(props) => (props.$isComplete ? "none" : "auto")};
   color: ${VARIABLES.textColor};
   display: flex;
@@ -377,13 +407,14 @@ export const LeftSection = styled.div`
   position: relative;
 
   @media (${VARIABLES.tabletLarge}) {
-    padding: 24px;
-    height: 20%;
+    padding: 28px;
+    height: 25%;
     width: 100%;
     border-radius: 24px 24px 0px 0px;
   }
 
   @media (${VARIABLES.mobileLarge}) {
+    padding: 24px;
     height: 30%;
     border-radius: 0px;
   }
@@ -398,13 +429,14 @@ export const RightSection = styled.div`
   width: 60%;
 
   @media (${VARIABLES.tabletLarge}) {
-    padding: 24px;
-    height: 80%;
+    padding: 28px;
+    height: 75%;
     width: 100%;
     border-radius: 0px 0px 24px 24px;
   }
 
   @media (${VARIABLES.mobileLarge}) {
+    padding: 24px;
     height: 70%;
     border-radius: 0px;
   }
@@ -424,7 +456,6 @@ export const CustomInput = styled.input`
   border: 1px solid ${VARIABLES.darkTextColor}50;
   border-radius: 12px;
   font-size: 24px;
-  line-height: 32px;
   color: ${VARIABLES.textColor};
   outline: 1px solid ${VARIABLES.darkTextColor}50;
   width: 100%;
@@ -437,12 +468,10 @@ export const CustomInput = styled.input`
 
   @media (${VARIABLES.tabletLarge}) {
     font-size: 20px;
-    line-height: 28px;
   }
 
   @media (${VARIABLES.mobileLarge}) {
     font-size: 16px;
-    line-height: 24px;
     padding: 12px 16px 12px ${(props) => (props.$paddingLeft ? "48px" : "16px")};
   }
 `;
@@ -484,6 +513,7 @@ export const ContainerHeaderText = styled.span`
 `;
 
 export const ContainerText = styled.span`
+  display: block;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -503,7 +533,7 @@ export const ContainerLink = styled.span`
   width: fit-content;
   color: transparent;
   background: ${VARIABLES.gradient};
-  opacity: ${(props) => (props.$disabled ? "0.5" : "none")};
+  opacity: ${(props) => (props.$disabled ? "0.5" : "1")};
   pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
   -webkit-background-clip: text;
   background-clip: text;
@@ -517,7 +547,19 @@ export const ContainerLink = styled.span`
 export const ContainerIconWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+
+  @media (${VARIABLES.tabletLarge}) {
+    top: 60%;
+    width: 220px;
+  }
+`;
+
+export const ContainerLogoWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;

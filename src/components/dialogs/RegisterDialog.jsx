@@ -83,18 +83,24 @@ const RegisterDialog = () => {
   return (
     <ModalOverlay>
       <DialogContainer $isVisible={isRegisterOpen}>
+        <CloseWrapper onClick={closeRegister}>
+          <ContainerImage src={CloseIcon} alt="close-icon" />
+        </CloseWrapper>
         <LeftSection>
-          <ContainerHeaderText>Welcome!</ContainerHeaderText>
+          {/* <ContainerHeaderText>Welcome!</ContainerHeaderText> */}
           <ContainerIconWrapper>
             {/* <BrandImage src={BrandIcon} alt="revel-icon" />
-            <BrandImage src={MultiPassDisabledIcon} alt="revel-icon" /> */}
-            <BrandImage src={BrandLogo} alt="revel-icon" />
+            <BrandImage src={MultiPassDisabledIcon} alt="multipass-icon" /> */}
+            <FlexWrapper $gap="16px" $direction="column" $alignItems="center">
+              <BrandImage src={BrandLogo} alt="revel-icon" />
+              <ContainerText style={{ textAlign: "center" }}>
+                Anything & everything artistic under{" "}
+                <ContainerLink>One Subscription</ContainerLink>
+              </ContainerText>
+            </FlexWrapper>
           </ContainerIconWrapper>
         </LeftSection>
         <RightSection>
-          <CloseWrapper onClick={closeRegister}>
-            <ContainerImage src={CloseIcon} alt="close-icon" />
-          </CloseWrapper>
           <ContainerHeaderText>Register</ContainerHeaderText>
           {!isOtpGenerated ? (
             <>

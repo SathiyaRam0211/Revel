@@ -15,10 +15,12 @@ import {
   RightSection,
   CustomInputContainer,
   CustomInputPrefix,
+  FlexWrapper,
 } from "../../utils/util-styled-components";
 import { useAuthentication } from "../../contexts/AuthenticationContext";
-import BrandIcon from "../../assets/images/revel-icon.svg";
-import MultiPassIcon from "../../assets/images/multi-pass-icon.svg";
+// import BrandIcon from "../../assets/images/revel-icon.svg";
+// import MultiPassIcon from "../../assets/images/multi-pass-icon.svg";
+import BrandLogo from "../../assets/images/revel-logo.svg";
 import CloseIcon from "../../assets/images/close-icon.svg";
 import { isMobileDevice, validatePhoneNumber } from "../../utils/util-helper";
 import OtpSection from "../sections/OtpSection";
@@ -68,17 +70,24 @@ const LoginDialog = () => {
   return (
     <ModalOverlay>
       <DialogContainer $isVisible={isLoginOpen}>
+        <CloseWrapper onClick={closeLogin}>
+          <ContainerImage src={CloseIcon} alt="close-icon" />
+        </CloseWrapper>
         <LeftSection>
-          <ContainerHeaderText>Welcome back!</ContainerHeaderText>
+          {/* <ContainerHeaderText>Welcome back!</ContainerHeaderText> */}
           <ContainerIconWrapper>
-            <BrandImage src={BrandIcon} alt="revel-icon" />
-            <BrandImage src={MultiPassIcon} alt="revel-icon" />
+            {/* <BrandImage src={BrandIcon} alt="revel-icon" />
+            <BrandImage src={MultiPassDisabledIcon} alt="multipass-icon" /> */}
+            <FlexWrapper $gap="12px" $direction="column" $alignItems="center">
+              <BrandImage src={BrandLogo} alt="revel-icon" />
+              <ContainerText style={{ textAlign: "center" }}>
+                Anything & everything artistic under{" "}
+                <ContainerLink>One Subscription</ContainerLink>
+              </ContainerText>
+            </FlexWrapper>
           </ContainerIconWrapper>
         </LeftSection>
         <RightSection>
-          <CloseWrapper onClick={closeLogin}>
-            <ContainerImage src={CloseIcon} alt="close-icon" />
-          </CloseWrapper>
           <ContainerHeaderText>Log in</ContainerHeaderText>
           {!isOtpGenerated ? (
             <>

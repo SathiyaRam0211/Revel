@@ -1,9 +1,9 @@
 import { useState } from "react";
 import {
-  ActionsWrapper,
   ContainerLink,
   ContainerText,
   CustomBtn,
+  FlexWrapper,
 } from "../../utils/util-styled-components";
 import CustomOtpInput from "../common/CustomOtpInput";
 import CustomTimer from "../common/CustomTimer";
@@ -27,7 +27,7 @@ const OtpSection = ({
         setOtp={setOtp}
         setContinueDisabled={setContinueDisabled}
       />
-      <ActionsWrapper $maxWidth="396px">
+      <FlexWrapper $maxWidth="396px">
         <ContainerLink $disabled={!isResendEnabled} onClick={handleResend}>
           Resend OTP
         </ContainerLink>
@@ -36,7 +36,7 @@ const OtpSection = ({
           startCount={startCount}
           onExpire={handleTimerExpire}
         />
-      </ActionsWrapper>
+      </FlexWrapper>
       <div style={{ margin: "24px 0" }}>
         <CustomBtn
           $disabled={isContinueDisabled}

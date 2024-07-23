@@ -45,7 +45,7 @@ const EventSection = () => {
   const currentDay = new Date().getDate();
   const eventRefs = useRef({});
   const currentMonth = getCurrentMonthName();
-  const [windowWidth, setWindowWidth] = useState(window.outerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -86,7 +86,7 @@ const EventSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.outerWidth);
+      setWindowWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
 
