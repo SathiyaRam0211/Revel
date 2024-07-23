@@ -1,7 +1,7 @@
-import { url } from "../constants/constants";
+import { URL } from "../constants/constants";
 
 export const handleRegister = () => {
-  window.open(url.register, "_blank");
+  window.open(URL.register, "_blank");
 };
 
 export const getOrdinalSuffix = (day) => {
@@ -75,4 +75,8 @@ export const validatePhoneNumber = (number) => {
 export const validateEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+};
+
+export const isMobileDevice = () => {
+  return /Mobi|Android/i.test(navigator.userAgent);
 };

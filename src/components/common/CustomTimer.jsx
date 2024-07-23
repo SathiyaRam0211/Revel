@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ContainerText } from "../../utils/util-styled-components";
+import { OTP } from "../../constants/constants";
 
-const CustomTimer = ({ startCount = 60, onExpire = () => {} }) => {
+const CustomTimer = ({ startCount = OTP.duration, onExpire = () => {} }) => {
   const [displayCount, setDisplayCount] = useState(startCount);
   const countRef = useRef(startCount);
 

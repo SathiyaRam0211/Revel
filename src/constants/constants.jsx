@@ -1,8 +1,13 @@
-export const url = {
+export const URL = {
   register: "https://form.jotform.com/241773892472467",
 };
 
-export const artForms = [
+export const OTP = {
+  length: 6,
+  duration: 60,
+};
+
+export const ART_FORMS = [
   { value: "breaking", label: "Breaking" },
   { value: "choreography", label: "Choreography" },
   { value: "hipHop", label: "Hip Hop" },
@@ -20,7 +25,7 @@ export const artForms = [
   { value: "folkChoreography", label: "Folk Choreography" },
 ];
 
-export const variables = {
+export const VARIABLES = {
   backgroundColor: "#212a2f",
   secondaryBgColor: "#263238",
   darkBgColor: "#212b30",

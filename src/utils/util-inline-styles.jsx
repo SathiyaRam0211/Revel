@@ -1,4 +1,4 @@
-import { variables } from "../constants/constants";
+import { VARIABLES } from "../constants/constants";
 
 const ellipsis = {
   whiteSpace: "nowrap",
@@ -9,7 +9,7 @@ const ellipsis = {
 export const multiSelectStyle = {
   control: (baseStyles, state) => ({
     ...baseStyles,
-    backgroundColor: `${variables.backgroundColor}`,
+    backgroundColor: `${VARIABLES.backgroundColor}`,
     cursor: "pointer",
     minWidth: "180px",
     maxWidth: "400px",
@@ -20,41 +20,41 @@ export const multiSelectStyle = {
     textOverflow: "ellipsis",
     outline: "none",
     borderColor: state.isFocused
-      ? `${variables.primaryColor}`
+      ? `${VARIABLES.primaryColor}`
       : baseStyles.borderColor,
     boxShadow: state.isFocused
-      ? `0 0 0 1px ${variables.primaryColor}`
+      ? `0 0 0 1px ${VARIABLES.primaryColor}`
       : baseStyles.boxShadow,
     "&:hover": {
-      borderColor: `${variables.primaryColor}`,
+      borderColor: `${VARIABLES.primaryColor}`,
     },
   }),
   menuList: (baseStyles) => ({
     ...baseStyles,
-    backgroundColor: `${variables.secondaryBgColor}`,
-    color: `${variables.textColor}`,
+    backgroundColor: `${VARIABLES.secondaryBgColor}`,
+    color: `${VARIABLES.textColor}`,
     overflow: "auto",
     msOverflowStyle: "none",
     scrollbarWidth: "thin",
-    scrollbarColor: `${variables.primaryColor} ${variables.secondaryBgColor}`,
+    scrollbarColor: `${VARIABLES.primaryColor} ${VARIABLES.secondaryBgColor}`,
     "&::-webkit-scrollbar": {
       width: "12px",
     },
     "&::-webkit-scrollbar-track": {
-      background: variables.secondaryBgColor,
+      background: VARIABLES.secondaryBgColor,
     },
     "&::-webkit-scrollbar-thumb": {
-      backgroundColor: variables.primaryColor,
+      backgroundColor: VARIABLES.primaryColor,
       borderRadius: "10px",
-      border: `3px solid ${variables.secondaryBgColor}`,
+      border: `3px solid ${VARIABLES.secondaryBgColor}`,
     },
   }),
   option: (baseStyles, state) => ({
     ...baseStyles,
     backgroundColor: state.isFocused
-      ? variables.primaryColor
-      : variables.secondaryBgColor,
-    color: state.isFocused ? variables.secondaryTextColor : variables.textColor,
+      ? VARIABLES.primaryColor
+      : VARIABLES.secondaryBgColor,
+    color: state.isFocused ? VARIABLES.secondaryTextColor : VARIABLES.textColor,
     cursor: "pointer",
     fontFamily: "Haskoy",
     fontSize: "14px",
@@ -70,7 +70,7 @@ export const multiSelectStyle = {
 export const selectStyle = {
   control: (baseStyles, state) => ({
     ...baseStyles,
-    backgroundColor: `${variables.backgroundColor}`,
+    backgroundColor: `${VARIABLES.backgroundColor}`,
     cursor: "pointer",
     width: "145px",
     ...ellipsis,
@@ -78,52 +78,52 @@ export const selectStyle = {
     fontSize: "12px",
     outline: "none",
     borderColor: state.isFocused
-      ? `${variables.primaryColor}`
+      ? `${VARIABLES.primaryColor}`
       : baseStyles.borderColor,
     boxShadow: state.isFocused
-      ? `0 0 0 1px ${variables.primaryColor}`
+      ? `0 0 0 1px ${VARIABLES.primaryColor}`
       : baseStyles.boxShadow,
     "&:hover": {
-      borderColor: `${variables.primaryColor}`,
+      borderColor: `${VARIABLES.primaryColor}`,
     },
   }),
   menuList: (baseStyles) => ({
     ...baseStyles,
-    backgroundColor: `${variables.secondaryBgColor}`,
-    color: `${variables.textColor}`,
+    backgroundColor: `${VARIABLES.secondaryBgColor}`,
+    color: `${VARIABLES.textColor}`,
     overflow: "auto",
     msOverflowStyle: "none",
     scrollbarWidth: "thin",
-    scrollbarColor: `${variables.primaryColor} ${variables.secondaryBgColor}`,
+    scrollbarColor: `${VARIABLES.primaryColor} ${VARIABLES.secondaryBgColor}`,
     "&::-webkit-scrollbar": {
       width: "12px",
     },
     "&::-webkit-scrollbar-track": {
-      background: variables.secondaryBgColor,
+      background: VARIABLES.secondaryBgColor,
     },
     "&::-webkit-scrollbar-thumb": {
-      backgroundColor: variables.primaryColor,
+      backgroundColor: VARIABLES.primaryColor,
       borderRadius: "10px",
-      border: `3px solid ${variables.secondaryBgColor}`,
+      border: `3px solid ${VARIABLES.secondaryBgColor}`,
     },
   }),
   option: (baseStyles, state) => ({
     ...baseStyles,
     backgroundColor: state.isFocused
-      ? variables.primaryColor
-      : variables.secondaryBgColor,
-    color: state.isFocused ? variables.secondaryTextColor : variables.textColor,
+      ? VARIABLES.primaryColor
+      : VARIABLES.secondaryBgColor,
+    color: state.isFocused ? VARIABLES.secondaryTextColor : VARIABLES.textColor,
     cursor: "pointer",
     fontFamily: "Haskoy",
     fontSize: "12px",
   }),
   singleValue: (baseStyles) => ({
     ...baseStyles,
-    color: `${variables.primaryColor}`,
+    color: `${VARIABLES.primaryColor}`,
   }),
   input: (baseStyles) => ({
     ...baseStyles,
-    color: `${variables.textColor}`,
+    color: `${VARIABLES.textColor}`,
   }),
 };
 
@@ -157,28 +157,35 @@ export const venueStyle = {
 export const idStyle = {
   width: "fit-content",
   marginRight: "6px",
-  color: `${variables.primaryColor}`,
+  color: `${VARIABLES.primaryColor}`,
 };
 
 export const iconButtonStyle = {
   cursor: "pointer",
   fontSize: "14px",
-  color: `${variables.primaryColor}`,
+  color: `${VARIABLES.primaryColor}`,
 };
 
-export const otpStyle = {
+export const baseOtpStyle = {
   boxSizing: "border-box",
-  width: "64px",
+  width: "56px",
   height: "56px",
   marginRight: "12px",
   borderRadius: "8px",
-  backgroundColor: `${variables.backgroundColor}`,
-  border: `1px solid ${variables.darkTextColor}`,
-  color: `${variables.textColor}`,
-  fontSize: "18px",
+  backgroundColor: VARIABLES.backgroundColor,
+  border: `1px solid ${VARIABLES.darkTextColor}`,
+  color: VARIABLES.textColor,
+  fontSize: "20px",
+};
+
+export const mobileOtpStyle = {
+  marginRight: "8px",
+  width: "42px",
+  height: "42px",
+  fontSize: "14px",
 };
 
 export const errorStyle = {
-  color: `${variables.darkTextColor}`,
+  color: `${VARIABLES.darkTextColor}`,
   marginTop: "12px",
 };

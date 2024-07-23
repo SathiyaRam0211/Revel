@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ContainerText,
   CustomBtn,
@@ -15,32 +15,37 @@ import {
   RightSection,
   CustomInputContainer,
   CustomInputPrefix,
-  ActionsWrapper,
+  FlexWrapper,
 } from "../../utils/util-styled-components";
-import { useLogin } from "../../contexts/LoginContext";
-import BrandIcon from "../../assets/images/revel-icon.svg";
-import MultiPassDisabledIcon from "../../assets/images/multi-pass-disabled-icon.svg";
+import { useAuthentication } from "../../contexts/AuthenticationContext";
+// import BrandIcon from "../../assets/images/revel-icon.svg";
+// import MultiPassDisabledIcon from "../../assets/images/multi-pass-disabled-icon.svg";
+import BrandLogo from "../../assets/images/revel-logo.svg";
 import CloseIcon from "../../assets/images/close-icon.svg";
-import { validateEmail, validatePhoneNumber } from "../../utils/util-helper";
-import CustomOtpInput from "../common/CustomOtpInput";
-import CustomTimer from "../common/CustomTimer";
+import {
+  isMobileDevice,
+  validateEmail,
+  validatePhoneNumber,
+} from "../../utils/util-helper";
+import OtpSection from "../sections/OtpSection";
+import { OTP } from "../../constants/constants";
+import CustomCheckbox from "../common/CustomCheckbox";
 
 const RegisterDialog = () => {
-  const { isRegisterOpen, closeRegister, openLogin } = useLogin();
+  const { isRegisterOpen, closeRegister, openLogin } = useAuthentication();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [otp, setOtp] = useState("");
+  const [isTermsAccepted, setTermsAccepted] = useState(false);
   const [isBtnDisabled, setBtnDisabled] = useState(true);
   const [isOtpGenerated, setOtpGenerated] = useState(false);
   const [isResendEnabled, setResend] = useState(false);
-  const [isLoginDisabled, setLoginDisabled] = useState(true);
-  const [startCount, setStartCount] = useState(6);
+  const [startCount, setStartCount] = useState(OTP.duration);
 
   const handleSubmit = () => {
     setOtpGenerated(true);
     setResend(false);
-    setStartCount(6);
+    setStartCount(OTP.duration);
   };
 
   const handleRegister = () => {
@@ -49,7 +54,6 @@ const RegisterDialog = () => {
     setName("");
     setPhoneNumber("");
     setEmail("");
-    setOtp("");
   };
 
   const handleTimerExpire = () => {
@@ -81,9 +85,10 @@ const RegisterDialog = () => {
       <DialogContainer $isVisible={isRegisterOpen}>
         <LeftSection>
           <ContainerHeaderText>Welcome!</ContainerHeaderText>
-          <ContainerIconWrapper onClick={() => navigate("/")}>
-            <BrandImage src={BrandIcon} alt="revel-icon" />
-            <BrandImage src={MultiPassDisabledIcon} alt="revel-icon" />
+          <ContainerIconWrapper>
+            {/* <BrandImage src={BrandIcon} alt="revel-icon" />
+            <BrandImage src={MultiPassDisabledIcon} alt="revel-icon" /> */}
+            <BrandImage src={BrandLogo} alt="revel-icon" />
           </ContainerIconWrapper>
         </LeftSection>
         <RightSection>
@@ -101,14 +106,14 @@ const RegisterDialog = () => {
                   onChange={(event) => {
                     setName(event.target.value);
                   }}
-                  autoFocus
+                  autoFocus={!isMobileDevice()}
                 />
               </CustomInputContainer>
               <div style={{ margin: "12px 0" }}>
                 <CustomInputContainer>
                   <CustomInputPrefix>+91</CustomInputPrefix>
                   <CustomInput
-                    $marginRight="64px"
+                    $paddingLeft="64px"
                     placeholder="Phone"
                     type="number"
                     value={phoneNumber}
@@ -118,10 +123,10 @@ const RegisterDialog = () => {
                   />
                 </CustomInputContainer>
                 <ContainerText>
-                  We will be using this for sending class updates & reminders
+                  For sending class updates & reminders
                 </ContainerText>
               </div>
-              <div style={{ margin: "12px 0" }}>
+              <div style={{ margin: "12px 0 24px" }}>
                 <CustomInputContainer>
                   <CustomInput
                     placeholder="Email"
@@ -136,6 +141,16 @@ const RegisterDialog = () => {
                   For sending updates via email notifications
                 </ContainerText>
               </div>
+              <FlexWrapper $alignItems="center" $gap="12px">
+                <CustomCheckbox
+                  isChecked={isTermsAccepted}
+                  setChecked={setTermsAccepted}
+                />
+                <ContainerText>
+                  I have read and accept the{" "}
+                  <ContainerLink>Terms and Conditions</ContainerLink>
+                </ContainerText>
+              </FlexWrapper>
               <div style={{ margin: "24px 0" }}>
                 <CustomBtn $disabled={isBtnDisabled} onClick={handleSubmit}>
                   Create Account
@@ -143,34 +158,14 @@ const RegisterDialog = () => {
               </div>
             </>
           ) : (
-            <>
-              <ContainerText>
-                Verify with OTP sent to +91 {phoneNumber}
-              </ContainerText>
-              <CustomOtpInput
-                otp={otp}
-                setOtp={setOtp}
-                setLoginDisabled={setLoginDisabled}
-              />
-              <ActionsWrapper>
-                <ContainerLink
-                  $disabled={!isResendEnabled}
-                  onClick={handleResend}
-                >
-                  Resend OTP
-                </ContainerLink>
-                <CustomTimer
-                  key={startCount}
-                  startCount={startCount}
-                  onExpire={handleTimerExpire}
-                />
-              </ActionsWrapper>
-              <div style={{ margin: "24px 0" }}>
-                <CustomBtn $disabled={isLoginDisabled} onClick={handleRegister}>
-                  Continue
-                </CustomBtn>
-              </div>
-            </>
+            <OtpSection
+              phoneNumber={phoneNumber}
+              isResendEnabled={isResendEnabled}
+              handleResend={handleResend}
+              startCount={startCount}
+              handleTimerExpire={handleTimerExpire}
+              handleContinue={handleRegister}
+            />
           )}
           <ContainerText>
             Already have an account?{" "}

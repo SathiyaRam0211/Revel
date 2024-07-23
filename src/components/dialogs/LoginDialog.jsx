@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   ContainerText,
   CustomBtn,
@@ -15,25 +15,22 @@ import {
   RightSection,
   CustomInputContainer,
   CustomInputPrefix,
-  ActionsWrapper,
 } from "../../utils/util-styled-components";
-import { useLogin } from "../../contexts/LoginContext";
+import { useAuthentication } from "../../contexts/AuthenticationContext";
 import BrandIcon from "../../assets/images/revel-icon.svg";
 import MultiPassIcon from "../../assets/images/multi-pass-icon.svg";
 import CloseIcon from "../../assets/images/close-icon.svg";
-import { validatePhoneNumber } from "../../utils/util-helper";
-import CustomOtpInput from "../common/CustomOtpInput";
-import CustomTimer from "../common/CustomTimer";
+import { isMobileDevice, validatePhoneNumber } from "../../utils/util-helper";
+import OtpSection from "../sections/OtpSection";
+import { OTP } from "../../constants/constants";
 
 const LoginDialog = () => {
-  const { isLoginOpen, closeLogin, openRegister } = useLogin();
+  const { isLoginOpen, closeLogin, openRegister } = useAuthentication();
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [otp, setOtp] = useState("");
   const [isBtnDisabled, setBtnDisabled] = useState(true);
   const [isOtpGenerated, setOtpGenerated] = useState(false);
   const [isResendEnabled, setResend] = useState(false);
-  const [isLoginDisabled, setLoginDisabled] = useState(true);
-  const [startCount, setStartCount] = useState(6);
+  const [startCount, setStartCount] = useState(OTP.duration);
 
   const handleChange = (event) => {
     const entered = event.target.value;
@@ -48,14 +45,13 @@ const LoginDialog = () => {
   const handleSubmit = () => {
     setOtpGenerated(true);
     setResend(false);
-    setStartCount(6);
+    setStartCount(OTP.duration);
   };
 
   const handleLogin = () => {
     closeLogin();
     setOtpGenerated(false);
     setPhoneNumber("");
-    setOtp("");
   };
 
   const handleTimerExpire = () => {
@@ -74,7 +70,7 @@ const LoginDialog = () => {
       <DialogContainer $isVisible={isLoginOpen}>
         <LeftSection>
           <ContainerHeaderText>Welcome back!</ContainerHeaderText>
-          <ContainerIconWrapper onClick={() => navigate("/")}>
+          <ContainerIconWrapper>
             <BrandImage src={BrandIcon} alt="revel-icon" />
             <BrandImage src={MultiPassIcon} alt="revel-icon" />
           </ContainerIconWrapper>
@@ -93,8 +89,8 @@ const LoginDialog = () => {
                   type="number"
                   value={phoneNumber}
                   onChange={handleChange}
-                  autoFocus
-                  $marginRight="64px"
+                  autoFocus={!isMobileDevice()}
+                  $paddingLeft="64px"
                 />
               </CustomInputContainer>
               <ContainerText>
@@ -107,34 +103,14 @@ const LoginDialog = () => {
               </div>
             </>
           ) : (
-            <>
-              <ContainerText>
-                Verify with OTP sent to +91 {phoneNumber}
-              </ContainerText>
-              <CustomOtpInput
-                otp={otp}
-                setOtp={setOtp}
-                setLoginDisabled={setLoginDisabled}
-              />
-              <ActionsWrapper>
-                <ContainerLink
-                  $disabled={!isResendEnabled}
-                  onClick={handleResend}
-                >
-                  Resend OTP
-                </ContainerLink>
-                <CustomTimer
-                  key={startCount}
-                  startCount={startCount}
-                  onExpire={handleTimerExpire}
-                />
-              </ActionsWrapper>
-              <div style={{ margin: "24px 0" }}>
-                <CustomBtn $disabled={isLoginDisabled} onClick={handleLogin}>
-                  Continue
-                </CustomBtn>
-              </div>
-            </>
+            <OtpSection
+              phoneNumber={phoneNumber}
+              isResendEnabled={isResendEnabled}
+              handleResend={handleResend}
+              startCount={startCount}
+              handleTimerExpire={handleTimerExpire}
+              handleContinue={handleLogin}
+            />
           )}
           <ContainerText>
             Don't have an account?{" "}

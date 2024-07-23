@@ -6,11 +6,12 @@ import {
 import BrandLogo from "../../assets/images/revel-logo.svg";
 import { handleRegister } from "../../utils/util-helper";
 import { useNavigate } from "react-router";
-import { useLogin } from "../../contexts/LoginContext";
+import { useAuthentication } from "../../contexts/AuthenticationContext";
 
 const Navbar = () => {
-  const { openLogin, openRegister } = useLogin();
+  const { openLogin, openRegister } = useAuthentication();
   const navigate = useNavigate();
+  const isHidden = true;
 
   return (
     <CustomNav>
@@ -20,7 +21,7 @@ const Navbar = () => {
         onClick={() => navigate("/")}
       />
       <CustomBtn onClick={handleRegister}>Register now</CustomBtn>
-      {false && (
+      {!isHidden && (
         <>
           <button onClick={openLogin}>Login</button>
           <button onClick={openRegister}>Register</button>

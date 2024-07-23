@@ -2,13 +2,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
-import { LoginProvider } from "./contexts/LoginContext";
+import { AuthenticationProvider } from "./contexts/AuthenticationContext";
 import LoginDialog from "./components/dialogs/LoginDialog";
 import RegisterDialog from "./components/dialogs/RegisterDialog";
 
 function App() {
   return (
-    <LoginProvider>
+    <AuthenticationProvider>
       <LoginDialog />
       <RegisterDialog />
       <BrowserRouter>
@@ -17,7 +17,7 @@ function App() {
           <Route exact element={<Events />} path="/schedule" />
         </Routes>
       </BrowserRouter>
-    </LoginProvider>
+    </AuthenticationProvider>
   );
 }
 

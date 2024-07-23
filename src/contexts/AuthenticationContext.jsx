@@ -1,10 +1,10 @@
 import { createContext, useState, useContext } from "react";
 
-const LoginContext = createContext();
+const AuthenticationContext = createContext();
 
-export const useLogin = () => useContext(LoginContext);
+export const useAuthentication = () => useContext(AuthenticationContext);
 
-export const LoginProvider = ({ children }) => {
+export const AuthenticationProvider = ({ children }) => {
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [isRegisterOpen, setRegisterOpen] = useState(false);
 
@@ -15,7 +15,7 @@ export const LoginProvider = ({ children }) => {
   const closeRegister = () => setRegisterOpen(false);
 
   return (
-    <LoginContext.Provider
+    <AuthenticationContext.Provider
       value={{
         isLoginOpen,
         openLogin,
@@ -26,6 +26,6 @@ export const LoginProvider = ({ children }) => {
       }}
     >
       {children}
-    </LoginContext.Provider>
+    </AuthenticationContext.Provider>
   );
 };

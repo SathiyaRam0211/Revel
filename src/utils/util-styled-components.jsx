@@ -1,12 +1,12 @@
 import styled, { keyframes } from "styled-components";
-import { variables } from "../constants/constants";
+import { VARIABLES } from "../constants/constants";
 
 export const HomePage = styled.div`
-  background: ${variables.backgroundColor};
+  background: ${VARIABLES.backgroundColor};
 `;
 
 export const CustomNav = styled.nav`
-  background: ${variables.secondaryBgColor};
+  background: ${VARIABLES.secondaryBgColor};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +17,7 @@ export const CustomNav = styled.nav`
   height: 120px;
   padding: 32px 64px;
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     height: 100px !important;
     padding: 12px 24px;
   }
@@ -30,7 +30,7 @@ export const PageSection = styled.section`
     ${(props) => (props.$paddingX ? props.$paddingX : "64px")};
   position: relative;
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     height: calc(var(--vh, 1vh) * 100 - 100px);
     padding: 12px 24px;
   }
@@ -42,7 +42,7 @@ export const ModalOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +54,7 @@ export const CloseWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background-color: ${variables.backgroundColor};
+  background-color: ${VARIABLES.backgroundColor};
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -63,48 +63,15 @@ export const CloseWrapper = styled.div`
   border-radius: 0px 24px 0px 0px;
 `;
 
-export const DialogContainer = styled.div`
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 24px;
-  width: 75%;
-  height: 75%;
-  display: flex;
-  align-items: center;
-  animation: ${(props) => (props.$isVisible ? scaleIn : scaleOut)} 0.3s ease-out;
-
-  @media (${variables.tabletLarge}) {
-  }
-`;
-
-export const LeftSection = styled.div`
-  box-sizing: border-box;
-  border-radius: 24px 0px 0px 24px;
-  height: 100%;
-  background: ${variables.backgroundColor};
-  padding: 32px;
-  width: 40%;
-  position: relative;
-`;
-
-export const RightSection = styled.div`
-  box-sizing: border-box;
-  border-radius: 0px 24px 24px 0px;
-  height: 100%;
-  background: ${variables.secondaryBgColor};
-  padding: 32px;
-  width: 60%;
-`;
-
 export const BrandImage = styled.img`
   cursor: pointer;
   height: 40px;
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     height: 32px;
   }
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     height: 24px;
   }
 `;
@@ -113,11 +80,7 @@ export const ContainerImage = styled.img`
   cursor: pointer;
   height: 20px;
 
-  @media (${variables.tabletLarge}) {
-    height: 16px;
-  }
-
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     height: 16px;
   }
 `;
@@ -129,74 +92,74 @@ export const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (${variables.desktopSmall}) {
+  @media (${VARIABLES.desktopSmall}) {
     padding: 64px 120px;
   }
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     padding: 64px 16px;
   }
 `;
 
 export const HeroText = styled.div`
-  font-family: ${variables.headerFont};
+  font-family: ${VARIABLES.headerFont};
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-  color: ${variables.textColor};
+  color: ${VARIABLES.textColor};
   display: flex;
   align-items: center;
   gap: 8px;
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     font-size: 16px;
     line-height: 24px;
   }
 `;
 
 export const HeaderText = styled.h1`
-  font-family: ${variables.headerFont};
+  font-family: ${VARIABLES.headerFont};
   font-weight: 600;
   font-size: 48px;
   line-height: 56px;
-  color: ${variables.textColor};
+  color: ${VARIABLES.textColor};
   text-align: center;
   margin: 40px 0;
 
-  @media (${variables.desktopSmall}) {
+  @media (${VARIABLES.desktopSmall}) {
     font-size: 42px;
     line-height: 50px;
   }
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     font-size: 32px;
     line-height: 40px;
   }
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     font-size: 28px;
     line-height: 36px;
   }
 `;
 
 export const HighlightText = styled.span`
-  font-family: ${variables.headerFont};
+  font-family: ${VARIABLES.headerFont};
   font-weight: 600;
   font-size: 48px;
   line-height: 56px;
-  color: ${variables.highlightColor};
+  color: ${VARIABLES.highlightColor};
 
-  @media (${variables.desktopSmall}) {
+  @media (${VARIABLES.desktopSmall}) {
     font-size: 42px;
     line-height: 50px;
   }
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     font-size: 36px;
     line-height: 42px;
   }
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     font-size: 28px;
     line-height: 36px;
   }
@@ -207,21 +170,32 @@ export const ActionsWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  max-width: ${(props) => (props.$maxWidth ? props.$maxWidth : "none")};
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     gap: 8px;
+    max-width: ${(props) => (props.$maxWidth ? "292px" : "none")};
   }
+`;
+
+export const FlexWrapper = styled.div`
+  display: flex;
+  flex-direction: ${(props) => (props.$direction ? props.$direction : "row")};
+  align-items: ${(props) =>
+    props.$alignItems ? props.$alignItems : "flex-start"};
+  justify-content: ${(props) =>
+    props.$justifyContent ? props.$justifyContent : "flex-start"};
+  gap: ${(props) => (props.$gap ? props.$gap : "0px")};
 `;
 
 export const CustomBtn = styled.div`
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 32px;
-  background: ${(props) =>
-    props.$disabled ? variables.backgroundColor : variables.primaryColor};
-  color: ${(props) =>
-    props.$disabled ? variables.lightTextColor : variables.secondaryTextColor};
+  background: ${VARIABLES.primaryColor};
+  color: ${VARIABLES.secondaryTextColor};
   pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
+  opacity: ${(props) => (props.$disabled ? "0.5" : "none")};
   font-size: 24px;
   font-weight: 600;
   border-radius: 12px;
@@ -230,15 +204,15 @@ export const CustomBtn = styled.div`
   text-align: center;
 
   &:hover {
-    background: ${variables.gradient};
+    background: ${VARIABLES.gradient};
   }
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     padding: 8px 16px;
     font-size: 20px;
   }
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     padding: 8px 16px;
     font-size: 16px;
   }
@@ -248,19 +222,19 @@ export const CustomLink = styled.div`
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 32px;
-  color: ${variables.primaryColor};
+  color: ${VARIABLES.primaryColor};
   font-size: 24px;
   font-weight: 700;
   width: fit-content;
 
   &:hover {
     color: transparent;
-    background: ${variables.gradient};
+    background: ${VARIABLES.gradient};
     -webkit-background-clip: text;
     background-clip: text;
   }
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     padding: 0px 8px;
     font-size: 16px;
   }
@@ -282,12 +256,12 @@ export const AnnouncementVideo = styled.video`
   width: 300px;
   height: 587px;
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     width: 240px;
     height: 510px;
   }
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     width: 100vw;
     height: calc(100vh - 100px);
   }
@@ -322,14 +296,14 @@ export const EventsWrapper = styled.div`
     width: 12px;
   }
   ::-webkit-scrollbar-track {
-    background: ${variables.secondaryBgColor};
+    background: ${VARIABLES.secondaryBgColor};
   }
   ::-webkit-scrollbar-thumb {
-    background-color: ${variables.primaryColor};
+    background-color: ${VARIABLES.primaryColor};
     border-radius: 10px;
-    border: 3px solid ${variables.secondaryBgColor};
+    border: 3px solid ${VARIABLES.secondaryBgColor};
   }
-  scrollbar-color: ${variables.primaryColor} ${variables.secondaryBgColor};
+  scrollbar-color: ${VARIABLES.primaryColor} ${VARIABLES.secondaryBgColor};
   scrollbar-width: thin;
 `;
 
@@ -337,7 +311,7 @@ export const DayHeader = styled.div`
   span {
     font-size: 16px;
     color: transparent;
-    background: ${variables.gradient};
+    background: ${VARIABLES.gradient};
     -webkit-background-clip: text;
     background-clip: text;
   }
@@ -347,10 +321,10 @@ export const EventRow = styled.div`
   margin: 8px 8px 8px 0;
   padding: 8px 16px;
   border-radius: 12px;
-  background: ${variables.secondaryBgColor};
+  background: ${VARIABLES.secondaryBgColor};
   opacity: ${(props) => (props.$isComplete ? 0.5 : 1)};
   pointer-events: ${(props) => (props.$isComplete ? "none" : "auto")};
-  color: ${variables.textColor};
+  color: ${VARIABLES.textColor};
   display: flex;
   align-items: center;
   gap: 32px;
@@ -361,7 +335,7 @@ export const EventRow = styled.div`
     gap: 8px;
     font-size: 14px;
   }
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
@@ -369,6 +343,70 @@ export const EventRow = styled.div`
     div {
       gap: 0px;
     }
+  }
+`;
+
+export const DialogContainer = styled.div`
+  box-sizing: border-box;
+  position: relative;
+  width: 75%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  animation: ${(props) => (props.$isVisible ? scaleIn : scaleOut)} 0.3s ease-out;
+
+  @media (${VARIABLES.tabletLarge}) {
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+  }
+
+  @media (${VARIABLES.mobileLarge}) {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const LeftSection = styled.div`
+  box-sizing: border-box;
+  border-radius: 24px 0px 0px 24px;
+  height: 100%;
+  background: ${VARIABLES.backgroundColor};
+  padding: 32px;
+  width: 40%;
+  position: relative;
+
+  @media (${VARIABLES.tabletLarge}) {
+    padding: 24px;
+    height: 20%;
+    width: 100%;
+    border-radius: 24px 24px 0px 0px;
+  }
+
+  @media (${VARIABLES.mobileLarge}) {
+    height: 30%;
+    border-radius: 0px;
+  }
+`;
+
+export const RightSection = styled.div`
+  box-sizing: border-box;
+  border-radius: 0px 24px 24px 0px;
+  height: 100%;
+  background: ${VARIABLES.secondaryBgColor};
+  padding: 32px;
+  width: 60%;
+
+  @media (${VARIABLES.tabletLarge}) {
+    padding: 24px;
+    height: 80%;
+    width: 100%;
+    border-radius: 0px 0px 24px 24px;
+  }
+
+  @media (${VARIABLES.mobileLarge}) {
+    height: 70%;
+    border-radius: 0px;
   }
 `;
 
@@ -381,28 +419,31 @@ export const CustomInput = styled.input`
   box-sizing: border-box;
   margin: 8px 0;
   padding: 16px 24px 16px
-    ${(props) => (props.$marginRight ? props.$marginRight : "24px")};
-  background: ${variables.backgroundColor};
-  border: 1px solid ${variables.darkTextColor}50;
+    ${(props) => (props.$paddingLeft ? props.$paddingLeft : "24px")};
+  background: ${VARIABLES.backgroundColor};
+  border: 1px solid ${VARIABLES.darkTextColor}50;
   border-radius: 12px;
   font-size: 24px;
-  color: ${variables.textColor};
-  outline: 1px solid ${variables.darkTextColor}50;
+  line-height: 32px;
+  color: ${VARIABLES.textColor};
+  outline: 1px solid ${VARIABLES.darkTextColor}50;
   width: 100%;
-  letter-spacing: 2px;
+  max-width: 520px;
+  letter-spacing: 1px;
 
   &:focus {
-    border-color: ${variables.textColor};
+    border-color: ${VARIABLES.textColor};
   }
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     font-size: 20px;
     line-height: 28px;
   }
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     font-size: 16px;
     line-height: 24px;
+    padding: 12px 16px 12px ${(props) => (props.$paddingLeft ? "48px" : "16px")};
   }
 `;
 
@@ -411,16 +452,17 @@ export const CustomInputPrefix = styled.span`
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  color: ${variables.lightTextColor};
+  color: ${VARIABLES.lightTextColor};
   pointer-events: none;
   font-size: 24px;
+  line-height: 32px;
 
-  @media (${variables.tabletLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     font-size: 20px;
     line-height: 28px;
   }
 
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.mobileLarge}) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -432,16 +474,12 @@ export const ContainerHeaderText = styled.span`
   font-weight: 600;
   line-height: 32px;
   margin-bottom: 24px;
-  color: ${variables.textColor};
+  color: ${VARIABLES.textColor};
 
-  @media (${variables.tabletLarge}) {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  @media (${variables.mobileLarge}) {
+  @media (${VARIABLES.tabletLarge}) {
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -449,16 +487,11 @@ export const ContainerText = styled.span`
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: ${variables.lightTextColor};
+  color: ${VARIABLES.lightTextColor};
 
-  @media (${variables.tabletLarge}) {
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  @media (${variables.mobileLarge}) {
-    font-size: 16px;
-    line-height: 24px;
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 14px;
+    line-height: 20px;
   }
 `;
 
@@ -469,15 +502,15 @@ export const ContainerLink = styled.span`
   font-weight: 600;
   width: fit-content;
   color: transparent;
-  background: ${(props) =>
-    props.$disabled ? variables.darkTextColor : variables.gradient};
+  background: ${VARIABLES.gradient};
+  opacity: ${(props) => (props.$disabled ? "0.5" : "none")};
   pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
   -webkit-background-clip: text;
   background-clip: text;
 
-  @media (${variables.mobileLarge}) {
-    padding: 0px 8px;
-    font-size: 16px;
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 14px;
+    line-height: 20px;
   }
 `;
 
@@ -489,6 +522,10 @@ export const ContainerIconWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (${VARIABLES.tabletLarge}) {
+    top: 60%;
+  }
 `;
 
 export const Ellipsis = styled.div`
@@ -496,6 +533,51 @@ export const Ellipsis = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   margin-left: 4px;
+`;
+
+export const CheckboxContainer = styled.label`
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+`;
+
+export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+`;
+
+export const StyledCheckbox = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 2px solid ${VARIABLES.darkTextColor}50;
+  background: ${VARIABLES.backgroundColor};
+  border-radius: 4px;
+  z-index: 1;
+
+  ${HiddenCheckbox}:checked + & {
+    background: ${VARIABLES.gradient};
+    border: none;
+  }
+
+  ${HiddenCheckbox}:checked + &::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
 `;
 
 const scaleIn = keyframes`

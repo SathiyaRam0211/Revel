@@ -5,7 +5,7 @@ import React, {
   useCallback,
   useRef,
 } from "react";
-import { artForms, variables } from "../../constants/constants";
+import { ART_FORMS, VARIABLES } from "../../constants/constants";
 import { eventDetails } from "../../constants/events";
 import {
   DayHeader,
@@ -70,7 +70,7 @@ const EventSection = () => {
   }, [selectedMonth, selectedOption, currentDay]);
 
   const fetchArtForm = useCallback((category) => {
-    return artForms.find((each) => each?.value === category)?.label || "Other";
+    return ART_FORMS.find((each) => each?.value === category)?.label || "Other";
   }, []);
 
   const handleMonthChange = useCallback(
@@ -133,7 +133,7 @@ const EventSection = () => {
               )}
             </HeroText>
             <CustomSelect
-              options={artForms}
+              options={ART_FORMS}
               onChange={handleChange}
               placeholder={"Filter by Artform"}
             />
@@ -160,7 +160,7 @@ const EventSection = () => {
                         <FontAwesomeIcon
                           icon={faClock}
                           fontSize="12px"
-                          color={variables.primaryColor}
+                          color={VARIABLES.primaryColor}
                         />{" "}
                         {time}
                       </span>
@@ -169,7 +169,7 @@ const EventSection = () => {
                       <FontAwesomeIcon
                         icon={faLocationDot}
                         fontSize="12px"
-                        color={variables.primaryColor}
+                        color={VARIABLES.primaryColor}
                       />{" "}
                       {venue}
                     </span>
