@@ -5,7 +5,7 @@ export const HomePage = styled.div`
   background: ${VARIABLES.backgroundColor};
 `;
 
-export const CustomNav = styled.nav`
+export const Nav = styled.nav`
   background: ${VARIABLES.secondaryBgColor};
   display: flex;
   align-items: center;
@@ -383,6 +383,7 @@ export const DialogContainer = styled.div`
   height: 75%;
   display: flex;
   align-items: center;
+  flex-direction: ${(props) => (props.$direction ? props.$direction : "row")};
   animation: ${(props) => (props.$isVisible ? scaleIn : scaleOut)} 0.3s ease-out;
 
   @media (${VARIABLES.tabletLarge}) {
@@ -440,6 +441,32 @@ export const RightSection = styled.div`
     height: 70%;
     border-radius: 0px;
   }
+`;
+
+export const DialogHeader = styled.div`
+  box-sizing: border-box;
+  border-radius: 24px 24px 0px 0px;
+  height: 90px;
+  background: ${VARIABLES.backgroundColor};
+  padding: 32px;
+  width: 100%;
+`;
+
+export const DialogBody = styled.div`
+  box-sizing: border-box;
+  height: calc(100% - 222px);
+  background: ${VARIABLES.backgroundColor};
+  padding: 32px;
+  width: 100%;
+`;
+
+export const DialogFooter = styled.div`
+  box-sizing: border-box;
+  border-radius: 0px 0px 24px 24px;
+  height: 128px;
+  background: ${VARIABLES.backgroundColor};
+  padding: 32px;
+  width: 100%;
 `;
 
 export const CustomInputContainer = styled.div`
@@ -503,7 +530,10 @@ export const ContainerHeaderText = styled.span`
   font-weight: 600;
   line-height: 32px;
   margin-bottom: 24px;
-  color: ${VARIABLES.textColor};
+  color: ${(props) => (props.$colored ? "transparent" : VARIABLES.textColor)};
+  background: ${VARIABLES.gradient};
+  -webkit-background-clip: text;
+  background-clip: text;
 
   @media (${VARIABLES.tabletLarge}) {
     font-size: 20px;
@@ -517,7 +547,11 @@ export const ContainerText = styled.span`
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: ${VARIABLES.lightTextColor};
+  color: ${(props) =>
+    props.$colored ? "transparent" : VARIABLES.lightTextColor};
+  background: ${VARIABLES.gradient};
+  -webkit-background-clip: text;
+  background-clip: text;
 
   @media (${VARIABLES.mobileLarge}) {
     font-size: 14px;
@@ -575,6 +609,13 @@ export const Ellipsis = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   margin-left: 4px;
+`;
+
+export const Separator = styled.div`
+  margin-right: auto;
+  width: ${(props) => (props.$width ? props.$width + "%" : "0")};
+  height: 2px;
+  background: ${VARIABLES.gradient};
 `;
 
 export const CheckboxContainer = styled.label`

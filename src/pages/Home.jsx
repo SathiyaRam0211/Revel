@@ -1,4 +1,4 @@
-import Navbar from "../components/common/Navbar";
+import CustomNavbar from "../components/common/CustomNavbar";
 import AnnouncementSection from "../components/sections/AnnouncementSection";
 import LandingSection from "../components/sections/LandingSection";
 import { HomePage } from "../utils/util-styled-components";
@@ -6,7 +6,7 @@ import { HomePage } from "../utils/util-styled-components";
 const Home = () => {
   return (
     <HomePage>
-      <Navbar />
+      <CustomNavbar />
       <LandingSection />
       <AnnouncementSection />
     </HomePage>

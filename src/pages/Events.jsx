@@ -1,11 +1,11 @@
-import Navbar from "../components/common/Navbar";
+import CustomNavbar from "../components/common/CustomNavbar";
 import EventSection from "../components/sections/EventSection";
 import { HomePage } from "../utils/util-styled-components";
 
 const Events = () => {
   return (
     <HomePage>
-      <Navbar />
+      <CustomNavbar />
       <EventSection />
     </HomePage>
   );

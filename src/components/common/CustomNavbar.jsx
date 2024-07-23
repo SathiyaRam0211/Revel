@@ -1,5 +1,5 @@
 import {
-  CustomNav,
+  Nav,
   CustomBtn,
   BrandImage,
   CustomLink,
@@ -18,8 +18,8 @@ import { useNavigate } from "react-router";
 import { useAuthentication } from "../../contexts/AuthenticationContext";
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
-  const { openLogin, openRegister } = useAuthentication();
+const CustomNavbar = () => {
+  const { openLogin, openRegister, openPreferences } = useAuthentication();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [navMenuOpen, setNavMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -69,7 +69,7 @@ const Navbar = () => {
   return (
     <>
       <NavMenu />
-      <CustomNav>
+      <Nav>
         <BrandImage
           src={BrandLogo}
           alt="revel-logo"
@@ -91,13 +91,14 @@ const Navbar = () => {
             </>
           ) : (
             <FlexWrapper $gap="12px">
+              <CustomLink onClick={openPreferences}>Preferences</CustomLink>
               <CustomLink onClick={openLogin}>Login</CustomLink>
               <CustomBtn onClick={openRegister}>Register</CustomBtn>
             </FlexWrapper>
           ))}
-      </CustomNav>
+      </Nav>
     </>
   );
 };
 
-export default Navbar;
+export default CustomNavbar;
