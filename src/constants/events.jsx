@@ -317,7 +317,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Smashers, Thoraipakkam",
+          venue: "Dance Zone, Santhospuram",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -380,12 +380,6 @@ export const eventDetails = {
           category: "house",
           venue: "Dance Zone, Santhospuram",
           faculty: "Joshi",
-          time: "8:00 - 9:00 am",
-        },
-        {
-          category: "freestyleBasics",
-          venue: "Smashers, Thoraipakkam",
-          faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
       ],
