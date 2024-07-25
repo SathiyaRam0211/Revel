@@ -219,12 +219,12 @@ export const CustomBtn = styled.div`
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;
+  font-size: 24px;
+  font-weight: 600;
   background: ${VARIABLES.primaryColor};
   color: ${VARIABLES.secondaryTextColor};
   pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
   opacity: ${(props) => (props.$disabled ? "0.5" : "1")};
-  font-size: 24px;
-  font-weight: 600;
   border-radius: 12px;
   width: ${(props) => (props.$width ? props.$width : "fit-content")};
   max-width: 360px;
@@ -447,31 +447,48 @@ export const DialogHeader = styled.div`
   box-sizing: border-box;
   border-radius: 24px 24px 0px 0px;
   height: 90px;
-  background: ${VARIABLES.backgroundColor};
+  background: ${VARIABLES.secondaryBgColor};
   padding: 32px;
   width: 100%;
+
+  @media (${VARIABLES.mobileLarge}) {
+    height: 80px;
+    padding: 24px;
+    border-radius: 0px;
+  }
 `;
 
 export const DialogBody = styled.div`
   box-sizing: border-box;
   height: calc(100% - 222px);
-  background: ${VARIABLES.backgroundColor};
+  background: ${VARIABLES.secondaryBgColor};
   padding: 32px;
   width: 100%;
+
+  @media (${VARIABLES.mobileLarge}) {
+    height: calc(100% - 177px);
+    padding: 24px;
+  }
 `;
 
 export const DialogFooter = styled.div`
   box-sizing: border-box;
   border-radius: 0px 0px 24px 24px;
   height: 128px;
-  background: ${VARIABLES.backgroundColor};
+  background: ${VARIABLES.secondaryBgColor};
   padding: 32px;
   width: 100%;
+
+  @media (${VARIABLES.mobileLarge}) {
+    padding: 24px;
+    border-radius: 0px;
+    height: 93px;
+  }
 `;
 
 export const CustomInputContainer = styled.div`
   position: relative;
-  width: 100%;
+  width: ${(props) => (props.$width ? props.$width : "100%")};
 `;
 
 export const CustomInput = styled.input`
@@ -482,10 +499,10 @@ export const CustomInput = styled.input`
   background: ${VARIABLES.backgroundColor};
   border: 1px solid ${VARIABLES.darkTextColor}50;
   border-radius: 12px;
-  font-size: 24px;
+  font-size: 22px;
   color: ${VARIABLES.textColor};
   outline: 1px solid ${VARIABLES.darkTextColor}50;
-  width: 100%;
+  width: ${(props) => (props.$width ? props.$width : "100%")};
   max-width: 520px;
   letter-spacing: 1px;
 
@@ -511,16 +528,31 @@ export const CustomInputPrefix = styled.span`
   color: ${VARIABLES.lightTextColor};
   pointer-events: none;
   font-size: 24px;
-  line-height: 32px;
 
   @media (${VARIABLES.tabletLarge}) {
     font-size: 20px;
-    line-height: 28px;
   }
 
   @media (${VARIABLES.mobileLarge}) {
     font-size: 16px;
-    line-height: 24px;
+  }
+`;
+
+export const CustomInputSuffix = styled.span`
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  margin-right: 8px;
+  font-size: 24px;
+  color: ${VARIABLES.lightTextColor};
+
+  @media (${VARIABLES.tabletLarge}) {
+    font-size: 20px;
+  }
+
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 16px;
   }
 `;
 
@@ -529,16 +561,16 @@ export const ContainerHeaderText = styled.span`
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-  margin-bottom: 24px;
+  margin-bottom: ${(props) => (props.$colored ? "0px" : "24px")};
   color: ${(props) => (props.$colored ? "transparent" : VARIABLES.textColor)};
   background: ${VARIABLES.gradient};
   -webkit-background-clip: text;
   background-clip: text;
 
   @media (${VARIABLES.tabletLarge}) {
+    margin-bottom: ${(props) => (props.$colored ? "0px" : "16px")};
     font-size: 20px;
     line-height: 28px;
-    margin-bottom: 16px;
   }
 `;
 
@@ -660,6 +692,130 @@ export const StyledCheckbox = styled.div`
     border: solid black;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
+  }
+`;
+
+export const SliderContainer = styled.div`
+  width: 100%;
+  padding: 16px 0px;
+`;
+
+export const Slider = styled.input`
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: ${VARIABLES.gradient};
+  border-radius: 5px;
+  outline: none;
+  transition: opacity 0.2s;
+  position: relative;
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: black;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    border-radius: 5px;
+    background: ${VARIABLES.gradient};
+    width: ${(props) => (props.$width ? props.$width : 0)}%;
+    z-index: 2;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: ${VARIABLES.gradient};
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-top: -10px;
+  }
+
+  &::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: ${VARIABLES.gradient};
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
+  &::-moz-range-progress {
+    background: ${VARIABLES.gradient};
+    height: 5px;
+    border-radius: 5px;
+  }
+
+  &::-ms-fill-lower {
+    background: ${VARIABLES.gradient};
+    height: 5px;
+    border-radius: 5px;
+  }
+
+  &::-ms-fill-upper {
+    background: ${VARIABLES.gradient};
+    height: 5px;
+    border-radius: 5px;
+  }
+`;
+
+export const ToggleContainer = styled.div`
+  display: flex;
+  border: 1px solid ${VARIABLES.darkTextColor};
+  border-radius: 12px;
+  overflow: hidden;
+  width: fit-content;
+  margin: 16px 0;
+`;
+
+export const ToggleButton = styled.button`
+  flex: 1;
+  border: none;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 400;
+  background: ${(props) =>
+    props.$active ? VARIABLES.gradient : VARIABLES.backgroundColor};
+  color: ${(props) =>
+    props.$active ? VARIABLES.darkTextColor : VARIABLES.textColor};
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+
+  &:first-child {
+    border-radius: 12px 0 0 12px;
+  }
+
+  &:last-child {
+    border-radius: 0 12px 12px 0;
+  }
+
+  &:hover {
+    background: ${VARIABLES.primaryColor}50;
+    color: ${VARIABLES.darkTextColor};
+  }
+
+  @media (${VARIABLES.tabletLarge}) {
+    padding: 12px 16px;
+    font-size: 18px;
+  }
+
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 16px;
   }
 `;
 
