@@ -344,21 +344,16 @@ export const eventDetails = {
       day: 27,
       events: [
         {
+          category: "breaking",
+          venue: "Hipz n Toez, T Nagar",
+          faculty: "Feelhips aka Prabhu",
+          time: "7:00 - 8:00 pm",
+        },
+        {
           category: "digitalDesign",
           venue: "Hipz n Toez, T Nagar",
           faculty: "Vijay",
-          time: "2:00 - 3:00 pm",
-        },
-      ],
-    },
-    {
-      day: 28,
-      events: [
-        {
-          category: "breaking",
-          venue: "RMC, Ashok Nagar",
-          faculty: "Feelhips aka Prabhu",
-          time: "7:00 - 8:00 pm",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
