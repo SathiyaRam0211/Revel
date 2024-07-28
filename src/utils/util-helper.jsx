@@ -1,5 +1,55 @@
 import { URL } from "../constants/constants";
 
+export async function fetchUrl(url, method = "GET", data = null, headers = {}) {
+  const defaultHeaders = {
+    "Content-Type": "application/json",
+    ...headers,
+  };
+
+  const config = {
+    method,
+    headers: defaultHeaders,
+    ...(data && { body: JSON.stringify(data) }),
+  };
+
+  try {
+    const response = await fetch(url, config);
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      return {
+        data: null,
+        error: `Error: ${response.status} ${response.statusText} - ${errorData.message}`,
+      };
+    }
+
+    const responseData = await response.json();
+    return { data: responseData, error: null };
+  } catch (error) {
+    console.error("API call failed:", error);
+    return { data: null, error: error.message };
+  }
+}
+
+// fetchUrl('https://api.example.com/data')
+//   .then(({ data, error }) => {
+//     if (error) {
+//       console.error('GET error:', error);
+//     } else {
+//       console.log('GET response:', data);
+//     }
+//   });
+
+// const postData = { key: 'value' };
+// fetchUrl('https://api.example.com/data', 'POST', postData)
+//   .then(({ data, error }) => {
+//     if (error) {
+//       console.error('POST error:', error);
+//     } else {
+//       console.log('POST response:', data);
+//     }
+//   });
+
 export const handleRegister = () => {
   window.open(URL.register, "_blank");
 };
