@@ -377,41 +377,11 @@ export const eventDetails = {
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
-      ],
-    },
-    {
-      day: 31,
-      events: [
-        {
-          category: "digitalDesign",
-          venue: "Dance Lessons, Mogappair",
-          faculty: "Vijay",
-          time: "7:00 - 8:00 pm",
-        },
         {
           category: "graffiti",
-          venue: "Dance Lessons, Mogappair",
+          venue: "Dance Zone, Santhospuram",
           faculty: "Vijay",
-          time: "8:00 - 9:00 pm",
-        },
-      ],
-    },
-  ],
-  August: [
-    {
-      day: 1,
-      events: [
-        {
-          category: "locking",
-          venue: "Dance Lessons, Mogappair",
-          faculty: "Sakthi",
-          time: "7:30 - 8:30 pm",
-        },
-        {
-          category: "house",
-          venue: "Dance Lessons, Mogappair",
-          faculty: "Joshi",
-          time: "8:30 - 9:30 pm",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
