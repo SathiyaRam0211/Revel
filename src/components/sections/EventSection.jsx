@@ -19,6 +19,7 @@ import {
 import CustomSelect from "../common/CustomSelect";
 import {
   getCurrentMonthName,
+  getFilteredArtForms,
   getFormattedDate,
   preprocessEventDetails,
 } from "../../utils/util-helper";
@@ -48,8 +49,11 @@ const EventSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [filteredArtForms, setFilteredArtForms] = useState(
+    getFilteredArtForms(processedEventDetails, selectedMonth)
+  );
 
-  const handleChange = useCallback((selected) => {
+  const handleFilterChange = useCallback((selected) => {
     setSelectedOption(selected || null);
   }, []);
 
@@ -62,8 +66,7 @@ const EventSection = () => {
       .map((day) => ({
         ...day,
         events: day.events.filter(
-          (event) =>
-            event.category === selectedOption.value && day.day >= currentDay
+          (event) => event.category === selectedOption.value
         ),
       }))
       .filter((day) => day.events.length > 0);
@@ -98,6 +101,9 @@ const EventSection = () => {
   useEffect(() => {
     if (selectedMonth !== currentMonth) return;
 
+    setFilteredArtForms(
+      getFilteredArtForms(processedEventDetails, selectedMonth)
+    );
     const days = Object.keys(eventRefs.current)
       .map(Number)
       .sort((a, b) => a - b);
@@ -151,8 +157,8 @@ const EventSection = () => {
               )}
             </HeroText>
             <CustomSelect
-              options={ART_FORMS}
-              onChange={handleChange}
+              options={filteredArtForms}
+              onChange={handleFilterChange}
               placeholder={"Filter by Artform"}
             />
           </Toolbar>

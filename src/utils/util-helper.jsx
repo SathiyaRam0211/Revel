@@ -1,4 +1,4 @@
-import { URL } from "../constants/constants";
+import { ART_FORMS, URL } from "../constants/constants";
 
 export async function fetchUrl(url, method = "GET", data = null, headers = {}) {
   const defaultHeaders = {
@@ -115,6 +115,18 @@ export const preprocessEventDetails = (eventDetails) => {
     }));
   }
   return processedEventDetails;
+};
+
+export const getFilteredArtForms = (processedEventDetails, currentMonth) => {
+  const currentMonthEvents = processedEventDetails[currentMonth];
+  if (!currentMonthEvents) return [];
+  const uniqueCategories = new Set();
+  currentMonthEvents.forEach((day) => {
+    day.events.forEach((event) => {
+      uniqueCategories.add(event.category);
+    });
+  });
+  return ART_FORMS.filter((artForm) => uniqueCategories.has(artForm.value));
 };
 
 export const validatePhoneNumber = (number) => {
