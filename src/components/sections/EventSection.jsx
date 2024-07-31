@@ -43,8 +43,8 @@ const processedEventDetails = preprocessEventDetails(eventDetails);
 const EventSection = () => {
   const availableMonths = Object.keys(processedEventDetails);
   const currentDay = new Date().getDate();
-  const eventRefs = useRef({});
   const currentMonth = getCurrentMonthName();
+  const eventRefs = useRef({});
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -96,15 +96,33 @@ const EventSection = () => {
   }, []);
 
   useEffect(() => {
+    if (selectedMonth !== currentMonth) return;
+
     const days = Object.keys(eventRefs.current)
       .map(Number)
       .sort((a, b) => a - b);
-    const nextEventDay = days.find((day) => day >= currentDay) || days[0];
+
+    let nextEventDay = days.find((day) => day >= currentDay);
+
+    if (!nextEventDay) {
+      const nextMonth =
+        availableMonths[availableMonths.indexOf(currentMonth) + 1];
+      if (nextMonth) {
+        setSelectedMonth(nextMonth);
+        nextEventDay = 1;
+      }
+    }
 
     if (eventRefs.current[nextEventDay]) {
       eventRefs.current[nextEventDay].scrollIntoView({ behavior: "smooth" });
     }
-  }, [currentDay, selectedMonth, selectedOption]);
+  }, [
+    currentDay,
+    selectedMonth,
+    selectedOption,
+    currentMonth,
+    availableMonths,
+  ]);
 
   return (
     <PageSection>

@@ -308,6 +308,11 @@ export const EventContainer = styled.div`
     flex-direction: column;
     height: 100%;
     width: fit-content;
+    min-width: 800px;
+
+    @media (${VARIABLES.tabletLarge}) {
+      min-width: auto;
+    }
   }
 `;
 
