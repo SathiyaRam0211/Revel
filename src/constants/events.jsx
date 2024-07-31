@@ -410,7 +410,7 @@ export const eventDetails = {
         {
           category: "locking",
           venue: "Dance Lessons, Mogappair",
-          faculty: "Joshi",
+          faculty: "Sakthi",
           time: "9:00 - 10:00 pm",
         },
       ],
@@ -459,13 +459,13 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "Kickers Academy, Madipakkam",
+          venue: "RMC, Ashok Nagar",
           faculty: "DeeZee aka Dinesh",
           time: "7:00 - 8:00 am",
         },
         {
           category: "hipHop",
-          venue: "Kickers Academy, Madipakkam",
+          venue: "RMC, Ashok Nagar",
           faculty: "DeeZee aka Dinesh",
           time: "8:00 - 9:00 am",
         },
