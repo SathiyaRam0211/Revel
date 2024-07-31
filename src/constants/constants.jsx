@@ -23,6 +23,7 @@ export const ART_FORMS = [
   { value: "danceFitness", label: "Dance Fitness" },
   { value: "freestyleBasics", label: "Freestyle Basics" },
   { value: "folkChoreography", label: "Folk Choreography" },
+  { value: "creativeMovement", label: "Creative Movement" },
 ];
 
 export const VARIABLES = {

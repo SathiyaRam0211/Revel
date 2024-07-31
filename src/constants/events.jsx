@@ -386,4 +386,45 @@ export const eventDetails = {
       ],
     },
   ],
+  August: [
+    {
+      day: 1,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "RMC, Ashok Nagar",
+          faculty: "Joshi",
+          time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 2,
+      events: [
+        {
+          category: "locking",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "Joshi",
+          time: "8:00 - 9:00 pm",
+        },
+        {
+          category: "locking",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "Joshi",
+          time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 3,
+      events: [
+        {
+          category: "breaking",
+          venue: "Hipz n Toez, T Nagar",
+          faculty: "Feelhips aka Prabhu",
+          time: "7:00 - 8:00 pm",
+        },
+      ],
+    },
+  ]
 };
