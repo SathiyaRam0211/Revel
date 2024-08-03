@@ -39,6 +39,7 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
+// Preprocess event details once
 const processedEventDetails = preprocessEventDetails(eventDetails);
 
 const EventSection = () => {
@@ -46,17 +47,22 @@ const EventSection = () => {
   const currentDay = new Date().getDate();
   const currentMonth = getCurrentMonthName();
   const eventRefs = useRef({});
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [filteredArtForms, setFilteredArtForms] = useState(
-    getFilteredArtForms(processedEventDetails, selectedMonth)
+
+  // Only update filteredArtForms when selectedMonth changes
+  const filteredArtForms = useMemo(
+    () => getFilteredArtForms(processedEventDetails, selectedMonth),
+    [selectedMonth]
   );
 
   const handleFilterChange = useCallback((selected) => {
     setSelectedOption(selected || null);
   }, []);
 
+  // Memoize filtered events to avoid unnecessary recalculations
   const filteredEvents = useMemo(() => {
     const events = processedEventDetails[selectedMonth];
     if (!selectedOption) {
@@ -70,7 +76,7 @@ const EventSection = () => {
         ),
       }))
       .filter((day) => day.events.length > 0);
-  }, [selectedMonth, selectedOption, currentDay]);
+  }, [selectedMonth, selectedOption]);
 
   const fetchArtForm = useCallback((category) => {
     return ART_FORMS.find((each) => each?.value === category)?.label || "Other";
@@ -101,9 +107,6 @@ const EventSection = () => {
   useEffect(() => {
     if (selectedMonth !== currentMonth) return;
 
-    setFilteredArtForms(
-      getFilteredArtForms(processedEventDetails, selectedMonth)
-    );
     const days = Object.keys(eventRefs.current)
       .map(Number)
       .sort((a, b) => a - b);
@@ -122,13 +125,7 @@ const EventSection = () => {
     if (eventRefs.current[nextEventDay]) {
       eventRefs.current[nextEventDay].scrollIntoView({ behavior: "smooth" });
     }
-  }, [
-    currentDay,
-    selectedMonth,
-    selectedOption,
-    currentMonth,
-    availableMonths,
-  ]);
+  }, [currentDay, selectedMonth, currentMonth, availableMonths]);
 
   return (
     <PageSection>
@@ -209,4 +206,4 @@ const EventSection = () => {
   );
 };
 
-export default EventSection;
+export default React.memo(EventSection);
