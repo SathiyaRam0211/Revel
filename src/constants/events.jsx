@@ -427,17 +427,6 @@ export const eventDetails = {
       ],
     },
     {
-      day: 6,
-      events: [
-        {
-          category: "house",
-          venue: "Kickers Academy, Madipakkam",
-          faculty: "Joshi",
-          time: "8:00 - 9:00 pm",
-        },
-      ],
-    },
-    {
       day: 8,
       events: [
         {
@@ -451,6 +440,17 @@ export const eventDetails = {
           venue: "Kickers Academy, Madipakkam",
           faculty: "Sakthi",
           time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 9,
+      events: [
+        {
+          category: "house",
+          venue: "Kickers Academy, Madipakkam",
+          faculty: "Joshi",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
