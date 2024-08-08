@@ -450,7 +450,7 @@ export const eventDetails = {
           category: "house",
           venue: "RMC, Ashok Nagar",
           faculty: "Joshi",
-          time: "8:00 - 9:00 pm",
+          time: "7.30 - 8:30 am",
         },
       ],
     },
