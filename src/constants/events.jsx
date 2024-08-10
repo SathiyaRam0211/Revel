@@ -469,11 +469,16 @@ export const eventDetails = {
           faculty: "DeeZee aka Dinesh",
           time: "8:00 - 9:00 am",
         },
+      ],
+    },
+    {
+      day: 10,
+      events: [
         {
           category: "breaking",
           venue: "Hips n Toez, T Nagar",
           faculty: "Feelhips aka Prabhu",
-          time: "7:00 - 8:00 pm",
+          time: "7:30 - 8:30 pm",
         },
       ],
     },
