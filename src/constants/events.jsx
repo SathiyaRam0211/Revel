@@ -472,7 +472,7 @@ export const eventDetails = {
       ],
     },
     {
-      day: 10,
+      day: 11,
       events: [
         {
           category: "breaking",
