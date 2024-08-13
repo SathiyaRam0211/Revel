@@ -504,15 +504,15 @@ export const eventDetails = {
       events: [
         {
           category: "house",
-          venue: "Kickers Academy, Madipakkam",
+          venue: "Hips n Toez, T Nagar",
           faculty: "Joshi",
-          time: "8:00 - 9:00 pm",
+          time: "7:30 - 8:30 am",
         },
         {
           category: "locking",
-          venue: "Kickers Academy, Madipakkam",
+          venue: "Hips n Toez, T Nagar",
           faculty: "Sakthi",
-          time: "9:00 - 10:00 pm",
+          time: "8:30 - 9:30 am",
         },
       ],
     },
