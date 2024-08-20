@@ -14,6 +14,7 @@ export const ART_FORMS = [
   { value: "locking", label: "Locking" },
   { value: "house", label: "House" },
   { value: "graffiti", label: "Graffiti" },
+  { value: "visualArtGraffiti", label: "Visual Art and Graffiti" },
   { value: "parai", label: "Parai" },
   { value: "silambam", label: "Silambam" },
   { value: "digitalDesign", label: "Digital Design" },

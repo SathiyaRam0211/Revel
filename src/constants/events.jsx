@@ -537,7 +537,7 @@ export const eventDetails = {
       day: 21,
       events: [
         {
-          category: "graffiti",
+          category: "visualArtGraffiti",
           venue: "Kickers Academy, Madipakkam",
           faculty: "Vijay",
           time: "8:00 - 9:00 pm",
@@ -582,7 +582,7 @@ export const eventDetails = {
       day: 26,
       events: [
         {
-          category: "graffiti",
+          category: "visualArtGraffiti",
           venue: "Dance Lessons, Mogappair",
           faculty: "Vijay",
           time: "8:30 - 9:30 pm",
@@ -644,13 +644,13 @@ export const eventDetails = {
       day: 31,
       events: [
         {
-          category: "graffiti",
+          category: "visualArtGraffiti",
           venue: "Hips n Toez, T Nagar",
           faculty: "Vijay",
           time: "7:30 - 8:30 am",
         },
         {
-          category: "graffiti",
+          category: "visualArtGraffiti",
           venue: "Hips n Toez, T Nagar",
           faculty: "Vijay",
           time: "8:30 - 9:30 am",
