@@ -534,23 +534,12 @@ export const eventDetails = {
       ],
     },
     {
-      day: 21,
-      events: [
-        {
-          category: "visualArtGraffiti",
-          venue: "Kickers Academy, Madipakkam",
-          faculty: "Vijay",
-          time: "8:00 - 9:00 pm",
-        },
-      ],
-    },
-    {
       day: 22,
       events: [
         {
-          category: "creativeMovement",
+          category: "locking",
           venue: "Kickers Academy, Madipakkam",
-          faculty: "Joshi",
+          faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
         {
@@ -565,11 +554,16 @@ export const eventDetails = {
       day: 24,
       events: [
         {
-          category: "locking",
+          category: "breaking",
           venue: "Hips n Toez, T Nagar",
-          faculty: "Sakthi",
-          time: "7:30 - 8:30 am",
+          faculty: "Feelhips aka Prabhu",
+          time: "7:00 - 8:00 pm",
         },
+      ],
+    },
+    {
+      day: 25,
+      events: [
         {
           category: "breaking",
           venue: "Hips n Toez, T Nagar",
@@ -585,7 +579,13 @@ export const eventDetails = {
           category: "visualArtGraffiti",
           venue: "Dance Lessons, Mogappair",
           faculty: "Vijay",
-          time: "8:30 - 9:30 pm",
+          time: "8:00 - 9:00 pm",
+        },
+        {
+          category: "visualArtGraffiti",
+          venue: "Dance Lessons, Mogappair",
+          faculty: "Vijay",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
