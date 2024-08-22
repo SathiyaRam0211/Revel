@@ -537,9 +537,9 @@ export const eventDetails = {
       day: 22,
       events: [
         {
-          category: "locking",
+          category: "creativeMovement",
           venue: "Kickers Academy, Madipakkam",
-          faculty: "Sakthi",
+          faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
