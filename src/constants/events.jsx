@@ -571,13 +571,13 @@ export const eventDetails = {
       day: 26,
       events: [
         {
-          category: "visualArtGraffiti",
+          category: "graffiti",
           venue: "Dance Lessons, Mogappair",
           faculty: "Vijay",
           time: "8:00 - 9:00 pm",
         },
         {
-          category: "visualArtGraffiti",
+          category: "graffiti",
           venue: "Dance Lessons, Mogappair",
           faculty: "Vijay",
           time: "9:00 - 10:00 pm",
@@ -639,13 +639,13 @@ export const eventDetails = {
       day: 31,
       events: [
         {
-          category: "visualArtGraffiti-rev",
+          category: "graffiti-rev",
           venue: "Hips n Toez, T Nagar",
           faculty: "Vijay",
           time: "7:30 - 8:30 am",
         },
         {
-          category: "visualArtGraffiti-rev",
+          category: "graffiti-rev",
           venue: "Hips n Toez, T Nagar",
           faculty: "Vijay",
           time: "8:30 - 9:30 am",
@@ -670,7 +670,7 @@ export const eventDetails = {
           time: "1:30 - 3:30 pm",
         },
         {
-          category: "choreography-wk",
+          category: "choreo-wk",
           venue: "TBC",
           faculty: "Selva",
           time: "3:30 - 5:30 pm",

@@ -26,13 +26,14 @@ export const ART_FORMS = [
   { value: "folkChoreography", label: "Folk Choreography" },
   { value: "creativeMovement", label: "Creative Movement" },
   { value: "breaking-rev", label: "Breaking - Revision" },
-  { value: "choreography-wk", label: "Choreography Workshop" },
+  { value: "choreo-wk", label: "Choreo Workshop" },
   { value: "hipHop-rev", label: "Hip Hop - Revision" },
   { value: "locking-rev", label: "Locking - Revision" },
   { value: "visualArtGraffiti-rev", label: "Visual Art and Graffiti - Revision" },
   { value: "house-rev", label: "House Revision" },
   { value: "parai-wk", label: "Parai Workshop" },
   { value: "practice", label: "Practice Session" },
+  { value: "graffiti-rev", label: "Graffiti - Revision" },
 ];
 
 export const VARIABLES = {
