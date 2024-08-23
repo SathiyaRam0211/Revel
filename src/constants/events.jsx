@@ -624,14 +624,14 @@ export const eventDetails = {
         {
           category: "locking-rev",
           venue: "Dance Lessons, Mogappair",
-          faculty: "Joshi",
-          time: "7:00 - 8:00 am",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
         },
         {
           category: "locking-rev",
           venue: "Dance Lessons, Mogappair",
           faculty: "Sakthi",
-          time: "8:00 - 9:00 pm",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
