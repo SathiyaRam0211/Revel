@@ -551,24 +551,19 @@ export const eventDetails = {
       ],
     },
     {
-      day: 24,
+      day: 25,
       events: [
         {
-          category: "breaking",
+          category: "breaking-rev",
           venue: "Hips n Toez, T Nagar",
           faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
-      ],
-    },
-    {
-      day: 25,
-      events: [
         {
-          category: "breaking",
+          category: "breaking-rev",
           venue: "Hips n Toez, T Nagar",
           faculty: "Feelhips aka Prabhu",
-          time: "7:00 - 8:00 pm",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
@@ -593,13 +588,13 @@ export const eventDetails = {
       day: 27,
       events: [
         {
-          category: "locking",
+          category: "house-rev",
           venue: "Kickers Academy, Madipakkam",
-          faculty: "Sakthi",
+          faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
-          category: "house",
+          category: "house-rev",
           venue: "Kickers Academy, Madipakkam",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
@@ -610,13 +605,13 @@ export const eventDetails = {
       day: 29,
       events: [
         {
-          category: "hipHop",
+          category: "hipHop-rev",
           venue: "Dance Lessons, Mogappair",
           faculty: "DeeZee aka Dinesh",
           time: "8:00 - 9:00 pm",
         },
         {
-          category: "hipHop",
+          category: "hipHop-rev",
           venue: "Dance Lessons, Mogappair",
           faculty: "DeeZee aka Dinesh",
           time: "9:00 - 10:00 pm",
@@ -627,16 +622,16 @@ export const eventDetails = {
       day: 30,
       events: [
         {
-          category: "creativeMovement",
-          venue: "RMC, Ashok Nagar",
+          category: "locking-rev",
+          venue: "Dance Lessons, Mogappair",
           faculty: "Joshi",
           time: "7:00 - 8:00 am",
         },
         {
-          category: "locking",
-          venue: "RMC, Ashok Nagar",
+          category: "locking-rev",
+          venue: "Dance Lessons, Mogappair",
           faculty: "Sakthi",
-          time: "8:00 - 9:00 am",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
@@ -644,13 +639,13 @@ export const eventDetails = {
       day: 31,
       events: [
         {
-          category: "visualArtGraffiti",
+          category: "visualArtGraffiti-rev",
           venue: "Hips n Toez, T Nagar",
           faculty: "Vijay",
           time: "7:30 - 8:30 am",
         },
         {
-          category: "visualArtGraffiti",
+          category: "visualArtGraffiti-rev",
           venue: "Hips n Toez, T Nagar",
           faculty: "Vijay",
           time: "8:30 - 9:30 am",
@@ -660,6 +655,58 @@ export const eventDetails = {
           venue: "Hips n Toez, T Nagar",
           faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
+        },
+      ],
+    },
+  ],
+  September: [
+    {
+      day: 1,
+      events: [
+        {
+          category: "parai-wk",
+          venue: "TBC",
+          faculty: "Manimaran",
+          time: "1:30 - 3:30 pm",
+        },
+        {
+          category: "choreography-wk",
+          venue: "TBC",
+          faculty: "Selva",
+          time: "3:30 - 5:30 pm",
+        },
+      ],
+    },
+    {
+      day: 2,
+      events: [
+        {
+          category: "practice",
+          venue: "TBC",
+          faculty: "",
+          time: "TBC",
+        },
+      ],
+    },
+    {
+      day: 3,
+      events: [
+        {
+          category: "practice",
+          venue: "TBC",
+          faculty: "",
+          time: "TBC",
+        },
+      ],
+    },
+    {
+      day: 4,
+      events: [
+        {
+          category: "practice",
+          venue: "TBC",
+          faculty: "",
+          time: "TBC",
         },
       ],
     },
