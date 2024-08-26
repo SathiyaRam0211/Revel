@@ -588,13 +588,13 @@ export const eventDetails = {
       day: 27,
       events: [
         {
-          category: "house-rev",
+          category: "creativeMovement",
           venue: "Kickers Academy, Madipakkam",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
-          category: "house-rev",
+          category: "creativeMovement",
           venue: "Kickers Academy, Madipakkam",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
