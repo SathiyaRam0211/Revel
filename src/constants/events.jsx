@@ -665,13 +665,13 @@ export const eventDetails = {
       events: [
         {
           category: "parai-wk",
-          venue: "TBC",
+          venue: "Brigade Fitness, Valsaravakkam",
           faculty: "Manimaran",
           time: "1:30 - 3:30 pm",
         },
         {
           category: "choreo-wk",
-          venue: "TBC",
+          venue: "Brigade Fitness, Valsaravakkam",
           faculty: "Selva",
           time: "3:30 - 5:30 pm",
         },
@@ -682,9 +682,9 @@ export const eventDetails = {
       events: [
         {
           category: "practice",
-          venue: "TBC",
+          venue: "Anna Nagar Tower",
           faculty: "",
-          time: "TBC",
+          time: "6:00 - 9:00 pm",
         },
       ],
     },
@@ -693,9 +693,20 @@ export const eventDetails = {
       events: [
         {
           category: "practice",
-          venue: "TBC",
+          venue: "Anna Nagar Tower",
           faculty: "",
-          time: "TBC",
+          time: "7:00 - 9:00 am",
+        },
+      ],
+    },
+    {
+      day: 3,
+      events: [
+        {
+          category: "practice",
+          venue: "Thiruvanmiyur Park",
+          faculty: "",
+          time: "6:00 - 8:00 pm",
         },
       ],
     },
@@ -704,9 +715,9 @@ export const eventDetails = {
       events: [
         {
           category: "practice",
-          venue: "TBC",
+          venue: "Anna Nagar Tower",
           faculty: "",
-          time: "TBC",
+          time: "6:00 - 9:00 pm",
         },
       ],
     },
