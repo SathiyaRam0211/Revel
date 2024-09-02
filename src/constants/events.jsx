@@ -704,8 +704,6 @@ export const eventDetails = {
         },
       ],
     },
-  ],
-  September: [
     {
       day: 5,
       events: [
