@@ -704,5 +704,271 @@ export const eventDetails = {
         },
       ],
     },
-  ]
+  ],
+  September: [
+    {
+      day: 5,
+      events: [
+        {
+          category: "breaking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Prabhu",
+          time: "8:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 6,
+      events: [
+        {
+          category: "hipHop",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Dinesh",
+          time: "8:30 - 9:30 pm",
+        },
+        {
+          category: "hipHop",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Dinesh",
+          time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+    {
+      day: 7,
+      events: [
+        {
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 am",
+        },
+      ],
+    },
+    {
+      day: 10,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "8:30 - 9:30 pm",
+        },
+        {
+          category: "house",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+    {
+      day: 11,
+      events: [
+        {
+          category: "locking",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 12,
+      events: [
+        {
+          category: "breaking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Prabhu",
+          time: "8:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 13,
+      events: [
+        {
+          category: "hipHop",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Dinesh",
+          time: "8:30 - 9:30 pm",
+        },
+        {
+          category: "hipHop",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Dinesh",
+          time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+    {
+      day: 14,
+      events: [
+        {
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 am",
+        },
+      ],
+    },
+    {
+      day: 17,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "8:30 - 9:30 pm",
+        },
+        {
+          category: "house",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+    {
+      day: 18,
+      events: [
+        {
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 19,
+      events: [
+        {
+          category: "breaking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Prabhu",
+          time: "8:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 20,
+      events: [
+        {
+          category: "hipHop",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Dinesh",
+          time: "8:00 - 9:00 pm",
+        },
+        {
+          category: "hipHop",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Dinesh",
+          time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 21,
+      events: [
+        {
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 am",
+        },
+      ],
+    },
+    {
+      day: 24,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "8:30 - 9:30 pm",
+        },
+        {
+          category: "house",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+    {
+      day: 25,
+      events: [
+        {
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 26,
+      events: [
+        {
+          category: "breaking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Prabhu",
+          time: "8:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 27,
+      events: [
+        {
+          category: "hipHop",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Dinesh",
+          time: "8:30 - 9:30 pm",
+        },
+        {
+          category: "hipHop",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Dinesh",
+          time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+    {
+      day: 28,
+      events: [
+        {
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 am",
+        },
+      ],
+    },
+  ],
+  October: [
+    {
+      day: 1,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "8:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 2,
+      events: [
+        {
+          category: "house",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+  ],
 };
