@@ -568,23 +568,6 @@ export const eventDetails = {
       ],
     },
     {
-      day: 26,
-      events: [
-        {
-          category: "graffiti",
-          venue: "Dance Lessons, Mogappair",
-          faculty: "Vijay",
-          time: "8:00 - 9:00 pm",
-        },
-        {
-          category: "graffiti",
-          venue: "Dance Lessons, Mogappair",
-          faculty: "Vijay",
-          time: "9:00 - 10:00 pm",
-        },
-      ],
-    },
-    {
       day: 27,
       events: [
         {
