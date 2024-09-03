@@ -968,7 +968,7 @@ export const eventDetails = {
         {
           category: "parai-wk",
           venue: "Brigade Fitness",
-          faculty: "Prabhu",
+          faculty: "Manimaran",
           time: "2:00 - 4:00 pm",
         },
         {
