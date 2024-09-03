@@ -709,13 +709,13 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "DeeZee aka Dinesh",
           time: "8:30 - 9:30 pm",
         },
         {
           category: "hipHop",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "DeeZee aka Dinesh",
           time: "9:30 - 10:30 pm",
         },
@@ -726,13 +726,13 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Sakthi",
           time: "7:30 - 8:30 am",
         },
         {
           category: "locking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Sakthi",
           time: "8:30 - 9:30 am",
         },
@@ -743,13 +743,13 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Feelhips aka Prabhu",
           time: "6:00 - 7:00 pm",
         },
         {
           category: "breaking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
@@ -788,7 +788,7 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Feelhips aka Prabhu",
           time: "8:30 - 9:30 pm",
         },
@@ -799,13 +799,13 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "DeeZee aka Dinesh",
           time: "8:30 - 9:30 pm",
         },
         {
           category: "hipHop",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "DeeZee aka Dinesh",
           time: "9:30 - 10:30 pm",
         },
@@ -844,7 +844,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Sakthi",
           time: "8:30 - 9:30 pm",
         },
@@ -872,13 +872,13 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Sakthi",
           time: "7:30 - 8:30 am",
         },
         {
           category: "locking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Sakthi",
           time: "8:30 - 9:30 am",
         },
@@ -923,7 +923,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Sakthi",
           time: "8:30 - 9:30 pm",
         },
@@ -934,7 +934,7 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Feelhips aka Prabhu",
           time: "8:30 - 9:30 pm",
         },
@@ -945,13 +945,13 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "DeeZee aka Dinesh",
           time: "8:30 - 9:30 pm",
         },
         {
           category: "hipHop",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "DeeZee aka Dinesh",
           time: "9:30 - 10:30 pm",
         },
@@ -1015,7 +1015,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Hips n Toez - T nagar",
+          venue: "TBC",
           faculty: "Sakthi",
           time: "8:30 - 9:30 pm",
         },
