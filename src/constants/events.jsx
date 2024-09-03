@@ -705,17 +705,6 @@ export const eventDetails = {
       ],
     },
     {
-      day: 5,
-      events: [
-        {
-          category: "breaking",
-          venue: "Hips n Toez - T nagar",
-          faculty: "Feelhips aka Prabhu",
-          time: "8:30 - 9:30 pm",
-        },
-      ],
-    },
-    {
       day: 6,
       events: [
         {
@@ -746,6 +735,23 @@ export const eventDetails = {
           venue: "Hips n Toez - T nagar",
           faculty: "Sakthi",
           time: "8:30 - 9:30 am",
+        },
+      ],
+    },
+    {
+      day: 8,
+      events: [
+        {
+          category: "breaking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Feelhips aka Prabhu",
+          time: "6:00 - 7:00 pm",
+        },
+        {
+          category: "breaking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Feelhips aka Prabhu",
+          time: "7:00 - 8:00 pm",
         },
       ],
     },
@@ -809,9 +815,9 @@ export const eventDetails = {
       day: 14,
       events: [
         {
-          category: "afro-wk",
+          category: "graffiti-wk",
           venue: "Brigade Fitness",
-          faculty: "Alisha",
+          faculty: "Vjay",
           time: "4:00 - 6:00 pm",
         },
       ],
@@ -840,17 +846,6 @@ export const eventDetails = {
           category: "locking",
           venue: "Hips n Toez - T nagar",
           faculty: "Sakthi",
-          time: "8:30 - 9:30 pm",
-        },
-      ],
-    },
-    {
-      day: 19,
-      events: [
-        {
-          category: "breaking",
-          venue: "Hips n Toez - T nagar",
-          faculty: "Feelhips aka Prabhu",
           time: "8:30 - 9:30 pm",
         },
       ],
@@ -983,9 +978,9 @@ export const eventDetails = {
       day: 29,
       events: [
         {
-          category: "graffiti-wk",
+          category: "afro-wk",
           venue: "Brigade Fitness",
-          faculty: "Vijay",
+          faculty: "Alisha",
           time: "2:00 - 4:00 pm",
         },
         {
@@ -1017,6 +1012,17 @@ export const eventDetails = {
           venue: "Dance Lessons - Mogappair",
           faculty: "Joshi",
           time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+    {
+      day: 3,
+      events: [
+        {
+          category: "breaking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Feelhips aka Prabhu",
+          time: "8:30 - 9:30 pm",
         },
       ],
     },
