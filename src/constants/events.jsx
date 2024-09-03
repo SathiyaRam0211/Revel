@@ -1021,16 +1021,5 @@ export const eventDetails = {
         },
       ],
     },
-    {
-      day: 3,
-      events: [
-        {
-          category: "breaking",
-          venue: "Hips n Toez - T nagar",
-          faculty: "Feelhips aka Prabhu",
-          time: "8:30 - 9:30 pm",
-        },
-      ],
-    },
   ],
 };
