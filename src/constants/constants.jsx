@@ -34,6 +34,9 @@ export const ART_FORMS = [
   { value: "parai-wk", label: "Parai Workshop" },
   { value: "practice", label: "Practice Session" },
   { value: "graffiti-rev", label: "Graffiti - Revision" },
+  { value: "afro-wk", label: "Afro Workshop" },
+  { value: "breaking-wk", label: "Fitness and Breaking Workshop" },
+  { value: "graffiti-wk", label: "Graffiti Workshop" },
 ];
 
 export const VARIABLES = {

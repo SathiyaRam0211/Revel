@@ -806,6 +806,17 @@ export const eventDetails = {
       ],
     },
     {
+      day: 14,
+      events: [
+        {
+          category: "afro-wk",
+          venue: "Brigade Fitness",
+          faculty: "Alisha",
+          time: "4:00 - 6:00 pm",
+        },
+      ],
+    },
+    {
       day: 17,
       events: [
         {
@@ -931,6 +942,40 @@ export const eventDetails = {
           venue: "Hips n Toez - T nagar",
           faculty: "DeeZee aka Dinesh",
           time: "9:30 - 10:30 pm",
+        },
+      ],
+    },
+    {
+      day: 28,
+      events: [
+        {
+          category: "parai-wk",
+          venue: "Brigade Fitness",
+          faculty: "Prabhu",
+          time: "2:00 - 4:00 pm",
+        },
+        {
+          category: "breaking-wk",
+          venue: "Brigade Fitness",
+          faculty: "Prabhu",
+          time: "4:00 - 6:00 pm",
+        },
+      ],
+    },
+    {
+      day: 29,
+      events: [
+        {
+          category: "graffiti-wk",
+          venue: "Brigade Fitness",
+          faculty: "Vijay",
+          time: "2:00 - 4:00 pm",
+        },
+        {
+          category: "choreo-wk",
+          venue: "Brigade Fitness",
+          faculty: "Selva",
+          time: "4:00 - 6:00 pm",
         },
       ],
     },
