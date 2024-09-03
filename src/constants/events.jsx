@@ -700,7 +700,7 @@ export const eventDetails = {
           category: "practice",
           venue: "Anna Nagar Tower",
           faculty: "",
-          time: "6:00 - 9:00 pm",
+          time: "7:00 - 9:00 pm",
         },
       ],
     },
