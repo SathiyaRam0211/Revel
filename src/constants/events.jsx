@@ -890,6 +890,23 @@ export const eventDetails = {
       ],
     },
     {
+      day: 22,
+      events: [
+        {
+          category: "karokeOpenmic-ev",
+          venue: "Idam - Kodambakkam",
+          faculty: "",
+          time: "3:00 - 5:00 pm",
+        },
+        {
+          category: "ganaCypher-ev",
+          venue: "Idam - Kodambakkam",
+          faculty: "",
+          time: "5:00 - 7:00 pm",
+        },
+      ],
+    },
+    {
       day: 24,
       events: [
         {

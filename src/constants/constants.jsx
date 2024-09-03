@@ -37,6 +37,8 @@ export const ART_FORMS = [
   { value: "afro-wk", label: "Afro Workshop" },
   { value: "breaking-wk", label: "Fitness and Breaking Workshop" },
   { value: "graffiti-wk", label: "Graffiti Workshop" },
+  { value: "karokeOpenmic-ev", label: "Karoke & Open Mic Event" },
+  { value: "ganaCypher-ev", label: "Gana Cypher Event" },
 ];
 
 export const VARIABLES = {
