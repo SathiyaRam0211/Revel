@@ -710,7 +710,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "Hips n Toez - T nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "8:30 - 9:30 pm",
         },
       ],
@@ -721,13 +721,13 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "Hips n Toez - T nagar",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "8:30 - 9:30 pm",
         },
         {
           category: "hipHop",
           venue: "Hips n Toez - T nagar",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "9:30 - 10:30 pm",
         },
       ],
@@ -739,7 +739,13 @@ export const eventDetails = {
           category: "locking",
           venue: "Hips n Toez - T nagar",
           faculty: "Sakthi",
-          time: "8:00 - 9:00 am",
+          time: "7:30 - 8:30 am",
+        },
+        {
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:30 - 9:30 am",
         },
       ],
     },
@@ -777,7 +783,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "Hips n Toez - T nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "8:30 - 9:30 pm",
         },
       ],
@@ -788,25 +794,14 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "Hips n Toez - T nagar",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "8:30 - 9:30 pm",
         },
         {
           category: "hipHop",
           venue: "Hips n Toez - T nagar",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "9:30 - 10:30 pm",
-        },
-      ],
-    },
-    {
-      day: 14,
-      events: [
-        {
-          category: "locking",
-          venue: "Hips n Toez - T nagar",
-          faculty: "Sakthi",
-          time: "8:00 - 9:00 am",
         },
       ],
     },
@@ -844,7 +839,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "Hips n Toez - T nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "8:30 - 9:30 pm",
         },
       ],
@@ -855,13 +850,13 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "Dance Lessons - Mogappair",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "hipHop",
           venue: "Dance Lessons - Mogappair",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "9:00 - 10:00 pm",
         },
       ],
@@ -873,7 +868,13 @@ export const eventDetails = {
           category: "locking",
           venue: "Hips n Toez - T nagar",
           faculty: "Sakthi",
-          time: "8:00 - 9:00 am",
+          time: "7:30 - 8:30 am",
+        },
+        {
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:30 - 9:30 am",
         },
       ],
     },
@@ -911,7 +912,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "Hips n Toez - T nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "8:30 - 9:30 pm",
         },
       ],
@@ -922,25 +923,14 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "Hips n Toez - T nagar",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "8:30 - 9:30 pm",
         },
         {
           category: "hipHop",
           venue: "Hips n Toez - T nagar",
-          faculty: "Dinesh",
+          faculty: "DeeZee aka Dinesh",
           time: "9:30 - 10:30 pm",
-        },
-      ],
-    },
-    {
-      day: 28,
-      events: [
-        {
-          category: "locking",
-          venue: "Hips n Toez - T nagar",
-          faculty: "Sakthi",
-          time: "8:00 - 9:00 am",
         },
       ],
     },
