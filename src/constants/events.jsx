@@ -1002,16 +1002,22 @@ export const eventDetails = {
           faculty: "Joshi",
           time: "8:30 - 9:30 pm",
         },
+        {
+          category: "house",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Joshi",
+          time: "9:30 - 10:30 pm",
+        },
       ],
     },
     {
       day: 2,
       events: [
         {
-          category: "house",
-          venue: "Dance Lessons - Mogappair",
-          faculty: "Joshi",
-          time: "9:30 - 10:30 pm",
+          category: "locking",
+          venue: "Hips n Toez - T nagar",
+          faculty: "Sakthi",
+          time: "8:30 - 9:30 pm",
         },
       ],
     },
