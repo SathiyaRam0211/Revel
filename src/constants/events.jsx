@@ -700,6 +700,17 @@ export const eventDetails = {
       ],
     },
     {
+      day: 5,
+      events: [
+        {
+          category: "practice",
+          venue: "Thiruvanmiyur Park",
+          faculty: "",
+          time: "6:00 - 8:00 pm",
+        },
+      ],
+    },
+    {
       day: 6,
       events: [
         {
@@ -842,16 +853,16 @@ export const eventDetails = {
       day: 22,
       events: [
         {
-          category: "karokeOpenmic-ev",
-          venue: "Idam - Kodambakkam",
-          faculty: "",
-          time: "3:00 - 5:00 pm",
+          category: "parai-wk",
+          venue: "TBC",
+          faculty: "Manimaran",
+          time: "2:00 - 4:00 pm",
         },
         {
-          category: "ganaCypher-ev",
-          venue: "Idam - Kodambakkam",
-          faculty: "",
-          time: "5:00 - 7:00 pm",
+          category: "choreo-wk",
+          venue: "TBC",
+          faculty: "Selva",
+          time: "4:00 - 6:00 pm",
         },
       ],
     },
@@ -920,15 +931,15 @@ export const eventDetails = {
       day: 29,
       events: [
         {
-          category: "parai-wk",
-          venue: "Brigade Fitness, Valasaravakkam",
-          faculty: "Manimaran",
+          category: "breaking-wk",
+          venue: "TBC",
+          faculty: "Alisha",
           time: "2:00 - 4:00 pm",
         },
         {
-          category: "choreo-wk",
-          venue: "Brigade Fitness, Valasaravakkam",
-          faculty: "Selva",
+          category: "afro-wk",
+          venue: "TBC",
+          faculty: "Prabhu",
           time: "4:00 - 6:00 pm",
         },
       ],
@@ -956,16 +967,10 @@ export const eventDetails = {
       day: 2,
       events: [
         {
-          category: "afro-wk",
-          venue: "Brigade Fitness",
-          faculty: "Alisha",
-          time: "2:00 - 4:00 pm",
-        },
-        {
-          category: "breaking-wk",
-          venue: "Brigade Fitness",
-          faculty: "Prabhu",
-          time: "4:00 - 6:00 pm",
+          category: "ganaCypher-ev",
+          venue: "Idam - Kodambakkam",
+          faculty: "",
+          time: "6:00 - 9:00 pm",
         },
       ],
     },
