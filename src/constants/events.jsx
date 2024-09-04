@@ -680,11 +680,6 @@ export const eventDetails = {
           faculty: "",
           time: "7:00 - 9:00 am",
         },
-      ],
-    },
-    {
-      day: 3,
-      events: [
         {
           category: "practice",
           venue: "Thiruvanmiyur Park",
