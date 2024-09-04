@@ -708,33 +708,10 @@ export const eventDetails = {
       day: 6,
       events: [
         {
-          category: "hipHop",
-          venue: "TBC",
-          faculty: "DeeZee aka Dinesh",
-          time: "8:30 - 9:30 pm",
-        },
-        {
-          category: "hipHop",
-          venue: "TBC",
-          faculty: "DeeZee aka Dinesh",
-          time: "9:30 - 10:30 pm",
-        },
-      ],
-    },
-    {
-      day: 7,
-      events: [
-        {
           category: "locking",
-          venue: "TBC",
+          venue: "Nrittalaya School of arts - Pallikaranai",
           faculty: "Sakthi",
-          time: "7:30 - 8:30 am",
-        },
-        {
-          category: "locking",
-          venue: "TBC",
-          faculty: "Sakthi",
-          time: "8:30 - 9:30 am",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
@@ -743,15 +720,9 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "TBC",
-          faculty: "Feelhips aka Prabhu",
-          time: "6:00 - 7:00 pm",
-        },
-        {
-          category: "breaking",
-          venue: "TBC",
-          faculty: "Feelhips aka Prabhu",
-          time: "7:00 - 8:00 pm",
+          venue: "RMC - Ashok Nagar",
+          faculty: "Prabhu",
+          time: "6:00 - 8:00 pm",
         },
       ],
     },
@@ -788,9 +759,9 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "TBC",
-          faculty: "Feelhips aka Prabhu",
-          time: "8:30 - 9:30 pm",
+          venue: "RMC - Ashok Nagar",
+          faculty: "Prabhu",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
@@ -798,16 +769,10 @@ export const eventDetails = {
       day: 13,
       events: [
         {
-          category: "hipHop",
-          venue: "TBC",
-          faculty: "DeeZee aka Dinesh",
-          time: "8:30 - 9:30 pm",
-        },
-        {
-          category: "hipHop",
-          venue: "TBC",
-          faculty: "DeeZee aka Dinesh",
-          time: "9:30 - 10:30 pm",
+          category: "locking",
+          venue: "Nrittalaya School of arts - Pallikaranai",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
@@ -815,10 +780,10 @@ export const eventDetails = {
       day: 14,
       events: [
         {
-          category: "graffiti-wk",
-          venue: "Brigade Fitness",
-          faculty: "Vjay",
-          time: "4:00 - 6:00 pm",
+          category: "hipHop",
+          venue: "RMC - Ashok Nagar",
+          faculty: "Dinesh",
+          time: "7:30 - 9:30 am",
         },
       ],
     },
@@ -827,15 +792,15 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "Dance Lessons - Mogappair",
+          venue: "Nrittalaya School of arts - Pallikaranai",
           faculty: "Joshi",
-          time: "8:30 - 9:30 pm",
+          time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "Dance Lessons - Mogappair",
+          venue: "Nrittalaya School of arts - Pallikaranai",
           faculty: "Joshi",
-          time: "9:30 - 10:30 pm",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
@@ -844,9 +809,9 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "TBC",
+          venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
-          time: "8:30 - 9:30 pm",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
@@ -854,16 +819,10 @@ export const eventDetails = {
       day: 20,
       events: [
         {
-          category: "hipHop",
-          venue: "Dance Lessons - Mogappair",
-          faculty: "DeeZee aka Dinesh",
+          category: "locking",
+          venue: "Nrittalaya School of arts - Pallikaranai",
+          faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
-        },
-        {
-          category: "hipHop",
-          venue: "Dance Lessons - Mogappair",
-          faculty: "DeeZee aka Dinesh",
-          time: "9:00 - 10:00 pm",
         },
       ],
     },
@@ -871,33 +830,10 @@ export const eventDetails = {
       day: 21,
       events: [
         {
-          category: "locking",
-          venue: "TBC",
-          faculty: "Sakthi",
-          time: "7:30 - 8:30 am",
-        },
-        {
-          category: "locking",
-          venue: "TBC",
-          faculty: "Sakthi",
-          time: "8:30 - 9:30 am",
-        },
-      ],
-    },
-    {
-      day: 22,
-      events: [
-        {
-          category: "karokeOpenmic-ev",
-          venue: "Idam - Kodambakkam",
-          faculty: "",
-          time: "3:00 - 5:00 pm",
-        },
-        {
-          category: "ganaCypher-ev",
-          venue: "Idam - Kodambakkam",
-          faculty: "",
-          time: "5:00 - 7:00 pm",
+          category: "hipHop",
+          venue: "RMC - Ashok Nagar",
+          faculty: "Dinesh",
+          time: "7:30 - 9:30 am",
         },
       ],
     },
@@ -923,9 +859,9 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "TBC",
+          venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
-          time: "8:30 - 9:30 pm",
+          time: "8:00 - 9:00 pm",
         },
       ],
     },
@@ -934,9 +870,9 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "TBC",
-          faculty: "Feelhips aka Prabhu",
-          time: "8:30 - 9:30 pm",
+          venue: "RMC - Ashok Nagar",
+          faculty: "Prabhu",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
@@ -945,15 +881,9 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "TBC",
-          faculty: "DeeZee aka Dinesh",
-          time: "8:30 - 9:30 pm",
-        },
-        {
-          category: "hipHop",
-          venue: "TBC",
-          faculty: "DeeZee aka Dinesh",
-          time: "9:30 - 10:30 pm",
+          venue: "Nrittalaya School of arts - Pallikaranai",
+          faculty: "Dinesh",
+          time: "8:00 - 10:00 pm",
         },
       ],
     },
@@ -961,33 +891,10 @@ export const eventDetails = {
       day: 28,
       events: [
         {
-          category: "parai-wk",
-          venue: "Brigade Fitness",
-          faculty: "Manimaran",
-          time: "2:00 - 4:00 pm",
-        },
-        {
-          category: "breaking-wk",
-          venue: "Brigade Fitness",
-          faculty: "Prabhu",
-          time: "4:00 - 6:00 pm",
-        },
-      ],
-    },
-    {
-      day: 29,
-      events: [
-        {
-          category: "afro-wk",
-          venue: "Brigade Fitness",
-          faculty: "Alisha",
-          time: "2:00 - 4:00 pm",
-        },
-        {
-          category: "choreo-wk",
-          venue: "Brigade Fitness",
-          faculty: "Selva",
-          time: "4:00 - 6:00 pm",
+          category: "locking",
+          venue: "RMC - Ashok Nagar",
+          faculty: "Sakthi",
+          time: "7:30 - 9:30 am",
         },
       ],
     },
@@ -998,26 +905,26 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "Dance Lessons - Mogappair",
+          venue: "Nrittalaya School of arts - Pallikaranai",
           faculty: "Joshi",
-          time: "8:30 - 9:30 pm",
+          time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "Dance Lessons - Mogappair",
+          venue: "Nrittalaya School of arts - Pallikaranai",
           faculty: "Joshi",
-          time: "9:30 - 10:30 pm",
+          time: "9:00 - 10:00 pm",
         },
       ],
     },
     {
-      day: 2,
+      day: 4,
       events: [
         {
-          category: "locking",
-          venue: "TBC",
-          faculty: "Sakthi",
-          time: "8:30 - 9:30 pm",
+          category: "hipHop",
+          venue: "Dance Lessons - Mogappair",
+          faculty: "Dinesh",
+          time: "8:00 - 10:00 pm",
         },
       ],
     },
