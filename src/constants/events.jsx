@@ -785,6 +785,17 @@ export const eventDetails = {
           faculty: "Dinesh",
           time: "7:30 - 9:30 am",
         },
+        {
+          day: 14,
+          events: [
+            {
+              category: "graffiti-wk",
+              venue: "RMC - Ashok Nagar",
+              faculty: "Vijay",
+              time: "4:00 - 6:00 pm",
+            },
+          ],
+        },
       ],
     },
     {
@@ -834,6 +845,23 @@ export const eventDetails = {
           venue: "RMC - Ashok Nagar",
           faculty: "Dinesh",
           time: "7:30 - 9:30 am",
+        },
+      ],
+    },
+    {
+      day: 22,
+      events: [
+        {
+          category: "karokeOpenmic-ev",
+          venue: "Idam - Kodambakkam",
+          faculty: "",
+          time: "3:00 - 5:00 pm",
+        },
+        {
+          category: "ganaCypher-ev",
+          venue: "Idam - Kodambakkam",
+          faculty: "",
+          time: "5:00 - 7:00 pm",
         },
       ],
     },
@@ -898,6 +926,23 @@ export const eventDetails = {
         },
       ],
     },
+    {
+      day: 29,
+      events: [
+        {
+          category: "parai-wk",
+          venue: "Brigade Fitness, Valasaravakkam",
+          faculty: "Manimaran",
+          time: "2:00 - 4:00 pm",
+        },
+        {
+          category: "choreo-wk",
+          venue: "Brigade Fitness, Valasaravakkam",
+          faculty: "Selva",
+          time: "4:00 - 6:00 pm",
+        },
+      ],
+    },
   ],
   October: [
     {
@@ -914,6 +959,23 @@ export const eventDetails = {
           venue: "Nrittalaya School of arts - Pallikaranai",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 2,
+      events: [
+        {
+          category: "afro-wk",
+          venue: "Brigade Fitness",
+          faculty: "Alisha",
+          time: "2:00 - 4:00 pm",
+        },
+        {
+          category: "breaking-wk",
+          venue: "Brigade Fitness",
+          faculty: "Prabhu",
+          time: "4:00 - 6:00 pm",
         },
       ],
     },
