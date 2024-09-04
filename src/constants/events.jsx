@@ -795,7 +795,7 @@ export const eventDetails = {
           category: "graffiti-wk",
           venue: "RMC - Ashok Nagar",
           faculty: "Vijay",
-          time: "4:00 - 6:00 pm",
+          time: "10:00 - 12:00 am",
         },
       ],
     },
