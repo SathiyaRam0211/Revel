@@ -786,15 +786,10 @@ export const eventDetails = {
           time: "7:30 - 9:30 am",
         },
         {
-          day: 14,
-          events: [
-            {
-              category: "graffiti-wk",
-              venue: "RMC - Ashok Nagar",
-              faculty: "Vijay",
-              time: "4:00 - 6:00 pm",
-            },
-          ],
+          category: "graffiti-wk",
+          venue: "RMC - Ashok Nagar",
+          faculty: "Vijay",
+          time: "4:00 - 6:00 pm",
         },
       ],
     },
