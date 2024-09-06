@@ -715,7 +715,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Nrittalaya School of arts - Pallikaranai",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -804,13 +804,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "Nrittalaya School of arts - Pallikaranai",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "Nrittalaya School of arts - Pallikaranai",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
@@ -821,7 +821,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Nrittalaya School of arts - Pallikaranai",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -832,7 +832,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Nrittalaya School of arts - Pallikaranai",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -910,7 +910,7 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "Nrittalaya School of arts - Pallikaranai",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Dinesh",
           time: "8:00 - 10:00 pm",
         },
@@ -951,13 +951,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "Nrittalaya School of arts - Pallikaranai",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "Nrittalaya School of arts - Pallikaranai",
+          venue: "Smashers, Thoraipakkam",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
