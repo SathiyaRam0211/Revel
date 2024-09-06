@@ -933,13 +933,13 @@ export const eventDetails = {
         {
           category: "breaking-wk",
           venue: "TBC",
-          faculty: "Alisha",
+          faculty: "Prabhu",
           time: "2:00 - 4:00 pm",
         },
         {
           category: "afro-wk",
           venue: "TBC",
-          faculty: "Prabhu",
+          faculty: "Alisha",
           time: "4:00 - 6:00 pm",
         },
       ],
