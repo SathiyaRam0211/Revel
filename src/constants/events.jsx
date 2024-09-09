@@ -793,9 +793,9 @@ export const eventDetails = {
         },
         {
           category: "graffiti-wk",
-          venue: "RMC - Ashok Nagar",
+          venue: "Hipz n Toez, T Nagar",
           faculty: "Vijay",
-          time: "10:00 - 12:00 am",
+          time: "4:00 - 6:00 pm",
         },
       ],
     },
