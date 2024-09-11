@@ -714,7 +714,7 @@ export const eventDetails = {
       day: 6,
       events: [
         {
-          category: "Campbellocking aka Locking",
+          category: "locking",
           venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -753,7 +753,7 @@ export const eventDetails = {
       day: 11,
       events: [
         {
-          category: "Campbellocking aka Locking",
+          category: "locking",
           venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -775,7 +775,7 @@ export const eventDetails = {
       day: 13,
       events: [
         {
-          category: "Campbellocking aka Locking",
+          category: "locking",
           venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -820,7 +820,7 @@ export const eventDetails = {
       day: 18,
       events: [
         {
-          category: "Campbellocking aka Locking",
+          category: "locking",
           venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -831,7 +831,7 @@ export const eventDetails = {
       day: 20,
       events: [
         {
-          category: "Campbellocking aka Locking",
+          category: "locking",
           venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -887,7 +887,7 @@ export const eventDetails = {
       day: 25,
       events: [
         {
-          category: "Campbellocking aka Locking",
+          category: "locking",
           venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -920,7 +920,7 @@ export const eventDetails = {
       day: 28,
       events: [
         {
-          category: "Campbellocking aka Locking",
+          category: "locking",
           venue: "RMC - Ashok Nagar",
           faculty: "Sakthi",
           time: "7:30 - 9:30 am",
