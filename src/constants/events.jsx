@@ -727,7 +727,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "RMC - Ashok Nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "6:00 - 8:00 pm",
         },
       ],
@@ -766,7 +766,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "RMC - Ashok Nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "9:00 - 10:00 pm",
         },
       ],
@@ -900,7 +900,7 @@ export const eventDetails = {
         {
           category: "breaking",
           venue: "RMC - Ashok Nagar",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "9:00 - 10:00 pm",
         },
       ],
@@ -933,7 +933,7 @@ export const eventDetails = {
         {
           category: "breaking-wk",
           venue: "TBC",
-          faculty: "Prabhu",
+          faculty: "Feelhips aka Prabhu",
           time: "2:00 - 4:00 pm",
         },
         {
