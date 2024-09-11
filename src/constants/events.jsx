@@ -714,7 +714,7 @@ export const eventDetails = {
       day: 6,
       events: [
         {
-          category: "locking",
+          category: "Campbellocking aka Locking",
           venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -753,7 +753,7 @@ export const eventDetails = {
       day: 11,
       events: [
         {
-          category: "locking",
+          category: "Campbellocking aka Locking",
           venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -775,7 +775,7 @@ export const eventDetails = {
       day: 13,
       events: [
         {
-          category: "locking",
+          category: "Campbellocking aka Locking",
           venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -788,7 +788,7 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "RMC - Ashok Nagar",
-          faculty: "Dinesh",
+          faculty: "DeZee aka Dinesh",
           time: "7:30 - 9:30 am",
         },
         {
@@ -820,7 +820,7 @@ export const eventDetails = {
       day: 18,
       events: [
         {
-          category: "locking",
+          category: "Campbellocking aka Locking",
           venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -831,7 +831,7 @@ export const eventDetails = {
       day: 20,
       events: [
         {
-          category: "locking",
+          category: "Campbellocking aka Locking",
           venue: "Smashers, Thoraipakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -844,7 +844,7 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "RMC - Ashok Nagar",
-          faculty: "Dinesh",
+          faculty: "DeZee aka Dinesh",
           time: "7:30 - 9:30 am",
         },
       ],
@@ -887,7 +887,7 @@ export const eventDetails = {
       day: 25,
       events: [
         {
-          category: "locking",
+          category: "Campbellocking aka Locking",
           venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
@@ -911,7 +911,7 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "Smashers, Thoraipakkam",
-          faculty: "Dinesh",
+          faculty: "DeZee aka Dinesh",
           time: "8:00 - 10:00 pm",
         },
       ],
@@ -920,7 +920,7 @@ export const eventDetails = {
       day: 28,
       events: [
         {
-          category: "locking",
+          category: "Campbellocking aka Locking",
           venue: "RMC - Ashok Nagar",
           faculty: "Sakthi",
           time: "7:30 - 9:30 am",
@@ -980,7 +980,7 @@ export const eventDetails = {
         {
           category: "hipHop",
           venue: "Dance Lessons - Mogappair",
-          faculty: "Dinesh",
+          faculty: "DeZee aka Dinesh",
           time: "8:00 - 10:00 pm",
         },
       ],
