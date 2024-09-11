@@ -11,7 +11,7 @@ export const ART_FORMS = [
   { value: "breaking", label: "Breaking" },
   { value: "choreography", label: "Choreography" },
   { value: "hipHop", label: "Hip Hop" },
-  { value: "locking", label: "Campbellocking aka Locking" },
+  { value: "locking", label: "Campbellocking/Locking" },
   { value: "house", label: "House" },
   { value: "graffiti", label: "Graffiti" },
   { value: "visualArtGraffiti", label: "Visual Art and Graffiti" },
