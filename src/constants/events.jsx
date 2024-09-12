@@ -853,15 +853,9 @@ export const eventDetails = {
       day: 22,
       events: [
         {
-          category: "parai-wk",
+          category: "breaking-wk",
           venue: "TBC",
-          faculty: "Manimaran",
-          time: "2:00 - 4:00 pm",
-        },
-        {
-          category: "choreo-wk",
-          venue: "TBC",
-          faculty: "Selva",
+          faculty: "Feelhips aka Prabhu",
           time: "4:00 - 6:00 pm",
         },
       ],
@@ -931,12 +925,6 @@ export const eventDetails = {
       day: 29,
       events: [
         {
-          category: "breaking-wk",
-          venue: "TBC",
-          faculty: "Feelhips aka Prabhu",
-          time: "2:00 - 4:00 pm",
-        },
-        {
           category: "afro-wk",
           venue: "TBC",
           faculty: "Alisha",
@@ -982,6 +970,23 @@ export const eventDetails = {
           venue: "Dance Lessons - Mogappair",
           faculty: "DeZee aka Dinesh",
           time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 6,
+      events: [
+        {
+          category: "parai-wk",
+          venue: "TBC",
+          faculty: "Manimaran",
+          time: "2:00 - 4:00 pm",
+        },
+        {
+          category: "choreo-wk",
+          venue: "TBC",
+          faculty: "Selva",
+          time: "4:00 - 6:00 pm",
         },
       ],
     },
