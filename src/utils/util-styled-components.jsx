@@ -316,6 +316,27 @@ export const EventContainer = styled.div`
   }
 `;
 
+export const Tab = styled.div`
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 8px;
+  margin: 8px 8px 4px 0;
+  border-radius: 40px;
+  border: 1px solid
+    ${(props) => (props.$active ? "transparent" : VARIABLES.primaryColor)};
+  background: ${(props) => (props.$active ? VARIABLES.gradient : "none")};
+  span {
+    font-size: 14px;
+    color: ${(props) =>
+      props.$active ? VARIABLES.darkTextColor : "transparent"};
+    font-weight: ${(props) => (props.$active ? 600 : 400)};
+    background: ${VARIABLES.gradient};
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+`;
+
 export const Toolbar = styled.div`
   display: flex;
   align-items: center;
@@ -325,7 +346,7 @@ export const Toolbar = styled.div`
 
 export const EventsWrapper = styled.div`
   margin: 16px 0;
-  max-height: calc(100% - 64px);
+  max-height: calc(100% - 64px - 100px);
   overflow-y: scroll;
   ::-webkit-scrollbar {
     width: 12px;
@@ -356,14 +377,15 @@ export const EventRow = styled.div`
   margin: 8px 8px 8px 0;
   padding: 8px 16px;
   border-radius: 12px;
-  background: ${VARIABLES.secondaryBgColor};
+  background: ${(props) =>
+    props.$isEmpty ? "transparent" : VARIABLES.secondaryBgColor};
   opacity: ${(props) => (props.$isComplete ? "0.5" : "1")};
   pointer-events: ${(props) => (props.$isComplete ? "none" : "auto")};
   color: ${VARIABLES.textColor};
   display: flex;
   align-items: center;
   gap: 32px;
-  width: fit-content;
+  width: ${(props) => (props.$isEmpty ? "765px" : "fit-content")};
   div,
   span {
     display: flex;
@@ -371,6 +393,7 @@ export const EventRow = styled.div`
     font-size: 14px;
   }
   @media (${VARIABLES.tabletLarge}) {
+    width: ${(props) => (props.$isEmpty ? "318px" : "fit-content")};
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;

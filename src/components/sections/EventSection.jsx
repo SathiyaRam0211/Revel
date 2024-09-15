@@ -5,7 +5,7 @@ import React, {
   useCallback,
   useRef,
 } from "react";
-import { ART_FORMS, VARIABLES } from "../../constants/constants";
+import { ART_FORMS, monthToNumber, VARIABLES } from "../../constants/constants";
 import { eventDetails } from "../../constants/events";
 import {
   DayHeader,
@@ -16,10 +16,10 @@ import {
   Toolbar,
   EventContainer,
 } from "../../utils/util-styled-components";
-import CustomSelect from "../common/CustomSelect";
+// import CustomSelect from "../common/CustomSelect";
 import {
   getCurrentMonthName,
-  getFilteredArtForms,
+  // getFilteredArtForms,
   getFormattedDate,
   preprocessEventDetails,
 } from "../../utils/util-helper";
@@ -38,8 +38,8 @@ import {
   faClock,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
+import TabSection from "./TabSection";
 
-// Preprocess event details once
 const processedEventDetails = preprocessEventDetails(eventDetails);
 
 const EventSection = () => {
@@ -52,31 +52,39 @@ const EventSection = () => {
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedOption, setSelectedOption] = useState(null);
 
-  // Only update filteredArtForms when selectedMonth changes
-  const filteredArtForms = useMemo(
-    () => getFilteredArtForms(processedEventDetails, selectedMonth),
-    [selectedMonth]
-  );
+  // const filteredArtForms = useMemo(
+  //   () => getFilteredArtForms(processedEventDetails, selectedMonth),
+  //   [selectedMonth]
+  // );
 
-  const handleFilterChange = useCallback((selected) => {
-    setSelectedOption(selected || null);
-  }, []);
+  // const handleFilterChange = useCallback((selected) => {
+  //   setSelectedOption(selected || null);
+  // }, []);
 
-  // Memoize filtered events to avoid unnecessary recalculations
   const filteredEvents = useMemo(() => {
-    const events = processedEventDetails[selectedMonth];
+    const events = processedEventDetails[selectedMonth] || [];
     if (!selectedOption) {
       return events;
     }
     return events
       .map((day) => ({
         ...day,
-        events: day.events.filter(
-          (event) => event.category === selectedOption.value
-        ),
+        events: day.events.filter((event) => {
+          if (selectedOption.value === "workshop") {
+            return (
+              event.category.toLowerCase().includes("-wk") &&
+              (selectedMonth !== currentMonth || day.day >= currentDay)
+            );
+          } else {
+            return (
+              event.category === selectedOption.value &&
+              (selectedMonth !== currentMonth || day.day >= currentDay)
+            );
+          }
+        }),
       }))
       .filter((day) => day.events.length > 0);
-  }, [selectedMonth, selectedOption]);
+  }, [selectedMonth, selectedOption, currentDay, currentMonth]);
 
   const fetchArtForm = useCallback((category) => {
     return ART_FORMS.find((each) => each?.value === category)?.label || "Other";
@@ -105,32 +113,32 @@ const EventSection = () => {
   }, []);
 
   useEffect(() => {
-    if (selectedMonth !== currentMonth) return;
-
-    const days = Object.keys(eventRefs.current)
-      .map(Number)
-      .sort((a, b) => a - b);
-
-    let nextEventDay = days.find((day) => day >= currentDay);
-
-    if (!nextEventDay) {
-      const nextMonth =
-        availableMonths[availableMonths.indexOf(currentMonth) + 1];
-      if (nextMonth) {
-        setSelectedMonth(nextMonth);
-        nextEventDay = 1;
+    const scrollToCurrentDay = () => {
+      if (selectedMonth === currentMonth) {
+        const targetDay = Object.keys(eventRefs.current)
+          .map(Number)
+          .find((day) => day >= currentDay);
+        if (targetDay && eventRefs.current[targetDay]) {
+          eventRefs.current[targetDay].scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        const firstDayOfMonth = Object.keys(eventRefs.current)
+          .map(Number)
+          .sort((a, b) => a - b)[0];
+        if (firstDayOfMonth && eventRefs.current[firstDayOfMonth]) {
+          eventRefs.current[firstDayOfMonth].scrollIntoView({
+            behavior: "smooth",
+          });
+        }
       }
-    }
-
-    if (eventRefs.current[nextEventDay]) {
-      eventRefs.current[nextEventDay].scrollIntoView({ behavior: "smooth" });
-    }
-  }, [currentDay, selectedMonth, currentMonth, availableMonths]);
+    };
+    scrollToCurrentDay();
+  }, [selectedOption, selectedMonth, currentDay, currentMonth]);
 
   return (
     <PageSection>
       <EventContainer>
-        <div className="wrapper">
+        <div>
           <Toolbar>
             <HeroText>
               Classes -{" "}
@@ -153,52 +161,66 @@ const EventSection = () => {
                 />
               )}
             </HeroText>
-            <CustomSelect
+            {/* <CustomSelect
               options={filteredArtForms}
               onChange={handleFilterChange}
               placeholder={"Filter by Artform"}
-            />
+            /> */}
           </Toolbar>
+          <TabSection
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+          />
           <EventsWrapper>
-            {filteredEvents.map(({ day, events }) => (
-              <div key={day} ref={(ref) => (eventRefs.current[day] = ref)}>
-                <DayHeader>
-                  <span>{getFormattedDate(selectedMonth, day)}</span>
-                </DayHeader>
-                {events.map(({ category, faculty, time, venue, id }, index) => (
-                  <EventRow
-                    $isComplete={
-                      day < currentDay && selectedMonth === currentMonth
-                    }
-                    key={`${category}-${day}-${index}`}
-                  >
-                    <div>
-                      <span style={idStyle}>#{id}</span>
-                      <span style={categoryStyle}>
-                        {fetchArtForm(category)}
-                      </span>
-                      <span style={timeStyle}>
-                        <FontAwesomeIcon
-                          icon={faClock}
-                          fontSize="12px"
-                          color={VARIABLES.primaryColor}
-                        />{" "}
-                        {time}
-                      </span>
-                    </div>
-                    <span style={venueStyle}>
-                      <FontAwesomeIcon
-                        icon={faLocationDot}
-                        fontSize="12px"
-                        color={VARIABLES.primaryColor}
-                      />{" "}
-                      {venue}
-                    </span>
-                    <span style={facultyStyle}>{faculty}</span>
-                  </EventRow>
-                ))}
-              </div>
-            ))}
+            {filteredEvents.length ? (
+              filteredEvents.map(({ day, events }) => (
+                <div key={day} ref={(ref) => (eventRefs.current[day] = ref)}>
+                  <DayHeader>
+                    <span>{getFormattedDate(selectedMonth, day)}</span>
+                  </DayHeader>
+                  {events.map(
+                    ({ category, faculty, time, venue, id }, index) => (
+                      <EventRow
+                        $isComplete={
+                          monthToNumber[selectedMonth] <
+                            monthToNumber[currentMonth] ||
+                          (monthToNumber[selectedMonth] ===
+                            monthToNumber[currentMonth] &&
+                            day < currentDay)
+                        }
+                        key={`${category}-${day}-${index}`}
+                      >
+                        <div>
+                          <span style={idStyle}>#{id}</span>
+                          <span style={categoryStyle}>
+                            {fetchArtForm(category)}
+                          </span>
+                          <span style={timeStyle}>
+                            <FontAwesomeIcon
+                              icon={faClock}
+                              fontSize="12px"
+                              color={VARIABLES.primaryColor}
+                            />{" "}
+                            {time}
+                          </span>
+                        </div>
+                        <span style={venueStyle}>
+                          <FontAwesomeIcon
+                            icon={faLocationDot}
+                            fontSize="12px"
+                            color={VARIABLES.primaryColor}
+                          />{" "}
+                          {venue}
+                        </span>
+                        <span style={facultyStyle}>{faculty}</span>
+                      </EventRow>
+                    )
+                  )}
+                </div>
+              ))
+            ) : (
+              <EventRow $isEmpty>No Events found</EventRow>
+            )}
           </EventsWrapper>
         </div>
       </EventContainer>

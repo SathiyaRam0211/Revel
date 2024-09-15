@@ -29,16 +29,29 @@ export const ART_FORMS = [
   { value: "choreo-wk", label: "Choreo Workshop" },
   { value: "hipHop-rev", label: "Hip Hop - Revision" },
   { value: "locking-rev", label: "Locking - Revision" },
-  { value: "visualArtGraffiti-rev", label: "Visual Art and Graffiti - Revision" },
+  {
+    value: "visualArtGraffiti-rev",
+    label: "Visual Art and Graffiti - Revision",
+  },
   { value: "house-rev", label: "House - Revision" },
   { value: "parai-wk", label: "Parai Workshop" },
   { value: "practice", label: "Practice Session" },
   { value: "graffiti-rev", label: "Graffiti - Revision" },
   { value: "afro-wk", label: "Afro Workshop" },
-  { value: "breaking-wk", label: "Fitness and Breaking Workshop" },
+  { value: "breaking-wk", label: "Fitness & Breaking Workshop" },
   { value: "graffiti-wk", label: "Graffiti Workshop" },
   { value: "karokeOpenmic-ev", label: "Karoke & Open Mic Event" },
   { value: "ganaCypher-ev", label: "Gana Cypher Event" },
+];
+
+export const TABS = [
+  { value: "all", label: "All" },
+  { value: "breaking", label: "Breaking" },
+  { value: "creativeMovement", label: "Creative Movement" },
+  { value: "hipHop", label: "Hip Hop" },
+  { value: "house", label: "House" },
+  { value: "locking", label: "Locking" },
+  { value: "workshop", label: "Workshop" },
 ];
 
 export const VARIABLES = {
@@ -62,4 +75,19 @@ export const VARIABLES = {
       ${this.primaryColor} 93.17%
     )`;
   },
+};
+
+export const monthToNumber = {
+  January: 1,
+  February: 2,
+  March: 3,
+  April: 4,
+  May: 5,
+  June: 6,
+  July: 7,
+  August: 8,
+  September: 9,
+  October: 10,
+  November: 11,
+  December: 12,
 };
