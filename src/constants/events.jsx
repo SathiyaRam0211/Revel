@@ -554,13 +554,13 @@ export const eventDetails = {
       day: 25,
       events: [
         {
-          category: "breaking-rev",
+          category: "breaking",
           venue: "Hips n Toez, T Nagar",
           faculty: "Feelhips aka Prabhu",
           time: "7:00 - 8:00 pm",
         },
         {
-          category: "breaking-rev",
+          category: "breaking",
           venue: "Hips n Toez, T Nagar",
           faculty: "Feelhips aka Prabhu",
           time: "8:00 - 9:00 pm",
@@ -588,13 +588,13 @@ export const eventDetails = {
       day: 29,
       events: [
         {
-          category: "hipHop-rev",
+          category: "hipHop",
           venue: "Dance Lessons, Mogappair",
           faculty: "DeeZee aka Dinesh",
           time: "8:00 - 9:00 pm",
         },
         {
-          category: "hipHop-rev",
+          category: "hipHop",
           venue: "Dance Lessons, Mogappair",
           faculty: "DeeZee aka Dinesh",
           time: "9:00 - 10:00 pm",
@@ -605,13 +605,13 @@ export const eventDetails = {
       day: 30,
       events: [
         {
-          category: "locking-rev",
+          category: "locking",
           venue: "Dance Lessons, Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
         {
-          category: "locking-rev",
+          category: "locking",
           venue: "Dance Lessons, Mogappair",
           faculty: "Sakthi",
           time: "9:00 - 10:00 pm",
@@ -622,13 +622,13 @@ export const eventDetails = {
       day: 31,
       events: [
         {
-          category: "graffiti-rev",
+          category: "graffiti",
           venue: "Hips n Toez, T Nagar",
           faculty: "Vijay",
           time: "7:30 - 8:30 am",
         },
         {
-          category: "graffiti-rev",
+          category: "graffiti",
           venue: "Hips n Toez, T Nagar",
           faculty: "Vijay",
           time: "8:30 - 9:30 am",
@@ -647,16 +647,18 @@ export const eventDetails = {
       day: 1,
       events: [
         {
-          category: "parai-wk",
+          category: "parai",
           venue: "Brigade Fitness, Valsaravakkam",
           faculty: "Manimaran",
           time: "1:30 - 3:30 pm",
+          type: "workshop",
         },
         {
-          category: "choreo-wk",
+          category: "choreo",
           venue: "Brigade Fitness, Valsaravakkam",
           faculty: "Selva",
           time: "3:30 - 5:30 pm",
+          type: "workshop",
         },
       ],
     },
@@ -792,10 +794,11 @@ export const eventDetails = {
           time: "7:30 - 9:30 am",
         },
         {
-          category: "graffiti-wk",
+          category: "graffiti",
           venue: "Hipz n Toez, T Nagar",
           faculty: "Vijay",
           time: "4:00 - 6:00 pm",
+          type: "workshop",
         },
       ],
     },
@@ -853,10 +856,11 @@ export const eventDetails = {
       day: 22,
       events: [
         {
-          category: "breaking-wk",
+          category: "breaking",
           venue: "TBC",
           faculty: "Feelhips aka Prabhu",
           time: "4:00 - 6:00 pm",
+          type: "workshop"
         },
       ],
     },
@@ -925,10 +929,11 @@ export const eventDetails = {
       day: 29,
       events: [
         {
-          category: "afro-wk",
+          category: "afro",
           venue: "TBC",
           faculty: "Alisha",
           time: "4:00 - 6:00 pm",
+          type: "workshop",
         },
       ],
     },
@@ -955,10 +960,11 @@ export const eventDetails = {
       day: 2,
       events: [
         {
-          category: "ganaCypher-ev",
+          category: "ganaCypher",
           venue: "Idam - Kodambakkam",
           faculty: "",
           time: "6:00 - 9:00 pm",
+          type: "event"
         },
       ],
     },
@@ -977,16 +983,18 @@ export const eventDetails = {
       day: 6,
       events: [
         {
-          category: "parai-wk",
+          category: "parai",
           venue: "TBC",
           faculty: "Manimaran",
           time: "2:00 - 4:00 pm",
+          type: "workshop",
         },
         {
-          category: "choreo-wk",
+          category: "choreo",
           venue: "TBC",
           faculty: "Selva",
           time: "4:00 - 6:00 pm",
+          type: "workshop",
         },
       ],
     },
