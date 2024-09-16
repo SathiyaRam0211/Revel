@@ -63,7 +63,7 @@ const EventSection = () => {
 
   const filteredEvents = useMemo(() => {
     const events = processedEventDetails[selectedMonth] || [];
-    if (!selectedOption) {
+    if (!selectedOption || selectedOption.value === "all") {
       return events;
     }
     return events
@@ -72,14 +72,21 @@ const EventSection = () => {
         events: day.events.filter((event) => {
           if (selectedOption.value === "workshop") {
             return (
-              event.category.toLowerCase().includes("-wk") &&
+              event.type === "workshop" &&
               (selectedMonth !== currentMonth || day.day >= currentDay)
             );
           } else {
-            return (
-              event.category === selectedOption.value &&
-              (selectedMonth !== currentMonth || day.day >= currentDay)
-            );
+            if (selectedOption.value === "event") {
+              return (
+                event.type === "event" &&
+                (selectedMonth !== currentMonth || day.day >= currentDay)
+              );
+            } else {
+              return (
+                event.category === selectedOption.value &&
+                (selectedMonth !== currentMonth || day.day >= currentDay)
+              );
+            }
           }
         }),
       }))
@@ -219,7 +226,11 @@ const EventSection = () => {
                 </div>
               ))
             ) : (
-              <EventRow $isEmpty>No Events found</EventRow>
+              <EventRow $isEmpty>
+                No{" "}
+                {selectedOption.value === "workshop" ? "Workshops " : "Events "}
+                found
+              </EventRow>
             )}
           </EventsWrapper>
         </div>

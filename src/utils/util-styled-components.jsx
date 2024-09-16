@@ -323,6 +323,7 @@ export const Tab = styled.div`
   padding: 6px 8px;
   margin: 8px 8px 4px 0;
   border-radius: 40px;
+  width: fit-content;
   border: 1px solid
     ${(props) => (props.$active ? "transparent" : VARIABLES.primaryColor)};
   background: ${(props) => (props.$active ? VARIABLES.gradient : "none")};
