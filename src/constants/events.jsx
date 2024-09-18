@@ -944,13 +944,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "Smashers, Thoraipakkam",
+          venue: "Madorock Dance Studio,Adambakkam",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "Smashers, Thoraipakkam",
+          venue: "Madorock Dance Studio,Adambakkam",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
