@@ -93,8 +93,15 @@ const EventSection = () => {
       .filter((day) => day.events.length > 0);
   }, [selectedMonth, selectedOption, currentDay, currentMonth]);
 
-  const fetchArtForm = useCallback((category) => {
-    return ART_FORMS.find((each) => each?.value === category)?.label || "Other";
+  const fetchArtForm = useCallback((category, type) => {
+    return (
+      ART_FORMS.find((each) => {
+        if (type !== null) {
+          return each?.value === category && each?.type === type;
+        }
+        return each?.value === category;
+      })?.label || "Other"
+    );
   }, []);
 
   const handleMonthChange = useCallback(
@@ -186,7 +193,7 @@ const EventSection = () => {
                     <span>{getFormattedDate(selectedMonth, day)}</span>
                   </DayHeader>
                   {events.map(
-                    ({ category, faculty, time, venue, id }, index) => (
+                    ({ category, faculty, time, venue, id, type }, index) => (
                       <EventRow
                         $isComplete={
                           monthToNumber[selectedMonth] <
@@ -200,7 +207,7 @@ const EventSection = () => {
                         <div>
                           <span style={idStyle}>#{id}</span>
                           <span style={categoryStyle}>
-                            {fetchArtForm(category)}
+                            {fetchArtForm(category, type)}
                           </span>
                           <span style={timeStyle}>
                             <FontAwesomeIcon
