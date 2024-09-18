@@ -29,7 +29,7 @@ export const ART_FORMS = [
   { value: "afro", label: "Afro Workshop", type: "workshop" },
   { value: "graffiti", label: "Graffiti Workshop", type: "workshop" },
   { value: "breaking", label: "Fitness and Breaking", type: "workshop" },
-  { value: "ganaCypher", label: "Gana Cypher Event", type: "event" },
+  { value: "ganaCypher", label: "Gana Cypher", type: "event" },
   { value: "practice", label: "Practice Session" },
 ];
 

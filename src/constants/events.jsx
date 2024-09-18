@@ -647,14 +647,14 @@ export const eventDetails = {
       day: 1,
       events: [
         {
-          category: "parai-wk",
+          category: "parai",
           venue: "Brigade Fitness, Valsaravakkam",
           faculty: "Manimaran",
           time: "1:30 - 3:30 pm",
           type: "workshop",
         },
         {
-          category: "choreo-wk",
+          category: "choreo",
           venue: "Brigade Fitness, Valsaravakkam",
           faculty: "Selva",
           time: "3:30 - 5:30 pm",
@@ -794,7 +794,7 @@ export const eventDetails = {
           time: "7:30 - 9:30 am",
         },
         {
-          category: "graffiti-wk",
+          category: "graffiti",
           venue: "Hipz n Toez, T Nagar",
           faculty: "Vijay",
           time: "4:00 - 6:00 pm",
@@ -983,14 +983,14 @@ export const eventDetails = {
       day: 6,
       events: [
         {
-          category: "parai-wk",
+          category: "parai",
           venue: "TBC",
           faculty: "Manimaran",
           time: "2:00 - 4:00 pm",
           type: "workshop",
         },
         {
-          category: "choreo-wk",
+          category: "choreo",
           venue: "TBC",
           faculty: "Selva",
           time: "4:00 - 6:00 pm",
