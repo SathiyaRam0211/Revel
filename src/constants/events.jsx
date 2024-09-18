@@ -857,7 +857,7 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "TBC",
+          venue: "Hi O Toes, Gopalapuram",
           faculty: "Feelhips aka Prabhu",
           time: "4:00 - 6:00 pm",
           type: "workshop"
@@ -930,7 +930,7 @@ export const eventDetails = {
       events: [
         {
           category: "afro",
-          venue: "TBC",
+          venue: "Hi O Toes, Gopalapuram",
           faculty: "Alisha",
           time: "4:00 - 6:00 pm",
           type: "workshop",
