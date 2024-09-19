@@ -835,7 +835,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Smashers, Thoraipakkam",
+          venue: "Dance Lessons - Mogappair",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -886,7 +886,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Dance Lessons - Mogappair",
+          venue: "Madorock Dance Studio,Adambakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
