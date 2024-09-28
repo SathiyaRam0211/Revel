@@ -979,24 +979,5 @@ export const eventDetails = {
         },
       ],
     },
-    {
-      day: 6,
-      events: [
-        {
-          category: "parai",
-          venue: "TBC",
-          faculty: "Manimaran",
-          time: "2:00 - 4:00 pm",
-          type: "workshop",
-        },
-        {
-          category: "choreo",
-          venue: "TBC",
-          faculty: "Selva",
-          time: "4:00 - 6:00 pm",
-          type: "workshop",
-        },
-      ],
-    },
   ],
 };
