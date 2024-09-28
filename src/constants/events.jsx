@@ -979,5 +979,205 @@ export const eventDetails = {
         },
       ],
     },
+    {
+      day: 7,
+      events: [
+        {
+          category: "hipHop",
+          venue: "TBC, Guindy",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 8,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "TBC, Guindy",
+          faculty: "Joshi",
+          time: "8:00 - 9:00 pm",
+        },
+        {
+          category: "house",
+          venue: "TBC, Guindy",
+          faculty: "Joshi",
+          time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 9,
+      events: [
+        {
+          category: "locking",
+          venue: "TBC, Guindy",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 15,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "TBC, Guindy",
+          faculty: "Joshi",
+          time: "8:00 - 9:00 pm",
+        },
+        {
+          category: "house",
+          venue: "TBC, Guindy",
+          faculty: "Joshi",
+          time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 16,
+      events: [
+        {
+          category: "locking",
+          venue: "TBC, Guindy",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 17,
+      events: [
+        {
+          category: "breaking",
+          venue: "TBC, Guindy",
+          faculty: "Feelhips aka Prabhu",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 18,
+      events: [
+        {
+          category: "hipHop",
+          venue: "TBC, Guindy",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 19,
+      events: [
+        {
+          category: "breaking",
+          venue: "TBC, Guindy",
+          faculty: "Feelhips aka Prabhu",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 22,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "TBC, Guindy",
+          faculty: "Joshi",
+          time: "8:00 - 9:00 pm",
+        },
+        {
+          category: "house",
+          venue: "TBC, Guindy",
+          faculty: "Joshi",
+          time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 23,
+      events: [
+        {
+          category: "locking",
+          venue: "TBC, Guindy",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 24,
+      events: [
+        {
+          category: "breaking",
+          venue: "TBC, Guindy",
+          faculty: "Feelhips aka Prabhu",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 25,
+      events: [
+        {
+          category: "hipHop",
+          venue: "TBC, Guindy",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 26,
+      events: [
+        {
+          category: "breaking",
+          venue: "TBC, Guindy",
+          faculty: "Feelhips aka Prabhu",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 28,
+      events: [
+        {
+          category: "hipHop",
+          venue: "TBC, Guindy",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 29,
+      events: [
+        {
+          category: "creativeMovement",
+          venue: "TBC, Guindy",
+          faculty: "Joshi",
+          time: "8:00 - 9:00 pm",
+        },
+        {
+          category: "house",
+          venue: "TBC, Guindy",
+          faculty: "Joshi",
+          time: "9:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 30,
+      events: [
+        {
+          category: "locking",
+          venue: "TBC, Guindy",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
   ],
 };
