@@ -984,7 +984,7 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "DeZee aka Dinesh",
           time: "8:00 - 10:00 pm",
         },
@@ -995,13 +995,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
@@ -1012,7 +1012,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Sakthi",
           time: "8:00 - 10:00 pm",
         },
@@ -1023,13 +1023,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
@@ -1040,7 +1040,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Sakthi",
           time: "8:00 - 10:00 pm",
         },
@@ -1051,7 +1051,7 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Feelhips aka Prabhu",
           time: "8:00 - 10:00 pm",
         },
@@ -1062,7 +1062,7 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "DeZee aka Dinesh",
           time: "8:00 - 10:00 pm",
         },
@@ -1073,7 +1073,7 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Feelhips aka Prabhu",
           time: "8:00 - 10:00 pm",
         },
@@ -1084,13 +1084,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
@@ -1101,7 +1101,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Sakthi",
           time: "8:00 - 10:00 pm",
         },
@@ -1112,7 +1112,7 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Feelhips aka Prabhu",
           time: "8:00 - 10:00 pm",
         },
@@ -1123,7 +1123,7 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "DeZee aka Dinesh",
           time: "8:00 - 10:00 pm",
         },
@@ -1134,7 +1134,7 @@ export const eventDetails = {
       events: [
         {
           category: "breaking",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Feelhips aka Prabhu",
           time: "8:00 - 10:00 pm",
         },
@@ -1145,7 +1145,7 @@ export const eventDetails = {
       events: [
         {
           category: "hipHop",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "DeZee aka Dinesh",
           time: "8:00 - 10:00 pm",
         },
@@ -1156,13 +1156,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
@@ -1173,7 +1173,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "TBC, Guindy",
+          venue: "Madorock Studio, Guindy",
           faculty: "Sakthi",
           time: "8:00 - 10:00 pm",
         },
