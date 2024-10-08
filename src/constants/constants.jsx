@@ -41,6 +41,7 @@ export const TABS = [
   { value: "hipHop", label: "Hip Hop" },
   { value: "house", label: "House" },
   { value: "locking", label: "Locking" },
+  { value: "choreography", label: "Choreography" },
   { value: "workshop", label: "Workshop" },
 ];
 

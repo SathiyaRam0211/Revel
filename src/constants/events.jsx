@@ -983,9 +983,9 @@ export const eventDetails = {
       day: 7,
       events: [
         {
-          category: "hipHop",
+          category: "locking",
           venue: "Madorock Studio, Guindy",
-          faculty: "DeZee aka Dinesh",
+          faculty: "Sakthi",
           time: "8:00 - 10:00 pm",
         },
       ],
@@ -1009,6 +1009,17 @@ export const eventDetails = {
     },
     {
       day: 9,
+      events: [
+        {
+          category: "hipHop",
+          venue: "Madorock Studio, Guindy",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 11,
       events: [
         {
           category: "locking",
@@ -1036,6 +1047,17 @@ export const eventDetails = {
       ],
     },
     {
+      day: 15,
+      events: [
+        {
+          category: "choreography",
+          venue: "High on Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+    {
       day: 16,
       events: [
         {
@@ -1058,13 +1080,13 @@ export const eventDetails = {
       ],
     },
     {
-      day: 18,
+      day: 17,
       events: [
         {
-          category: "hipHop",
-          venue: "Madorock Studio, Guindy",
-          faculty: "DeZee aka Dinesh",
-          time: "8:00 - 10:00 pm",
+          category: "choreography",
+          venue: "High on Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
         },
       ],
     },
@@ -1072,10 +1094,10 @@ export const eventDetails = {
       day: 19,
       events: [
         {
-          category: "breaking",
-          venue: "Madorock Studio, Guindy",
-          faculty: "Feelhips aka Prabhu",
-          time: "8:00 - 10:00 pm",
+          category: "hipHop",
+          venue: "RMC, Ashok Nagar",
+          faculty: "DeZee aka Dinesh",
+          time: "7:30 - 9:30 am",
         },
       ],
     },
@@ -1097,12 +1119,23 @@ export const eventDetails = {
       ],
     },
     {
+      day: 22,
+      events: [
+        {
+          category: "choreography",
+          venue: "High on Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+    {
       day: 23,
       events: [
         {
-          category: "locking",
+          category: "hipHop",
           venue: "Madorock Studio, Guindy",
-          faculty: "Sakthi",
+          faculty: "DeZee aka Dinesh",
           time: "8:00 - 10:00 pm",
         },
       ],
@@ -1119,12 +1152,23 @@ export const eventDetails = {
       ],
     },
     {
+      day: 24,
+      events: [
+        {
+          category: "choreography",
+          venue: "High on Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+    {
       day: 25,
       events: [
         {
-          category: "hipHop",
+          category: "locking",
           venue: "Madorock Studio, Guindy",
-          faculty: "DeZee aka Dinesh",
+          faculty: "Sakthi",
           time: "8:00 - 10:00 pm",
         },
       ],
@@ -1133,10 +1177,10 @@ export const eventDetails = {
       day: 26,
       events: [
         {
-          category: "breaking",
-          venue: "Madorock Studio, Guindy",
-          faculty: "Feelhips aka Prabhu",
-          time: "8:00 - 10:00 pm",
+          category: "hipHop",
+          venue: "RMC, Ashok Nagar",
+          faculty: "DeZee aka Dinesh",
+          time: "7:30 - 9:30 am",
         },
       ],
     },
@@ -1144,9 +1188,9 @@ export const eventDetails = {
       day: 28,
       events: [
         {
-          category: "hipHop",
+          category: "locking",
           venue: "Madorock Studio, Guindy",
-          faculty: "DeZee aka Dinesh",
+          faculty: "Sakthi",
           time: "8:00 - 10:00 pm",
         },
       ],
@@ -1169,13 +1213,13 @@ export const eventDetails = {
       ],
     },
     {
-      day: 30,
+      day: 29,
       events: [
         {
-          category: "locking",
-          venue: "Madorock Studio, Guindy",
-          faculty: "Sakthi",
-          time: "8:00 - 10:00 pm",
+          category: "choreography",
+          venue: "High on Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
         },
       ],
     },
