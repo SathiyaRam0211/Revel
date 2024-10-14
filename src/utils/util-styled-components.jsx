@@ -302,18 +302,6 @@ export const EventContainer = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: fit-content;
-    min-width: 800px;
-
-    @media (${VARIABLES.tabletLarge}) {
-      min-width: auto;
-    }
-  }
 `;
 
 export const Tab = styled.div`
@@ -338,17 +326,11 @@ export const Tab = styled.div`
   }
 `;
 
-export const Toolbar = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-`;
-
 export const EventsWrapper = styled.div`
   margin: 16px 0;
-  max-height: calc(100% - 64px - 100px);
-  overflow-y: ${(props) => (props.$isScrollable ? "auto" : "hidden")};
+  box-sizing: border-box;
+  height: calc(100% - 24px - 138px);
+  overflow-y: auto;
 
   ::-webkit-scrollbar {
     width: 12px;
@@ -387,7 +369,7 @@ export const EventRow = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
-  width: ${(props) => (props.$isEmpty ? "765px" : "fit-content")};
+  width: ${(props) => (props.$isEmpty ? "824px" : "fit-content")};
   div,
   span {
     display: flex;
@@ -395,7 +377,7 @@ export const EventRow = styled.div`
     font-size: 14px;
   }
   @media (${VARIABLES.tabletLarge}) {
-    width: ${(props) => (props.$isEmpty ? "318px" : "fit-content")};
+    width: ${(props) => (props.$isEmpty ? "322px" : "fit-content")};
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;

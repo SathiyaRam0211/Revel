@@ -12,7 +12,6 @@ import {
   EventsWrapper,
   HeroText,
   PageSection,
-  Toolbar,
   EventContainer,
 } from "../../utils/util-styled-components";
 import {
@@ -121,11 +120,6 @@ const EventSection = () => {
     [availableMonths, selectedMonth]
   );
 
-  const isScrollable = useMemo(
-    () => filteredEvents.length > 5,
-    [filteredEvents]
-  );
-
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -164,13 +158,11 @@ const EventSection = () => {
     <PageSection>
       <EventContainer>
         <div>
-          <Toolbar>
-            <HeroText>
-              Classes - {getMonthDisplay()} {renderMonthChangeIcons()}
-            </HeroText>
-          </Toolbar>
+          <HeroText>
+            Classes - {getMonthDisplay()} {renderMonthChangeIcons()}
+          </HeroText>
           <TabSection setSelectedOption={setSelectedOption} />
-          <EventsWrapper $isScrollable={isScrollable}>
+          <EventsWrapper>
             {filteredEvents.length ? (
               filteredEvents.map(({ day, events }) => (
                 <EventCard
