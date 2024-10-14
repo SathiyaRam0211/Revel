@@ -6,8 +6,9 @@ const TabSection = ({ setSelectedOption }) => {
   const [selectedArtForm, setSelectedArtForm] = useState("all");
   return (
     <div>
-      {TABS.map((eachArtForm) => (
+      {TABS.map((eachArtForm, index) => (
         <Tab
+          key={`${eachArtForm.value}-${index}`}
           $active={eachArtForm.value === selectedArtForm}
           onClick={() => {
             setSelectedOption(eachArtForm);

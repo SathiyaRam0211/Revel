@@ -128,7 +128,7 @@ export const selectStyle = {
 };
 
 export const categoryStyle = {
-  width: "160px",
+  width: "165px",
   fontWeight: "600",
   ...ellipsis,
 };
@@ -150,7 +150,7 @@ export const venueStyle = {
   display: "flex",
   gap: "6px",
   alignItems: "center",
-  width: "240px",
+  width: "280px",
   ...ellipsis,
 };
 

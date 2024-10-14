@@ -5,10 +5,9 @@ import React, {
   useCallback,
   useRef,
 } from "react";
-import { ART_FORMS, monthToNumber, VARIABLES } from "../../constants/constants";
+import { ART_FORMS, monthToNumber } from "../../constants/constants";
 import { eventDetails } from "../../constants/events";
 import {
-  DayHeader,
   EventRow,
   EventsWrapper,
   HeroText,
@@ -16,29 +15,20 @@ import {
   Toolbar,
   EventContainer,
 } from "../../utils/util-styled-components";
-// import CustomSelect from "../common/CustomSelect";
 import {
+  debounce,
   getCurrentMonthName,
-  // getFilteredArtForms,
   getFormattedDate,
   preprocessEventDetails,
 } from "../../utils/util-helper";
-import {
-  categoryStyle,
-  facultyStyle,
-  iconButtonStyle,
-  timeStyle,
-  venueStyle,
-  idStyle,
-} from "../../utils/util-inline-styles";
+import { iconButtonStyle } from "../../utils/util-inline-styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleChevronDown,
   faCircleChevronUp,
-  faClock,
-  faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import TabSection from "./TabSection";
+import EventCard from "../Event";
 
 const processedEventDetails = preprocessEventDetails(eventDetails);
 
@@ -52,42 +42,25 @@ const EventSection = () => {
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedOption, setSelectedOption] = useState(null);
 
-  // const filteredArtForms = useMemo(
-  //   () => getFilteredArtForms(processedEventDetails, selectedMonth),
-  //   [selectedMonth]
-  // );
-
-  // const handleFilterChange = useCallback((selected) => {
-  //   setSelectedOption(selected || null);
-  // }, []);
-
   const filteredEvents = useMemo(() => {
     const events = processedEventDetails[selectedMonth] || [];
-    if (!selectedOption || selectedOption.value === "all") {
-      return events;
-    }
+    if (!selectedOption || selectedOption.value === "all") return events;
     return events
       .map((day) => ({
         ...day,
         events: day.events.filter((event) => {
+          const isFutureEvent =
+            selectedMonth !== currentMonth || day.day >= currentDay;
+
           if (selectedOption.value === "workshop") {
-            return (
-              event.type === "workshop" &&
-              (selectedMonth !== currentMonth || day.day >= currentDay)
-            );
-          } else {
-            if (selectedOption.value === "event") {
-              return (
-                event.type === "event" &&
-                (selectedMonth !== currentMonth || day.day >= currentDay)
-              );
-            } else {
-              return (
-                event.category === selectedOption.value &&
-                (selectedMonth !== currentMonth || day.day >= currentDay)
-              );
-            }
+            return event.type === "workshop" && isFutureEvent;
           }
+
+          if (selectedOption.value === "event") {
+            return event.type === "event" && isFutureEvent;
+          }
+
+          return event.category === selectedOption.value && isFutureEvent;
         }),
       }))
       .filter((day) => day.events.length > 0);
@@ -115,14 +88,52 @@ const EventSection = () => {
     [availableMonths, selectedMonth]
   );
 
+  const getEmptyStateText = useCallback(() => {
+    return `No ${
+      selectedOption?.value === "workshop" ? "Workshop(s)" : "Event(s)"
+    } found`;
+  }, [selectedOption?.value]);
+
+  const getMonthDisplay = useCallback(() => {
+    return windowWidth < 991 ? selectedMonth.substring(0, 3) : selectedMonth;
+  }, [selectedMonth, windowWidth]);
+
+  const renderMonthChangeIcons = useCallback(
+    () => (
+      <>
+        {availableMonths.indexOf(selectedMonth) !== 0 && (
+          <FontAwesomeIcon
+            onClick={() => handleMonthChange(-1)}
+            style={iconButtonStyle}
+            icon={faCircleChevronUp}
+          />
+        )}
+        {availableMonths.indexOf(selectedMonth) !==
+          availableMonths.length - 1 && (
+          <FontAwesomeIcon
+            onClick={() => handleMonthChange(1)}
+            style={iconButtonStyle}
+            icon={faCircleChevronDown}
+          />
+        )}
+      </>
+    ),
+    [availableMonths, selectedMonth]
+  );
+
+  const isScrollable = useMemo(
+    () => filteredEvents.length > 5,
+    [filteredEvents]
+  );
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener("resize", handleResize);
-
+    const debouncedResize = debounce(handleResize, 300);
+    window.addEventListener("resize", debouncedResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", debouncedResize);
     };
   }, []);
 
@@ -155,89 +166,28 @@ const EventSection = () => {
         <div>
           <Toolbar>
             <HeroText>
-              Classes -{" "}
-              {windowWidth < 991
-                ? selectedMonth.substring(0, 3)
-                : selectedMonth}
-              {availableMonths.indexOf(selectedMonth) !== 0 && (
-                <FontAwesomeIcon
-                  onClick={() => handleMonthChange(-1)}
-                  style={iconButtonStyle}
-                  icon={faCircleChevronUp}
-                />
-              )}
-              {availableMonths.indexOf(selectedMonth) !==
-                availableMonths.length - 1 && (
-                <FontAwesomeIcon
-                  onClick={() => handleMonthChange(1)}
-                  style={iconButtonStyle}
-                  icon={faCircleChevronDown}
-                />
-              )}
+              Classes - {getMonthDisplay()} {renderMonthChangeIcons()}
             </HeroText>
-            {/* <CustomSelect
-              options={filteredArtForms}
-              onChange={handleFilterChange}
-              placeholder={"Filter by Artform"}
-            /> */}
           </Toolbar>
-          <TabSection
-            selectedOption={selectedOption}
-            setSelectedOption={setSelectedOption}
-          />
-          <EventsWrapper>
+          <TabSection setSelectedOption={setSelectedOption} />
+          <EventsWrapper $isScrollable={isScrollable}>
             {filteredEvents.length ? (
               filteredEvents.map(({ day, events }) => (
-                <div key={day} ref={(ref) => (eventRefs.current[day] = ref)}>
-                  <DayHeader>
-                    <span>{getFormattedDate(selectedMonth, day)}</span>
-                  </DayHeader>
-                  {events.map(
-                    ({ category, faculty, time, venue, id, type }, index) => (
-                      <EventRow
-                        $isComplete={
-                          monthToNumber[selectedMonth] <
-                            monthToNumber[currentMonth] ||
-                          (monthToNumber[selectedMonth] ===
-                            monthToNumber[currentMonth] &&
-                            day < currentDay)
-                        }
-                        key={`${category}-${day}-${index}`}
-                      >
-                        <div>
-                          <span style={idStyle}>#{id}</span>
-                          <span style={categoryStyle}>
-                            {fetchArtForm(category, type)}
-                          </span>
-                          <span style={timeStyle}>
-                            <FontAwesomeIcon
-                              icon={faClock}
-                              fontSize="12px"
-                              color={VARIABLES.primaryColor}
-                            />{" "}
-                            {time}
-                          </span>
-                        </div>
-                        <span style={venueStyle}>
-                          <FontAwesomeIcon
-                            icon={faLocationDot}
-                            fontSize="12px"
-                            color={VARIABLES.primaryColor}
-                          />{" "}
-                          {venue}
-                        </span>
-                        <span style={facultyStyle}>{faculty}</span>
-                      </EventRow>
-                    )
-                  )}
-                </div>
+                <EventCard
+                  key={day}
+                  day={day}
+                  selectedMonth={selectedMonth}
+                  currentMonth={currentMonth}
+                  currentDay={currentDay}
+                  events={events}
+                  eventRefs={eventRefs}
+                  getFormattedDate={getFormattedDate}
+                  fetchArtForm={fetchArtForm}
+                  monthToNumber={monthToNumber}
+                />
               ))
             ) : (
-              <EventRow $isEmpty>
-                No{" "}
-                {selectedOption.value === "workshop" ? "Workshops " : "Events "}
-                found
-              </EventRow>
+              <EventRow $isEmpty>{getEmptyStateText()}</EventRow>
             )}
           </EventsWrapper>
         </div>

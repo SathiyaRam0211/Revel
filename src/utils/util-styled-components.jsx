@@ -348,7 +348,8 @@ export const Toolbar = styled.div`
 export const EventsWrapper = styled.div`
   margin: 16px 0;
   max-height: calc(100% - 64px - 100px);
-  overflow-y: scroll;
+  overflow-y: ${(props) => (props.$isScrollable ? "auto" : "hidden")};
+
   ::-webkit-scrollbar {
     width: 12px;
   }
@@ -398,7 +399,7 @@ export const EventRow = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    padding: 14px;
+    padding: 12px;
     div {
       gap: 0px;
     }

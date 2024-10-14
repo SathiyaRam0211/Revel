@@ -807,13 +807,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "Madorock Dance Studio,Adambakkam",
+          venue: "Madorock Dance Studio, Adambakkam",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "Madorock Dance Studio,Adambakkam",
+          venue: "Madorock Dance Studio, Adambakkam",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
@@ -869,7 +869,7 @@ export const eventDetails = {
       events: [
         {
           category: "locking",
-          venue: "Madorock Dance Studio,Adambakkam",
+          venue: "Madorock Dance Studio, Adambakkam",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
         },
@@ -927,13 +927,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "Madorock Dance Studio,Adambakkam",
+          venue: "Madorock Dance Studio, Adambakkam",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "Madorock Dance Studio,Adambakkam",
+          venue: "Madorock Dance Studio, Adambakkam",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
@@ -956,13 +956,13 @@ export const eventDetails = {
       events: [
         {
           category: "creativeMovement",
-          venue: "Madorock Dance Studio,Adambakkam",
+          venue: "Madorock Dance Studio, Adambakkam",
           faculty: "Joshi",
           time: "8:00 - 9:00 pm",
         },
         {
           category: "house",
-          venue: "Madorock Dance Studio,Adambakkam",
+          venue: "Madorock Dance Studio, Adambakkam",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
         },
@@ -1047,17 +1047,6 @@ export const eventDetails = {
       ],
     },
     {
-      day: 15,
-      events: [
-        {
-          category: "choreography",
-          venue: "High on Dance, Teynampet",
-          faculty: "Selva",
-          time: "7:30 - 8:30 pm",
-        },
-      ],
-    },
-    {
       day: 16,
       events: [
         {
@@ -1076,17 +1065,6 @@ export const eventDetails = {
           venue: "Madorock Studio, Guindy",
           faculty: "Feelhips aka Prabhu",
           time: "8:00 - 10:00 pm",
-        },
-      ],
-    },
-    {
-      day: 17,
-      events: [
-        {
-          category: "choreography",
-          venue: "High on Dance, Teynampet",
-          faculty: "Selva",
-          time: "7:30 - 8:30 pm",
         },
       ],
     },
@@ -1119,17 +1097,6 @@ export const eventDetails = {
       ],
     },
     {
-      day: 22,
-      events: [
-        {
-          category: "choreography",
-          venue: "High on Dance, Teynampet",
-          faculty: "Selva",
-          time: "7:30 - 8:30 pm",
-        },
-      ],
-    },
-    {
       day: 23,
       events: [
         {
@@ -1148,17 +1115,6 @@ export const eventDetails = {
           venue: "Madorock Studio, Guindy",
           faculty: "Feelhips aka Prabhu",
           time: "8:00 - 10:00 pm",
-        },
-      ],
-    },
-    {
-      day: 24,
-      events: [
-        {
-          category: "choreography",
-          venue: "High on Dance, Teynampet",
-          faculty: "Selva",
-          time: "7:30 - 8:30 pm",
         },
       ],
     },
@@ -1209,17 +1165,6 @@ export const eventDetails = {
           venue: "Madorock Studio, Guindy",
           faculty: "Joshi",
           time: "9:00 - 10:00 pm",
-        },
-      ],
-    },
-    {
-      day: 29,
-      events: [
-        {
-          category: "choreography",
-          venue: "High on Dance, Teynampet",
-          faculty: "Selva",
-          time: "7:30 - 8:30 pm",
         },
       ],
     },

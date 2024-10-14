@@ -1,4 +1,14 @@
-import { ART_FORMS, URL } from "../constants/constants";
+import { ART_FORMS, daysOfWeek, URL } from "../constants/constants";
+
+export const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+};
 
 export async function fetchUrl(url, method = "GET", data = null, headers = {}) {
   const defaultHeaders = {
@@ -31,25 +41,6 @@ export async function fetchUrl(url, method = "GET", data = null, headers = {}) {
   }
 }
 
-// fetchUrl('https://api.example.com/data')
-//   .then(({ data, error }) => {
-//     if (error) {
-//       console.error('GET error:', error);
-//     } else {
-//       console.log('GET response:', data);
-//     }
-//   });
-
-// const postData = { key: 'value' };
-// fetchUrl('https://api.example.com/data', 'POST', postData)
-//   .then(({ data, error }) => {
-//     if (error) {
-//       console.error('POST error:', error);
-//     } else {
-//       console.log('POST response:', data);
-//     }
-//   });
-
 export const handleRegister = () => {
   window.open(URL.register, "_blank");
 };
@@ -70,15 +61,6 @@ export const getOrdinalSuffix = (day) => {
 
 export const getFormattedDate = (month, day, year = 2024) => {
   const date = new Date(`${month} ${day}, ${year}`);
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
   const dayOfWeek = daysOfWeek[date.getDay()];
   const ordinalSuffix = getOrdinalSuffix(day);
   return `${day}${ordinalSuffix} - ${dayOfWeek}`;

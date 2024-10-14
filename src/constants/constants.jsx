@@ -82,3 +82,13 @@ export const monthToNumber = {
   November: 11,
   December: 12,
 };
+
+export const daysOfWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
