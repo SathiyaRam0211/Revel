@@ -155,19 +155,16 @@ export const FloaterText = styled.div`
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;
-  color: ${VARIABLES.textColor};
+  color: ${VARIABLES.darkTextColor};
   background: ${VARIABLES.gradient};
   border-radius: 16px;
   padding: 4px 12px;
-  opacity: 80%;
+  opacity: 75%;
   border-bottom: 2px solid ${VARIABLES.textColor};
-  -webkit-box-shadow: -1px 1px 4px 1px rgba(129, 224, 255, 1);
-  -moz-box-shadow: -1px 1px 4px 1px rgba(129, 224, 255, 1);
-  box-shadow: -1px 1px 4px 1px rgba(129, 224, 255, 1);
 
   @media (${VARIABLES.tabletLarge}) {
     border-radius: 16px 0 0 16px;
-    padding: 2px 4px 2px 10px;
+    padding: 2px 4px 2px 12px;
   }
 
   @media (${VARIABLES.mobileLarge}) {

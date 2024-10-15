@@ -5,7 +5,7 @@ import React, {
   useCallback,
   useRef,
 } from "react";
-import { ART_FORMS, monthToNumber } from "../../constants/constants";
+import { ART_FORMS, monthToNumber, TABS } from "../../constants/constants";
 import { eventDetails } from "../../constants/events";
 import {
   EventRow,
@@ -40,7 +40,7 @@ const EventSection = () => {
   const eventsWrapperRef = useRef(null);
 
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(TABS[0]);
   const [isScrollTopEnabled, setIsScrollTopEnabled] = useState(true);
   const [isScrollDownEnabled, setIsScrollDownEnabled] = useState(true);
 
@@ -155,9 +155,7 @@ const EventSection = () => {
           });
         }
       }
-    } else {
-      eventRefs.current[todayKey].scrollIntoView({ behavior: "smooth" });
-    }
+    } else eventRefs.current[todayKey].scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
