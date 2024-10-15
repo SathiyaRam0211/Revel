@@ -13,7 +13,7 @@ import { useCallback } from "react"; // Import useCallback
 
 const EventCard = ({
   day,
-  selectedMonth,
+  month,
   currentMonth,
   currentDay,
   events,
@@ -26,8 +26,8 @@ const EventCard = ({
     ({ category, faculty, time, venue, id, type }) => (
       <EventRow
         $isComplete={
-          monthToNumber[selectedMonth] < monthToNumber[currentMonth] ||
-          (monthToNumber[selectedMonth] === monthToNumber[currentMonth] &&
+          monthToNumber[month] < monthToNumber[currentMonth] ||
+          (monthToNumber[month] === monthToNumber[currentMonth] &&
             day < currentDay)
         }
         key={`${category}-${id}`}
@@ -57,7 +57,7 @@ const EventCard = ({
     ),
     [
       monthToNumber,
-      selectedMonth,
+      month,
       currentMonth,
       currentDay,
       fetchArtForm,
@@ -70,9 +70,14 @@ const EventCard = ({
   );
 
   return (
-    <div ref={(ref) => (eventRefs.current[day] = ref)}>
+    <div
+      ref={(ref) => {
+        eventRefs.current[`${month}-${day}`] = ref;
+      }}
+      id={`${month}-${day}`}
+    >
       <DayHeader>
-        <span>{getFormattedDate(selectedMonth, day)}</span>
+        <span>{getFormattedDate(month, day)}</span>
       </DayHeader>
       {events.map(renderEventDetails)}
     </div>

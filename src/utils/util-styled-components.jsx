@@ -150,6 +150,79 @@ export const HeroText = styled.div`
   }
 `;
 
+export const FloaterText = styled.div`
+  font-family: ${VARIABLES.headerFont};
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  color: ${VARIABLES.textColor};
+  background: ${VARIABLES.gradient};
+  border-radius: 16px;
+  padding: 4px 12px;
+  opacity: 80%;
+  border-bottom: 2px solid ${VARIABLES.textColor};
+  -webkit-box-shadow: -1px 1px 4px 1px rgba(129, 224, 255, 1);
+  -moz-box-shadow: -1px 1px 4px 1px rgba(129, 224, 255, 1);
+  box-shadow: -1px 1px 4px 1px rgba(129, 224, 255, 1);
+
+  @media (${VARIABLES.tabletLarge}) {
+    border-radius: 16px 0 0 16px;
+    padding: 2px 4px 2px 10px;
+  }
+
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 12px;
+  }
+`;
+
+export const FloaterButton = styled.div`
+  font-size: 12px;
+  font-weight: 600;
+  color: ${VARIABLES.secondaryTextColor};
+  background: ${VARIABLES.primaryColor};
+  border-radius: 50%;
+  padding: 4px 6px;
+  cursor: pointer;
+  opacity: ${(props) => (props.$disabled ? "0.5" : "1")};
+  pointer-events: ${(props) => (props.$disabled ? "none" : "auto")};
+
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 8px;
+  }
+`;
+
+export const StatusBar = styled.div`
+  position: absolute;
+  width: 830px;
+  z-index: 10;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-end;
+
+  @media (${VARIABLES.tabletLarge}) {
+    width: 100%;
+    top: 8px;
+  }
+`;
+
+export const Pseudo = styled.div`
+  height: 0px;
+  visibility: hidden;
+`;
+
+export const StickyBar = styled.div`
+  position: absolute;
+  width: 100%;
+  bottom: 12px;
+  z-index: 10;
+  display: flex;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+`;
+
 export const HeaderText = styled.h1`
   font-family: ${VARIABLES.headerFont};
   font-weight: 600;
@@ -327,7 +400,7 @@ export const Tab = styled.div`
 `;
 
 export const EventsWrapper = styled.div`
-  margin: 16px 0;
+  margin: 12px 0;
   box-sizing: border-box;
   height: calc(100% - 24px - 138px);
   overflow-y: auto;
@@ -340,7 +413,7 @@ export const EventsWrapper = styled.div`
   }
   ::-webkit-scrollbar-thumb {
     background-color: ${VARIABLES.primaryColor};
-    border-radius: 10px;
+    border-radius: 12px;
     border: 3px solid ${VARIABLES.secondaryBgColor};
   }
   scrollbar-color: ${VARIABLES.primaryColor} ${VARIABLES.secondaryBgColor};
@@ -377,7 +450,7 @@ export const EventRow = styled.div`
     font-size: 14px;
   }
   @media (${VARIABLES.tabletLarge}) {
-    width: ${(props) => (props.$isEmpty ? "322px" : "fit-content")};
+    width: 320px;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;

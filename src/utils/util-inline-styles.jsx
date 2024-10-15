@@ -128,7 +128,7 @@ export const selectStyle = {
 };
 
 export const categoryStyle = {
-  width: "165px",
+  width: "180px",
   fontWeight: "600",
   ...ellipsis,
 };
@@ -140,7 +140,7 @@ export const facultyStyle = {
 
 export const timeStyle = {
   display: "flex",
-  gap: "6px",
+  gap: "4px",
   alignItems: "center",
   width: "120px",
   ...ellipsis,
@@ -148,7 +148,7 @@ export const timeStyle = {
 
 export const venueStyle = {
   display: "flex",
-  gap: "6px",
+  gap: "4px",
   alignItems: "center",
   width: "280px",
   ...ellipsis,
@@ -156,7 +156,7 @@ export const venueStyle = {
 
 export const idStyle = {
   width: "fit-content",
-  marginRight: "6px",
+  marginRight: "4px",
   color: `${VARIABLES.primaryColor}`,
 };
 

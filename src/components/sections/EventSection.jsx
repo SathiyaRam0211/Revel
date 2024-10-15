@@ -13,43 +13,61 @@ import {
   HeroText,
   PageSection,
   EventContainer,
+  StatusBar,
+  FloaterText,
+  StickyBar,
+  Pseudo,
+  FloaterButton,
 } from "../../utils/util-styled-components";
 import {
-  debounce,
   getCurrentMonthName,
   getFormattedDate,
   preprocessEventDetails,
 } from "../../utils/util-helper";
-import { iconButtonStyle } from "../../utils/util-inline-styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleChevronDown,
-  faCircleChevronUp,
-} from "@fortawesome/free-solid-svg-icons";
 import TabSection from "./TabSection";
 import EventCard from "../Event";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesDown, faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 
 const processedEventDetails = preprocessEventDetails(eventDetails);
 
 const EventSection = () => {
-  const availableMonths = Object.keys(processedEventDetails);
   const currentDay = new Date().getDate();
   const currentMonth = getCurrentMonthName();
   const eventRefs = useRef({});
+  const observerRef = useRef(null);
+  const firstEventRef = useRef(null);
+  const eventsWrapperRef = useRef(null);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [isScrollTopEnabled, setIsScrollTopEnabled] = useState(true);
+  const [isScrollDownEnabled, setIsScrollDownEnabled] = useState(true);
+
+  const allEvents = useMemo(() => {
+    const eventsArray = Object.entries(processedEventDetails).flatMap(
+      ([month, days]) =>
+        days.map((day) => ({
+          ...day,
+          month,
+          monthNumber: monthToNumber[month],
+        }))
+    );
+    return eventsArray.sort(
+      (a, b) => a.monthNumber - b.monthNumber || a.day - b.day
+    );
+  }, [processedEventDetails]);
 
   const filteredEvents = useMemo(() => {
-    const events = processedEventDetails[selectedMonth] || [];
-    if (!selectedOption || selectedOption.value === "all") return events;
-    return events
+    if (!selectedOption || selectedOption.value === "all") {
+      return allEvents;
+    }
+    return allEvents
       .map((day) => ({
         ...day,
         events: day.events.filter((event) => {
           const isFutureEvent =
-            selectedMonth !== currentMonth || day.day >= currentDay;
+            day.month !== currentMonth || day.day >= currentDay;
 
           if (selectedOption.value === "workshop") {
             return event.type === "workshop" && isFutureEvent;
@@ -63,7 +81,7 @@ const EventSection = () => {
         }),
       }))
       .filter((day) => day.events.length > 0);
-  }, [selectedMonth, selectedOption, currentDay, currentMonth]);
+  }, [allEvents, selectedOption, currentDay, currentMonth]);
 
   const fetchArtForm = useCallback((category, type) => {
     return (
@@ -76,99 +94,139 @@ const EventSection = () => {
     );
   }, []);
 
-  const handleMonthChange = useCallback(
-    (direction) => {
-      const currentIndex = availableMonths.indexOf(selectedMonth);
-      const newIndex = currentIndex + direction;
-      if (newIndex >= 0 && newIndex < availableMonths.length) {
-        setSelectedMonth(availableMonths[newIndex]);
-      }
-    },
-    [availableMonths, selectedMonth]
-  );
-
   const getEmptyStateText = useCallback(() => {
     return `No ${
       selectedOption?.value === "workshop" ? "Workshop(s)" : "Event(s)"
     } found`;
   }, [selectedOption?.value]);
 
-  const getMonthDisplay = useCallback(() => {
-    return windowWidth < 991 ? selectedMonth.substring(0, 3) : selectedMonth;
-  }, [selectedMonth, windowWidth]);
-
-  const renderMonthChangeIcons = useCallback(
-    () => (
-      <>
-        {availableMonths.indexOf(selectedMonth) !== 0 && (
-          <FontAwesomeIcon
-            onClick={() => handleMonthChange(-1)}
-            style={iconButtonStyle}
-            icon={faCircleChevronUp}
-          />
-        )}
-        {availableMonths.indexOf(selectedMonth) !==
-          availableMonths.length - 1 && (
-          <FontAwesomeIcon
-            onClick={() => handleMonthChange(1)}
-            style={iconButtonStyle}
-            icon={faCircleChevronDown}
-          />
-        )}
-      </>
-    ),
-    [availableMonths, selectedMonth]
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    const debouncedResize = debounce(handleResize, 300);
-    window.addEventListener("resize", debouncedResize);
-    return () => {
-      window.removeEventListener("resize", debouncedResize);
-    };
+  const handleIntersection = useCallback((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const [month] = entry.target.id.split("-");
+        setSelectedMonth(month);
+      }
+    });
   }, []);
 
-  useEffect(() => {
-    const scrollToCurrentDay = () => {
-      if (selectedMonth === currentMonth) {
-        const targetDay = Object.keys(eventRefs.current)
-          .map(Number)
-          .find((day) => day >= currentDay);
-        if (targetDay && eventRefs.current[targetDay]) {
-          eventRefs.current[targetDay].scrollIntoView({ behavior: "smooth" });
+  const handleScroll = useCallback(() => {
+    if (firstEventRef.current) {
+      const firstEventTop = firstEventRef.current.getBoundingClientRect().top;
+      setIsScrollTopEnabled(firstEventTop < -50); //50 pixels from top
+    }
+    const todayKey = `${currentMonth}-${currentDay}`;
+    if (eventRefs.current[todayKey]) {
+      const currentEventPosition =
+        eventRefs.current[todayKey].getBoundingClientRect().top;
+      setIsScrollDownEnabled(currentEventPosition > window.innerHeight);
+    }
+  }, [currentMonth, currentDay, firstEventRef, eventRefs]);
+
+  const scrollToTop = () => {
+    if (firstEventRef.current) {
+      firstEventRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToCurrentDay = () => {
+    const scrollToFirstAvailableDay = (month, startDay) => {
+      for (let day = startDay; day <= 31; day++) {
+        const key = `${month}-${day}`;
+        if (eventRefs.current[key]) {
+          eventRefs.current[key].scrollIntoView({ behavior: "smooth" });
+          return true;
         }
-      } else {
-        const firstDayOfMonth = Object.keys(eventRefs.current)
-          .map(Number)
-          .sort((a, b) => a - b)[0];
-        if (firstDayOfMonth && eventRefs.current[firstDayOfMonth]) {
-          eventRefs.current[firstDayOfMonth].scrollIntoView({
+      }
+      return false;
+    };
+    const todayKey = `${currentMonth}-${currentDay}`;
+    if (!eventRefs.current[todayKey]) {
+      if (!scrollToFirstAvailableDay(currentMonth, currentDay + 1)) {
+        const firstKeyInCurrentMonth = Object.keys(eventRefs.current)
+          .filter((key) => key.startsWith(`${currentMonth}-`))
+          .sort()[0];
+
+        if (
+          firstKeyInCurrentMonth &&
+          eventRefs.current[firstKeyInCurrentMonth]
+        ) {
+          eventRefs.current[firstKeyInCurrentMonth].scrollIntoView({
             behavior: "smooth",
           });
         }
       }
+    } else {
+      eventRefs.current[todayKey].scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    const scrollableElement = eventsWrapperRef.current;
+    if (scrollableElement) {
+      scrollableElement.addEventListener("scroll", handleScroll);
+    }
+    return () => {
+      if (scrollableElement) {
+        scrollableElement.removeEventListener("scroll", handleScroll);
+      }
     };
+  }, [handleScroll]);
+
+  useEffect(() => {
+    if (!observerRef.current) {
+      observerRef.current = new IntersectionObserver(handleIntersection, {
+        root: null,
+        threshold: 0.5,
+      });
+    }
+    const currentObserver = observerRef.current;
+    Object.values(eventRefs.current).forEach((ref) => {
+      if (ref) {
+        currentObserver.observe(ref);
+      }
+    });
+    return () => {
+      currentObserver.disconnect();
+    };
+  }, [filteredEvents]);
+
+  useEffect(() => {
     scrollToCurrentDay();
-  }, [selectedOption, selectedMonth, currentDay, currentMonth]);
+  }, [selectedOption, currentDay, currentMonth, eventRefs]);
 
   return (
     <PageSection>
       <EventContainer>
+        <StatusBar>
+          <FloaterText>{selectedMonth}</FloaterText>
+        </StatusBar>
+        {filteredEvents.length > 0 && (
+          <StickyBar>
+            <FloaterButton
+              $disabled={!isScrollTopEnabled}
+              onClick={scrollToTop}
+            >
+              <FontAwesomeIcon icon={faAnglesUp} />
+            </FloaterButton>
+            <FloaterButton
+              $disabled={!isScrollDownEnabled}
+              onClick={scrollToCurrentDay}
+            >
+              <FontAwesomeIcon icon={faAnglesDown} />
+            </FloaterButton>
+          </StickyBar>
+        )}
         <div>
-          <HeroText>
-            Classes - {getMonthDisplay()} {renderMonthChangeIcons()}
-          </HeroText>
+          <HeroText>Classes</HeroText>
           <TabSection setSelectedOption={setSelectedOption} />
-          <EventsWrapper>
-            {filteredEvents.length ? (
-              filteredEvents.map(({ day, events }) => (
+          <EventsWrapper ref={eventsWrapperRef}>
+            <Pseudo ref={firstEventRef} />
+            {filteredEvents.length > 0 ? (
+              filteredEvents.map(({ day, month, events }) => (
                 <EventCard
-                  key={day}
+                  key={`${month}-${day}`}
                   day={day}
-                  selectedMonth={selectedMonth}
+                  month={month}
                   currentMonth={currentMonth}
                   currentDay={currentDay}
                   events={events}
