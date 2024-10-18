@@ -1030,7 +1030,18 @@ export const eventDetails = {
       ],
     },
     {
-      day: 15,
+      day: 17,
+      events: [
+        {
+          category: "breaking",
+          venue: "Madorock Studio, Guindy",
+          faculty: "Feelhips aka Prabhu",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 18,
       events: [
         {
           category: "creativeMovement",
@@ -1047,28 +1058,6 @@ export const eventDetails = {
       ],
     },
     {
-      day: 16,
-      events: [
-        {
-          category: "locking",
-          venue: "Madorock Studio, Guindy",
-          faculty: "Sakthi",
-          time: "8:00 - 10:00 pm",
-        },
-      ],
-    },
-    {
-      day: 17,
-      events: [
-        {
-          category: "breaking",
-          venue: "Madorock Studio, Guindy",
-          faculty: "Feelhips aka Prabhu",
-          time: "8:00 - 10:00 pm",
-        },
-      ],
-    },
-    {
       day: 19,
       events: [
         {
@@ -1076,6 +1065,17 @@ export const eventDetails = {
           venue: "RMC, Ashok Nagar",
           faculty: "DeZee aka Dinesh",
           time: "7:30 - 9:30 am",
+        },
+      ],
+    },
+    {
+      day: 21,
+      events: [
+        {
+          category: "locking",
+          venue: "Madorock Studio, Guindy",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
         },
       ],
     },
