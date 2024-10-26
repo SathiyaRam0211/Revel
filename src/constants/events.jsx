@@ -1130,7 +1130,7 @@ export const eventDetails = {
       ],
     },
     {
-      day: 26,
+      day: 27,
       events: [
         {
           category: "hipHop",
