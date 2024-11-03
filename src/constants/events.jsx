@@ -1170,258 +1170,258 @@ export const eventDetails = {
     },
   ],
   November: [
-      {
-        day: 5,
-        events: [
-          {
-            category: "choreography",
-            venue: "High On Dance, Teynampet",
-            faculty: "Selva",
-            time: "7:30 - 8:30 pm",
-          },
-          {
-            category: "creativeMovement",
-            venue: "High On Dance, Teynampet",
-            faculty: "Joshi",
-            time: "8:00 - 10:00 pm",
-          },
-          {
-            category: "house",
-            venue: "High On Dance, Teynampet",
-            faculty: "Joshi",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 6,
-        events: [
-          {
-            category: "locking",
-            venue: "High On Dance, Teynampet",
-            faculty: "Sakthi",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 7,
-        events: [
-          {
-            category: "choreography",
-            venue: "High On Dance, Teynampet",
-            faculty: "Selva",
-            time: "7:30 - 9:30 pm",
-          },
-          {
-            category: "breaking",
-            venue: "High On Dance, Teynampet",
-            faculty: "FeelHips aka Prabhu",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 8,
-        events: [
-          {
-            category: "hipHop",
-            venue: "High On Dance, Teynampet",
-            faculty: "DeZee aka Dinesh",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 12,
-        events: [
-          {
-            category: "choreography",
-            venue: "High On Dance, Teynampet",
-            faculty: "Selva",
-            time: "7:30 - 8:30 pm",
-          },
-          {
-            category: "creativeMovement",
-            venue: "High On Dance, Teynampet",
-            faculty: "Joshi",
-            time: "8:00 - 10:00 pm",
-          },
-          {
-            category: "house",
-            venue: "High On Dance, Teynampet",
-            faculty: "Joshi",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 13,
-        events: [
-          {
-            category: "locking",
-            venue: "High On Dance, Teynampet",
-            faculty: "Sakthi",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 14,
-        events: [
-          {
-            category: "choreography",
-            venue: "High On Dance, Teynampet",
-            faculty: "Selva",
-            time: "7:30 - 9:30 pm",
-          },
-        ],
-      },
-      {
-        day: 15,
-        events: [
-          {
-            category: "hipHop",
-            venue: "High On Dance, Teynampet",
-            faculty: "DeZee aka Dinesh",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 16,
-        events: [
-          {
-            category: "breaking",
-            venue: "High On Dance, Teynampet",
-            faculty: "FeelHips aka Prabhu",
-            time: "7:30 - 9:30 pm",
-          },
-        ],
-      },
-      {
-        day: 19,
-        events: [
-          {
-            category: "choreography",
-            venue: "High On Dance, Teynampet",
-            faculty: "Selva",
-            time: "7:30 - 8:30 pm",
-          },
-          {
-            category: "creativeMovement",
-            venue: "High On Dance, Teynampet",
-            faculty: "Joshi",
-            time: "8:00 - 10:00 pm",
-          },
-          {
-            category: "house",
-            venue: "High On Dance, Teynampet",
-            faculty: "Joshi",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 20,
-        events: [
-          {
-            category: "locking",
-            venue: "High On Dance, Teynampet",
-            faculty: "Sakthi",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 21,
-        events: [
-          {
-            category: "choreography",
-            venue: "High On Dance, Teynampet",
-            faculty: "Selva",
-            time: "7:30 - 9:30 pm",
-          },
-          {
-            category: "breaking",
-            venue: "High On Dance, Teynampet",
-            faculty: "FeelHips aka Prabhu",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 22,
-        events: [
-          {
-            category: "hipHop",
-            venue: "High On Dance, Teynampet",
-            faculty: "DeZee aka Dinesh",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 26,
-        events: [
-          {
-            category: "choreography",
-            venue: "High On Dance, Teynampet",
-            faculty: "Selva",
-            time: "7:30 - 8:30 pm",
-          },
-          {
-            category: "creativeMovement",
-            venue: "High On Dance, Teynampet",
-            faculty: "Joshi",
-            time: "8:00 - 10:00 pm",
-          },
-          {
-            category: "house",
-            venue: "High On Dance, Teynampet",
-            faculty: "Joshi",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 27,
-        events: [
-          {
-            category: "locking",
-            venue: "High On Dance, Teynampet",
-            faculty: "Sakthi",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 28,
-        events: [
-          {
-            category: "choreography",
-            venue: "High On Dance, Teynampet",
-            faculty: "Selva",
-            time: "7:30 - 9:30 pm",
-          },
-          {
-            category: "breaking",
-            venue: "High On Dance, Teynampet",
-            faculty: "FeelHips aka Prabhu",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-      {
-        day: 29,
-        events: [
-          {
-            category: "hipHop",
-            venue: "High On Dance, Teynampet",
-            faculty: "DeZee aka Dinesh",
-            time: "8:00 - 10:00 pm",
-          },
-        ],
-      },
-    ],
+    {
+      day: 5,
+      events: [
+        {
+          category: "choreography",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+        {
+          category: "creativeMovement",
+          venue: "High On Dance, Teynampet",
+          faculty: "Joshi",
+          time: "8:00 - 10:00 pm",
+        },
+        {
+          category: "house",
+          venue: "High On Dance, Teynampet",
+          faculty: "Joshi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 6,
+      events: [
+        {
+          category: "hipHop",
+          venue: "High On Dance, Teynampet",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 7,
+      events: [
+        {
+          category: "choreography",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 9:30 pm",
+        },
+        {
+          category: "breaking",
+          venue: "High On Dance, Teynampet",
+          faculty: "FeelHips aka Prabhu",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 8,
+      events: [
+        {
+          category: "locking",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 12,
+      events: [
+        {
+          category: "choreography",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+        {
+          category: "creativeMovement",
+          venue: "High On Dance, Teynampet",
+          faculty: "Joshi",
+          time: "8:00 - 10:00 pm",
+        },
+        {
+          category: "house",
+          venue: "High On Dance, Teynampet",
+          faculty: "Joshi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 13,
+      events: [
+        {
+          category: "hipHop",
+          venue: "High On Dance, Teynampet",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 14,
+      events: [
+        {
+          category: "choreography",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 15,
+      events: [
+        {
+          category: "locking",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 16,
+      events: [
+        {
+          category: "breaking",
+          venue: "High On Dance, Teynampet",
+          faculty: "FeelHips aka Prabhu",
+          time: "7:30 - 9:30 pm",
+        },
+      ],
+    },
+    {
+      day: 19,
+      events: [
+        {
+          category: "choreography",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+        {
+          category: "creativeMovement",
+          venue: "High On Dance, Teynampet",
+          faculty: "Joshi",
+          time: "8:00 - 10:00 pm",
+        },
+        {
+          category: "house",
+          venue: "High On Dance, Teynampet",
+          faculty: "Joshi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 20,
+      events: [
+        {
+          category: "hipHop",
+          venue: "High On Dance, Teynampet",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 21,
+      events: [
+        {
+          category: "choreography",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 9:30 pm",
+        },
+        {
+          category: "breaking",
+          venue: "High On Dance, Teynampet",
+          faculty: "FeelHips aka Prabhu",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 22,
+      events: [
+        {
+          category: "locking",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 26,
+      events: [
+        {
+          category: "choreography",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+        {
+          category: "creativeMovement",
+          venue: "High On Dance, Teynampet",
+          faculty: "Joshi",
+          time: "8:00 - 10:00 pm",
+        },
+        {
+          category: "house",
+          venue: "High On Dance, Teynampet",
+          faculty: "Joshi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 27,
+      events: [
+        {
+          category: "hipHop",
+          venue: "High On Dance, Teynampet",
+          faculty: "DeZee aka Dinesh",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 28,
+      events: [
+        {
+          category: "choreography",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 9:30 pm",
+        },
+        {
+          category: "breaking",
+          venue: "High On Dance, Teynampet",
+          faculty: "FeelHips aka Prabhu",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+    {
+      day: 29,
+      events: [
+        {
+          category: "locking",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 10:00 pm",
+        },
+      ],
+    },
+  ],
 };
