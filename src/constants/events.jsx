@@ -1437,7 +1437,7 @@ export const eventDetails = {
         {
           category: "houseAndCreative",
           venue: "High On Dance, Teynampet",
-          faculty: "Joshie",
+          faculty: "joshi",
           time: "8:00 - 10:00 pm",
         },
       ],
@@ -1493,7 +1493,7 @@ export const eventDetails = {
         {
           category: "houseAndCreative",
           venue: "High On Dance, Teynampet",
-          faculty: "Joshie",
+          faculty: "joshi",
           time: "8:00 - 10:00 pm",
         },
       ],
@@ -1549,7 +1549,7 @@ export const eventDetails = {
         {
           category: "houseAndCreative",
           venue: "High On Dance, Teynampet",
-          faculty: "Joshie",
+          faculty: "joshi",
           time: "8:00 - 10:00 pm",
         },
       ],
@@ -1605,7 +1605,7 @@ export const eventDetails = {
         {
           category: "houseAndCreative",
           venue: "High On Dance, Teynampet",
-          faculty: "Joshie",
+          faculty: "joshi",
           time: "8:00 - 10:00 pm",
         },
       ],
