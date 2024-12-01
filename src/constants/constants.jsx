@@ -31,7 +31,7 @@ export const ART_FORMS = [
   { value: "breaking", label: "Fitness and Breaking", type: "workshop" },
   { value: "ganaCypher", label: "Gana Cypher", type: "event" },
   { value: "practice", label: "Practice Session" },
-  { value: "houseAndCreative", label: "Creative movement and House"}
+  { value: "houseAndCreative", label: "Creative movement & House"}
 ];
 
 export const TABS = [
