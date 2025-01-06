@@ -38,16 +38,16 @@ export const ART_FORMS = [
 
 export const TABS = [
   { value: "all", label: "All" },
-  { value: "breaking", label: "Breaking" },
-  { value: "creativeMovement", label: "Creative Movement" },
-  { value: "event", label: "Event" },
-  { value: "hipHop", label: "Hip Hop" },
-  { value: "house", label: "House" },
-  { value: "locking", label: "Locking" },
-  { value: "choreography", label: "Choreography" },
+  // { value: "breaking", label: "Breaking" },
+  // { value: "creativeMovement", label: "Creative Movement" },
+  // { value: "event", label: "Event" },
+  // { value: "hipHop", label: "Hip Hop" },
+  // { value: "house", label: "House" },
+  // { value: "locking", label: "Locking" },
+  // { value: "choreography", label: "Choreography" },
   { value: "choreography-1", label: "Choreography Batch 1" },
   { value: "choreography-2", label: "Choreography Batch 2" },
-  { value: "houseAndCreative", label: "Creative movement and House"},
+  // { value: "houseAndCreative", label: "Creative movement and House"},
   { value: "workshop", label: "Workshop" },
 ];
 
