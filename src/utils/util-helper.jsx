@@ -58,8 +58,8 @@ export const getOrdinalSuffix = (day) => {
       return "th";
   }
 };
-
-export const getFormattedDate = (month, day, year = 2024) => {
+// FIX THIS HARDCODED YEAR
+export const getFormattedDate = (month, day, year = 2025) => {
   const date = new Date(`${month} ${day}, ${year}`);
   const dayOfWeek = daysOfWeek[date.getDay()];
   const ordinalSuffix = getOrdinalSuffix(day);
