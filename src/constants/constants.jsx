@@ -31,7 +31,9 @@ export const ART_FORMS = [
   { value: "breaking", label: "Fitness and Breaking", type: "workshop" },
   { value: "ganaCypher", label: "Gana Cypher", type: "event" },
   { value: "practice", label: "Practice Session" },
-  { value: "houseAndCreative", label: "Creative movement & House"}
+  { value: "houseAndCreative", label: "Creative movement & House"},
+  { value: "choreography-1", label: "Choreography Batch 1" },
+  { value: "choreography-2", label: "Choreography Batch 2" },
 ];
 
 export const TABS = [
@@ -43,6 +45,8 @@ export const TABS = [
   { value: "house", label: "House" },
   { value: "locking", label: "Locking" },
   { value: "choreography", label: "Choreography" },
+  { value: "choreography-1", label: "Choreography Batch 1" },
+  { value: "choreography-2", label: "Choreography Batch 2" },
   { value: "houseAndCreative", label: "Creative movement and House"},
   { value: "workshop", label: "Workshop" },
 ];

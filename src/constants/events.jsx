@@ -1650,4 +1650,167 @@ export const eventDetails = {
       ],
     },
   ],
+  January: [
+    {
+      day: 2,
+      events: [
+        {
+          category: "choreography-1",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+    {
+      day: 6,
+      events: [
+        {
+          category: "choreography-2",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 7,
+      events: [
+        {
+          category: "choreography-1",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+        {
+          category: "choreography-2",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 9,
+      events: [
+        {
+          category: "choreography-1",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+    {
+      day: 16,
+      events: [
+        {
+          category: "choreography-1",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+        {
+          category: "choreography-2",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 20,
+      events: [
+        {
+          category: "choreography-2",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 21,
+      events: [
+        {
+          category: "choreography-1",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+    {
+      day: 22,
+      events: [
+        {
+          category: "choreography-2",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 23,
+      events: [
+        {
+          category: "choreography-1",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+        {
+          category: "choreography-2",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 27,
+      events: [
+        {
+          category: "choreography-2",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 28,
+      events: [
+        {
+          category: "choreography-1",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+    {
+      day: 29,
+      events: [
+        {
+          category: "choreography-2",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 30,
+      events: [
+        {
+          category: "choreography-1",
+          venue: "High On Dance, Teynampet",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+  ],
 };
