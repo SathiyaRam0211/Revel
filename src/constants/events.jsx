@@ -1663,6 +1663,28 @@ export const eventDetails = {
       ],
     },
     {
+      day: 4,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 5,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+    {
       day: 6,
       events: [
         {
@@ -1705,16 +1727,32 @@ export const eventDetails = {
       day: 16,
       events: [
         {
-          category: "choreography-1",
-          venue: "High On Dance, Teynampet",
-          faculty: "Selva",
-          time: "7:30 - 8:30 pm",
-        },
-        {
           category: "choreography-2",
           venue: "High On Dance, Teynampet",
           faculty: "Sakthi",
           time: "8:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 18,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 19,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
         },
       ],
     },
@@ -1769,6 +1807,28 @@ export const eventDetails = {
       ],
     },
     {
+      day: 25,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 26,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+    {
       day: 27,
       events: [
         {
@@ -1809,6 +1869,210 @@ export const eventDetails = {
           venue: "High On Dance, Teynampet",
           faculty: "Selva",
           time: "7:30 - 8:30 pm",
+        },
+      ],
+    },
+  ],
+  February: [
+    {
+      day: 1,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 2,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+    {
+      day: 15,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 16,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+  ],
+  March: [
+    {
+      day: 1,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 2,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+    {
+      day: 8,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 9,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+    {
+      day: 15,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 16,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+    {
+      day: 22,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 23,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+    {
+      day: 29,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 30,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+  ],
+  April: [
+    {
+      day: 5,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 6,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
+        },
+      ],
+    },
+    {
+      day: 12,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "7:00 - 9:00 pm",
+        },
+      ],
+    },
+    {
+      day: 13,
+      events: [
+        {
+          category: "locking-course",
+          venue: "High On Dance, Teynampet",
+          faculty: "Sakthi",
+          time: "2:00 - 4:00 pm",
         },
       ],
     },

@@ -34,6 +34,8 @@ export const ART_FORMS = [
   { value: "houseAndCreative", label: "Creative movement & House"},
   { value: "choreography-1", label: "Choreography Batch 1" },
   { value: "choreography-2", label: "Choreography Batch 2" },
+  { value: "locking-course", label: "Locking Course" },
+
 ];
 
 export const TABS = [
@@ -47,6 +49,7 @@ export const TABS = [
   // { value: "choreography", label: "Choreography" },
   { value: "choreography-1", label: "Choreography Batch 1" },
   { value: "choreography-2", label: "Choreography Batch 2" },
+  { value: "locking-course", label: "Locking Course" },
   // { value: "houseAndCreative", label: "Creative movement and House"},
   { value: "workshop", label: "Workshop" },
 ];
