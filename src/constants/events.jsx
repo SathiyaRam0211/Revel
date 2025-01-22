@@ -1798,11 +1798,16 @@ export const eventDetails = {
           faculty: "Selva",
           time: "7:30 - 8:30 pm",
         },
+      ],
+    },
+    {
+      day: 24,
+      events: [
         {
-          category: "choreography-2",
+          category: "choreography-1",
           venue: "High On Dance, Teynampet",
-          faculty: "Sakthi",
-          time: "8:00 - 9:00 pm",
+          faculty: "Selva",
+          time: "7:30 - 8:30 pm",
         },
       ],
     },
