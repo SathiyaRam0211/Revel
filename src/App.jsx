@@ -7,6 +7,7 @@ import LoginDialog from "./components/dialogs/LoginDialog";
 import RegisterDialog from "./components/dialogs/RegisterDialog";
 import PreferencesDialog from "./components/dialogs/PreferencesDialog";
 
+
 function App() {
   return (
     <AuthenticationProvider>
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route exact element={<Home />} path="/" />
           <Route exact element={<Events />} path="/schedule" />
+          <Route exact element={<BattleRegister />} path="/register" />
         </Routes>
       </BrowserRouter>
     </AuthenticationProvider>

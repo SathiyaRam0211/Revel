@@ -13,7 +13,6 @@ import {
 import BrandLogo from "../../assets/images/revel-logo.svg";
 import MenuIcon from "../../assets/images/menu-icon.svg";
 import CloseIcon from "../../assets/images/close-icon.svg";
-import { handleRegister } from "../../utils/util-helper";
 import { useNavigate } from "react-router";
 import { useAuthentication } from "../../contexts/AuthenticationContext";
 import { useEffect, useState } from "react";
@@ -76,7 +75,9 @@ const CustomNavbar = () => {
           onClick={() => navigate("/")}
         />
         {isHidden && (
-          <CustomBtn onClick={handleRegister}>Register now</CustomBtn>
+          <CustomBtn onClick={() => navigate("/register")}>
+            Register for BackInTime
+          </CustomBtn>
         )}
         {!isHidden &&
           (windowWidth <= 478 ? (
