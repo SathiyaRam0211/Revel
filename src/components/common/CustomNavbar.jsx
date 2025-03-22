@@ -76,7 +76,7 @@ const CustomNavbar = () => {
         />
         {isHidden && (
           <CustomBtn onClick={() => navigate("/register")}>
-            Register for BackInTime
+            Register
           </CustomBtn>
         )}
         {!isHidden &&
