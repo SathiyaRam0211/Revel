@@ -1,5 +1,5 @@
 export const URL = {
-  register: "https://form.jotform.com/241773892472467",
+  register: "https://rzp.io/rzp/backintime-revel",
 };
 
 export const OTP = {
