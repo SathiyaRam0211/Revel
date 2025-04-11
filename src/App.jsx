@@ -6,7 +6,6 @@ import { AuthenticationProvider } from "./contexts/AuthenticationContext";
 import LoginDialog from "./components/dialogs/LoginDialog";
 import RegisterDialog from "./components/dialogs/RegisterDialog";
 import PreferencesDialog from "./components/dialogs/PreferencesDialog";
-import BattleRegister from "./pages/BattleRegister";
 
 
 function App() {
