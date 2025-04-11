@@ -9,6 +9,7 @@ import {
   FlexWrapper,
 } from "../../utils/util-styled-components";
 import MultiPass from "../../assets/images/multi-pass-logo.svg";
+import { handleRegister } from "../../utils/util-helper";
 import { useNavigate } from "react-router";
 
 const LandingSection = () => {
@@ -25,7 +26,7 @@ const LandingSection = () => {
           <CustomLink onClick={() => navigate("/schedule")}>
             View Schedule
           </CustomLink>
-          <CustomBtn onClick={() => navigate("/register")}>Register for Battle</CustomBtn>
+          <CustomBtn onClick={handleRegister}>Register now</CustomBtn>
         </FlexWrapper>
       </HeroContainer>
     </PageSection>
