@@ -10,23 +10,11 @@ export const OTP = {
 export const ART_FORMS = [
   { value: "adult-choreo", label: "Adult Choreography" },
   { value: "kids-class", label: "Kids Dance Class" },
-  { value: "locking-course", label: "Locking Course" },
-
 ];
 
 export const TABS = [
   { value: "all", label: "All" },
-  // { value: "breaking", label: "Breaking" },
-  // { value: "creativeMovement", label: "Creative Movement" },
-  // { value: "event", label: "Event" },
-  // { value: "hipHop", label: "Hip Hop" },
-  // { value: "house", label: "House" },
-  // { value: "locking", label: "Locking" },
-  // { value: "choreography", label: "Choreography" },
-  { value: "choreography-1", label: "Choreography Batch 1" },
-  { value: "choreography-2", label: "Choreography Batch 2" },
-  { value: "locking-course", label: "Locking Course" },
-  // { value: "houseAndCreative", label: "Creative movement and House"},
+  { value: "kids-class", label: "Kids Dance Class" },
   { value: "workshop", label: "Workshop" },
 ];
 
