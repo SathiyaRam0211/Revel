@@ -5,10 +5,8 @@ import {
   HighlightText,
   CustomLink,
   CustomBtn,
-  BrandImage,
   FlexWrapper,
 } from "../../utils/util-styled-components";
-import MultiPass from "../../assets/images/multi-pass-logo.svg";
 import { handleRegister } from "../../utils/util-helper";
 import { useNavigate } from "react-router";
 
@@ -17,10 +15,9 @@ const LandingSection = () => {
   return (
     <PageSection>
       <HeroContainer>
-        <BrandImage src={MultiPass} alt="multi-pass" />
         <HeaderText>
-          Anything & everything artistic under{" "}
-          <HighlightText>one subscription</HighlightText>
+          Cultivating arts and creativity {" "}
+          <HighlightText>Join our classes and courses</HighlightText>
         </HeaderText>
         <FlexWrapper $gap="24px">
           <CustomLink onClick={() => navigate("/schedule")}>
