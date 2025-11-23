@@ -1,5 +1,5 @@
 export const URL = {
-  register: "https://rzp.io/rzp/backintime-revel",
+  register: "https://forms.zohopublic.in/adminre1/form/TrialBooking/formperma/ZbKh5Tg0YiP__B_s48YNv9w8S1r83cqjzd9EjDa5oQ4",
 };
 
 export const OTP = {

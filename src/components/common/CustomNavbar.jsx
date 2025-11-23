@@ -76,7 +76,7 @@ const CustomNavbar = () => {
           onClick={() => navigate("/")}
         />
         {isHidden && (
-          <CustomBtn onClick={handleRegister}>Register now</CustomBtn>
+          <CustomBtn onClick={handleRegister}>Book Trial</CustomBtn>
         )}
         {!isHidden &&
           (windowWidth <= 478 ? (

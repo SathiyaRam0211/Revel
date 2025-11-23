@@ -23,7 +23,7 @@ const LandingSection = () => {
           <CustomLink onClick={() => navigate("/schedule")}>
             View Schedule
           </CustomLink>
-          <CustomBtn onClick={handleRegister}>Register now</CustomBtn>
+          <CustomBtn onClick={handleRegister}>Book Trial</CustomBtn>
         </FlexWrapper>
       </HeroContainer>
     </PageSection>
