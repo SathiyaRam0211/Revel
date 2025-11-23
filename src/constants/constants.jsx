@@ -15,6 +15,7 @@ export const ART_FORMS = [
 export const TABS = [
   { value: "all", label: "All" },
   { value: "kids-class", label: "Kids Dance Class" },
+  { value: "adult-choreo", label: "Adult Choreography" },
   { value: "workshop", label: "Workshop" },
 ];
 
