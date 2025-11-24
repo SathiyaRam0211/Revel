@@ -15,10 +15,16 @@ const LandingSection = () => {
   return (
     <PageSection>
       <HeroContainer>
+        {/* responsive rule: no-wrap on desktop, allow wrap on small screens */}
+        <style>{`
+          .noWrapDesktop { white-space: nowrap; }
+          @media (max-width: 768px) { .noWrapDesktop { white-space: normal; } }
+        `}</style>
+
         <HeaderText>
-          Cultivating arts and creativity {" "}
+          Cultivating arts and creativity{" "}
           <HighlightText>
-            <span style={{ whiteSpace: "nowrap" }}>
+            <span className="noWrapDesktop">
               Join our Dance classes and courses
             </span>
             <br />
