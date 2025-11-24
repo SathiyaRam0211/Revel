@@ -17,7 +17,10 @@ const LandingSection = () => {
       <HeroContainer>
         <HeaderText>
           Cultivating arts and creativity {" "}
-          <HighlightText>Join our Dance classes and courses
+          <HighlightText>
+            <span style={{ whiteSpace: "nowrap" }}>
+              Join our Dance classes and courses
+            </span>
             <br />
             For all ages
           </HighlightText>
