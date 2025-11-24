@@ -17,7 +17,10 @@ const LandingSection = () => {
       <HeroContainer>
         <HeaderText>
           Cultivating arts and creativity {" "}
-          <HighlightText>Join our dance classes and courses - For all ages</HighlightText>
+          <HighlightText>Join our Dance classes and courses
+            <br />
+            For all ages
+          </HighlightText>
         </HeaderText>
         <FlexWrapper $gap="24px">
           <CustomLink onClick={() => navigate("/schedule")}>
