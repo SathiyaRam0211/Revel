@@ -8,14 +8,16 @@ export const OTP = {
 };
 
 export const ART_FORMS = [
-  { value: "adult-choreo", label: "Adult Choreography" },
+  { value: "adult-class", label: "Adult Dance Class" },
   { value: "kids-class", label: "Kids Dance Class" },
+  { value: "junior-class", label: "Junior Dance Class" },
 ];
 
 export const TABS = [
   { value: "all", label: "All" },
   { value: "kids-class", label: "Kids Dance Class" },
-  { value: "adult-choreo", label: "Adult Choreography Class" },
+  { value: "junior-class", label: "Junior Dance Class" },
+  { value: "adult-class", label: "Adult Dance Class" },
   { value: "workshop", label: "Workshop" },
 ];
 
