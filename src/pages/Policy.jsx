@@ -7,9 +7,36 @@ import {
   InfoTitle,
   InfoUpdated,
   InfoHeading,
+  InfoSubheading,
   InfoText,
   InfoList,
 } from "../utils/util-styled-components";
+
+const Labelled = ({ label, text }) => (
+  <>
+    {label && <strong>{label}</strong>} {text}
+  </>
+);
+
+const Block = ({ block }) => {
+  if (block.sub) return <InfoSubheading>{block.sub}</InfoSubheading>;
+  if (block.list) {
+    return (
+      <InfoList>
+        {block.list.map((item, i) => (
+          <li key={i}>
+            {typeof item === "string" ? item : <Labelled {...item} />}
+          </li>
+        ))}
+      </InfoList>
+    );
+  }
+  return (
+    <InfoText>
+      <Labelled label={block.label} text={block.p} />
+    </InfoText>
+  );
+};
 
 const Policy = ({ type }) => {
   const policy = POLICIES[type];
@@ -24,20 +51,16 @@ const Policy = ({ type }) => {
       <CustomNavbar />
       <InfoContainer>
         <InfoTitle>{policy.title}</InfoTitle>
-        <InfoUpdated>Last updated: {policy.updated}</InfoUpdated>
+        <InfoUpdated>Effective Date: {policy.effective}</InfoUpdated>
+        {policy.intro.map((text) => (
+          <InfoText key={text}>{text}</InfoText>
+        ))}
         {policy.sections.map((section) => (
           <section key={section.heading}>
             <InfoHeading>{section.heading}</InfoHeading>
-            {section.body?.map((text) => (
-              <InfoText key={text}>{text}</InfoText>
+            {section.blocks.map((block, i) => (
+              <Block key={i} block={block} />
             ))}
-            {section.list && (
-              <InfoList>
-                {section.list.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </InfoList>
-            )}
           </section>
         ))}
       </InfoContainer>

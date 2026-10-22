@@ -1028,10 +1028,21 @@ export const InfoHeading = styled.h2`
   }
 `;
 
+export const InfoSubheading = styled.h3`
+  font-size: 17px;
+  font-weight: 700;
+  color: ${VARIABLES.textColor};
+  margin: 20px 0 6px;
+`;
+
 export const InfoText = styled.p`
   font-size: 16px;
   line-height: 26px;
   margin: 8px 0;
+
+  strong {
+    color: ${VARIABLES.textColor};
+  }
 `;
 
 export const InfoList = styled.ul`
@@ -1042,6 +1053,10 @@ export const InfoList = styled.ul`
 
   li {
     margin-bottom: 6px;
+  }
+
+  strong {
+    color: ${VARIABLES.textColor};
   }
 `;
 
