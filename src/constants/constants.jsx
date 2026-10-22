@@ -68,3 +68,19 @@ export const daysOfWeek = [
   "Friday",
   "Saturday",
 ];
+
+// TODO: replace with Revel's real contact details before publishing
+export const CONTACT = {
+  name: "Revel Dance Academy",
+  address: "Revel Dance Academy, Adyar, Chennai, Tamil Nadu",
+  phone: "+91 XXXXX XXXXX",
+  email: "hello@example.com",
+  hours: "Monday - Sunday, 10:00 am - 7:30 pm",
+};
+
+export const NAV_LINKS = [
+  { path: "/privacy-policy", label: "Privacy Policy" },
+  { path: "/terms-and-conditions", label: "Terms & Conditions" },
+  { path: "/cancellation-policy", label: "Cancellation Policy" },
+  { path: "/contact-us", label: "Contact Us" },
+];

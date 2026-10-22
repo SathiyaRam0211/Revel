@@ -922,3 +922,125 @@ const scaleOut = keyframes`
     opacity: 0;
   }
 `;
+
+export const NavLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+export const NavItem = styled.div`
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 8px;
+  color: ${(props) =>
+    props.$active ? VARIABLES.primaryColor : VARIABLES.lightTextColor};
+
+  &:hover {
+    color: ${VARIABLES.primaryColor};
+    background: ${VARIABLES.darkBgColor};
+  }
+
+  @media (${VARIABLES.desktopSmall}) {
+    font-size: 14px;
+    padding: 8px;
+  }
+`;
+
+export const InfoContainer = styled.main`
+  box-sizing: border-box;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 64px 96px;
+  color: ${VARIABLES.lightTextColor};
+
+  @media (${VARIABLES.tabletLarge}) {
+    padding: 32px 24px 64px;
+  }
+`;
+
+export const InfoTitle = styled.h1`
+  font-family: ${VARIABLES.headerFont};
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: ${VARIABLES.textColor};
+  margin: 0 0 8px;
+
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+`;
+
+export const InfoUpdated = styled.div`
+  font-size: 14px;
+  color: ${VARIABLES.highlightColor};
+  margin-bottom: 16px;
+`;
+
+export const InfoHeading = styled.h2`
+  font-family: ${VARIABLES.headerFont};
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: ${VARIABLES.primaryColor};
+  margin: 32px 0 8px;
+
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 19px;
+    line-height: 26px;
+  }
+`;
+
+export const InfoText = styled.p`
+  font-size: 16px;
+  line-height: 26px;
+  margin: 8px 0;
+`;
+
+export const InfoList = styled.ul`
+  font-size: 16px;
+  line-height: 26px;
+  margin: 8px 0;
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 6px;
+  }
+`;
+
+export const ContactCard = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  background: ${VARIABLES.secondaryBgColor};
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px 0;
+
+  @media (${VARIABLES.mobileLarge}) {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+`;
+
+export const ContactLabel = styled.div`
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: ${VARIABLES.highlightColor};
+  margin-bottom: 6px;
+`;
+
+export const ContactValue = styled.div`
+  font-size: 18px;
+  line-height: 26px;
+  color: ${VARIABLES.textColor};
+  text-decoration: none;
+  overflow-wrap: anywhere;
+`;
