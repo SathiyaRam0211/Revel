@@ -34,10 +34,20 @@ const Contact = () => {
             <ContactValue>{CONTACT.address}</ContactValue>
           </div>
           <div>
-            <ContactLabel>Call or WhatsApp</ContactLabel>
+            <ContactLabel>Call</ContactLabel>
             <ContactValue
               as="a"
               href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
+            >
+              {CONTACT.phone}
+            </ContactValue>
+          </div>
+          <div>
+            <ContactLabel>WhatsApp</ContactLabel>
+            <ContactValue
+              as="a"
+              href={`https://wa.me/${CONTACT.phone.replace(/\D/g, "")}`}
+              target="_blank"
             >
               {CONTACT.phone}
             </ContactValue>
@@ -47,10 +57,6 @@ const Contact = () => {
             <ContactValue as="a" href={`mailto:${CONTACT.email}`}>
               {CONTACT.email}
             </ContactValue>
-          </div>
-          <div>
-            <ContactLabel>Hours</ContactLabel>
-            <ContactValue>{CONTACT.hours}</ContactValue>
           </div>
         </ContactCard>
         <CustomBtn onClick={handleRegister}>Book Trial</CustomBtn>
