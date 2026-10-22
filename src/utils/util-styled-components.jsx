@@ -21,6 +21,13 @@ export const Nav = styled.nav`
     height: 100px !important;
     padding: 12px 24px;
   }
+
+  @media (${VARIABLES.tabletSmall}) {
+    height: auto !important;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    padding: 16px 24px 12px;
+  }
 `;
 
 export const CustomMenu = styled.div`
@@ -926,7 +933,22 @@ const scaleOut = keyframes`
 export const NavLinks = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex: 1;
   gap: 8px;
+  padding: 0 16px;
+
+  @media (${VARIABLES.tabletLarge}) {
+    gap: 2px;
+    padding: 0 8px;
+  }
+
+  @media (${VARIABLES.tabletSmall}) {
+    order: 3;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 `;
 
 export const NavItem = styled.div`
@@ -947,6 +969,16 @@ export const NavItem = styled.div`
   @media (${VARIABLES.desktopSmall}) {
     font-size: 14px;
     padding: 8px;
+  }
+
+  @media (${VARIABLES.tabletLarge}) {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  @media (${VARIABLES.mobileLarge}) {
+    font-size: 12px;
+    padding: 4px 6px;
   }
 `;
 

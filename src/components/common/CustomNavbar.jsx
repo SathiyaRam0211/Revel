@@ -28,7 +28,6 @@ const CustomNavbar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const isHidden = true;
-  const isCompact = windowWidth <= 991;
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,58 +41,30 @@ const CustomNavbar = () => {
   }, []);
 
   const NavMenu = () => {
-    if (!navMenuOpen) return null;
-    if (isHidden ? !isCompact : windowWidth > 478) return null;
+    if (!navMenuOpen || windowWidth > 478) return null;
     return (
       <ModalOverlay>
         <CustomMenu>
           <CloseWrapper onClick={() => setNavMenuOpen(false)}>
             <ContainerImage src={CloseIcon} alt="close-icon" />
           </CloseWrapper>
-          {isHidden ? (
-            <>
-              {NAV_LINKS.map((link) => (
-                <MenuItem
-                  key={link.path}
-                  onClick={() => {
-                    setNavMenuOpen(false);
-                    navigate(link.path);
-                  }}
-                >
-                  {link.label}
-                </MenuItem>
-              ))}
-              <MenuItem
-                $isBtn
-                onClick={() => {
-                  setNavMenuOpen(false);
-                  handleRegister();
-                }}
-              >
-                Book Trial
-              </MenuItem>
-            </>
-          ) : (
-            <>
-              <MenuItem
-                $isBtn
-                onClick={() => {
-                  setNavMenuOpen(false);
-                  openRegister();
-                }}
-              >
-                Register
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  setNavMenuOpen(false);
-                  openLogin();
-                }}
-              >
-                Login
-              </MenuItem>
-            </>
-          )}
+          <MenuItem
+            $isBtn
+            onClick={() => {
+              setNavMenuOpen(false);
+              openRegister();
+            }}
+          >
+            Register
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              setNavMenuOpen(false);
+              openLogin();
+            }}
+          >
+            Login
+          </MenuItem>
         </CustomMenu>
       </ModalOverlay>
     );
@@ -108,7 +79,7 @@ const CustomNavbar = () => {
           alt="revel-logo"
           onClick={() => navigate("/")}
         />
-        {isHidden && !isCompact && (
+        {isHidden && (
           <NavLinks>
             {NAV_LINKS.map((link) => (
               <NavItem
@@ -122,16 +93,7 @@ const CustomNavbar = () => {
           </NavLinks>
         )}
         {isHidden && (
-          <FlexWrapper $gap="16px" $alignItems="center">
-            <CustomBtn onClick={handleRegister}>Book Trial</CustomBtn>
-            {isCompact && (
-              <BrandImage
-                src={MenuIcon}
-                onClick={() => setNavMenuOpen(true)}
-                alt="menu-icon"
-              />
-            )}
-          </FlexWrapper>
+          <CustomBtn onClick={handleRegister}>Book Trial</CustomBtn>
         )}
         {!isHidden &&
           (windowWidth <= 478 ? (

@@ -33,6 +33,7 @@ export const VARIABLES = {
   highlightColor: "#81e0ff",
   desktopSmall: "max-width: 1080px",
   tabletLarge: "max-width: 991px",
+  tabletSmall: "max-width: 720px",
   mobileLarge: "max-width: 478px",
   headerFont: "Hepta Slab",
   get gradient() {
