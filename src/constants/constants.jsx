@@ -33,6 +33,7 @@ export const VARIABLES = {
   highlightColor: "#81e0ff",
   desktopSmall: "max-width: 1080px",
   tabletLarge: "max-width: 991px",
+  tabletSmall: "max-width: 720px",
   mobileLarge: "max-width: 478px",
   headerFont: "Hepta Slab",
   get gradient() {
@@ -67,4 +68,19 @@ export const daysOfWeek = [
   "Thursday",
   "Friday",
   "Saturday",
+];
+
+export const CONTACT = {
+  name: "Revel Dance Academy",
+  address:
+    "1st Floor, 9a, 4th St, Venkateswara Nagar, Adyar, Chennai, Tamil Nadu 600020",
+  phone: "+91 91500 07598",
+  email: "reveldanceacademy2026@gmail.com",
+};
+
+export const NAV_LINKS = [
+  { path: "/privacy-policy", label: "Privacy Policy" },
+  { path: "/terms-and-conditions", label: "Terms & Conditions" },
+  { path: "/cancellation-policy", label: "Cancellation Policy" },
+  { path: "/contact-us", label: "Contact Us" },
 ];

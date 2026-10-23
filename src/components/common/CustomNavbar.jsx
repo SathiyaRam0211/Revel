@@ -9,12 +9,15 @@ import {
   CloseWrapper,
   MenuItem,
   ContainerImage,
+  NavLinks,
+  NavItem,
 } from "../../utils/util-styled-components";
 import BrandLogo from "../../assets/images/revel-logo.svg";
 import MenuIcon from "../../assets/images/menu-icon.svg";
 import CloseIcon from "../../assets/images/close-icon.svg";
 import { handleRegister } from "../../utils/util-helper";
-import { useNavigate } from "react-router";
+import { NAV_LINKS } from "../../constants/constants";
+import { useLocation, useNavigate } from "react-router";
 import { useAuthentication } from "../../contexts/AuthenticationContext";
 import { useEffect, useState } from "react";
 
@@ -23,6 +26,7 @@ const CustomNavbar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [navMenuOpen, setNavMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const isHidden = true;
 
   useEffect(() => {
@@ -75,6 +79,19 @@ const CustomNavbar = () => {
           alt="revel-logo"
           onClick={() => navigate("/")}
         />
+        {isHidden && (
+          <NavLinks>
+            {NAV_LINKS.map((link) => (
+              <NavItem
+                key={link.path}
+                $active={pathname === link.path}
+                onClick={() => navigate(link.path)}
+              >
+                {link.label}
+              </NavItem>
+            ))}
+          </NavLinks>
+        )}
         {isHidden && (
           <CustomBtn onClick={handleRegister}>Book Trial</CustomBtn>
         )}
